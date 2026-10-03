@@ -11,6 +11,9 @@ on:
       max_results:
         description: Maximum arXiv results to scan
         default: "3000"
+      broad:
+        description: Also match noisier phrases (true/false)
+        default: "true"
 
 permissions:
   contents: write
@@ -29,7 +32,10 @@ jobs:
         env:
           DAYS: ${{ github.event.inputs.days }}
           MAX: ${{ github.event.inputs.max_results }}
-        run: python scripts/arxiv_watch.py --broad --days "$DAYS" --max-results "$MAX" --out "$RUNNER_TEMP/c.md" --json "$RUNNER_TEMP/candidates.json"
+          BROAD: ${{ github.event.inputs.broad }}
+        run: |
+          flag=$([ "$BROAD" = "false" ] || echo "--broad")
+          python scripts/arxiv_watch.py $flag --days "$DAYS" --max-results "$MAX" --out "$RUNNER_TEMP/c.md" --json "$RUNNER_TEMP/candidates.json"
       - name: Publish candidates to the arxiv-candidates branch
         run: |
           cp "$RUNNER_TEMP/candidates.json" /tmp/candidates.json
