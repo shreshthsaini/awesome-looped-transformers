@@ -29,7 +29,7 @@ categories:
   - id: algorithmic-reasoning
     title: Algorithmic Reasoning & Length Generalization
     emoji: "🧮"
-    blurb: Thinking longer to solve harder instances. Arithmetic, graphs, puzzles and easy-to-hard extrapolation.
+    blurb: Looping longer to solve harder instances. Arithmetic, graphs, puzzles, combinatorial optimization and length generalization.
   - id: latent-reasoning
     title: Recursive & Latent Reasoning
     emoji: "🧠"
@@ -57,7 +57,7 @@ categories:
   - id: equilibrium-implicit
     title: Equilibrium & Implicit Models
     emoji: "♾️"
-    blurb: The infinite-loop limit. Deep equilibrium models and fixed-point transformers.
+    blurb: The infinite-loop limit. Weight-tied transformers solved to a fixed point or attractor.
   - id: analysis-interpretability
     title: Analysis & Interpretability
     emoji: "🔬"

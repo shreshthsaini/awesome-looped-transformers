@@ -59,14 +59,6 @@
   description: Official DEQ code for fixed-point weight-tied models with implicit differentiation.
   related_arxiv: '1909.01377'
 
-- name: deep-thinking
-  kind: code
-  url: https://github.com/aks2203/deep-thinking
-  date: 2022-02
-  description: Deep Thinking networks with recall and progressive loss for easy-to-hard extrapolation in recurrent
-    networks.
-  related_arxiv: '2202.05826'
-
 - name: HRM
   kind: code
   url: https://github.com/sapientinc/HRM

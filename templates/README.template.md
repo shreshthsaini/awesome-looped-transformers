@@ -50,10 +50,13 @@ flowchart LR
 ```
 
 This list tracks the whole family: the original **Universal Transformer**, the **theory** of what loops can
-express, **algorithmic and latent reasoning** (HRM, TRM, Deep Thinking), **looped LLMs** at scale (Huginn,
-Ouro, Mixture-of-Recursions), **adaptive depth**, **compression** of pretrained models into recursive
-ones, **looped diffusion and vision** backbones, and their infinite-depth cousins, **deep equilibrium
-models**.
+express, **recursive reasoning** (HRM, TRM), **looped LLMs** at scale (Huginn, Ouro, Mixture-of-Recursions),
+**adaptive depth**, **compression** of pretrained models into recursive ones, **looped diffusion and vision**
+backbones, and **fixed-point / equilibrium transformers**.
+
+> **Scope.** Only work where a transformer (or transformer-style) block is **reused across depth with shared
+> weights** is listed, plus theory and analysis of such models. Recurrence over time or tokens, recurrent CNNs,
+> generic implicit/DEQ layers, energy-based refinement and token-level latent CoT are out of scope.
 
 ## 🆕 Recently added
 
