@@ -81,15 +81,16 @@ make build          # = validate + README
 
 ## Inclusion criteria
 
-A paper belongs here only if a **transformer (or transformer-style) block is reused across depth with shared
-weights** (looping, recurrent depth, weight-tied layers, recursion, HRM/TRM-style recursive reasoners, or a
-fixed-point / equilibrium transformer) and that reuse is **central** to the contribution. Theory and analysis
-papers about such models also qualify.
+A paper belongs here only if its model is a **transformer whose own layers or block are re-applied in depth with
+shared weights** (looped / recurrent-depth / Universal / recursive transformers, weight-tied transformer stacks,
+HRM/TRM-style recursive reasoners built from transformer blocks, fixed-point transformers), and that looping is
+**central** to the contribution. Theory and analysis papers about such models also qualify.
 
-Out of scope: recurrence only over time or tokens (RNNs, SSMs, block-recurrent memory), recurrent CNNs and
-GNNs, generic implicit / DEQ layers without a transformer, energy-based iterative refinement, token-level
-latent chain-of-thought, agent or prompt-level "recursion", and papers that only mention looped models.
-When in doubt, open an issue and ask.
+Out of scope, even if iterative: recurrence over time or tokens (RNNs, SSMs, memory tokens), recurrent CNNs/GNNs,
+diffusion or flow sampling steps and denoisers reused as reasoners, weight-tied world models or policies that are
+not looped transformers, energy-based refinement, token-level latent chain-of-thought, layer skipping/routing,
+partial weight sharing used only for compression, agent or prompt-level "recursion", and papers that only mention
+looped models. When in doubt, open an issue and ask.
 
 ## Repository layout
 
