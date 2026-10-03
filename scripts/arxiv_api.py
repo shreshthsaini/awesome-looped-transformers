@@ -42,6 +42,7 @@ def _entry_to_dict(entry: ET.Element) -> dict:
 
     arxiv_id = re.sub(r"v\d+$", "", text("a:id").rsplit("/abs/", 1)[-1])
     authors = [" ".join(a.find("a:name", NS).text.split()) for a in entry.findall("a:author", NS)]
+    authors = [a.strip(" :;,") for a in authors if re.search(r"\w", a)]  # drop stray ":" tokens
     if len(authors) > 6:
         authors = authors[:5] + ["et al."]
     summary = text("a:summary") or ""
