@@ -10,10 +10,14 @@ year_started: 2026
 
 # Display order, titles and blurbs for each category. `id` is what papers.yaml uses.
 categories:
-  - id: surveys
-    title: Surveys & Position Papers
-    emoji: "📚"
-    blurb: Overviews of looped, recurrent-depth and latent-reasoning models, plus opinionated position pieces.
+  - id: diffusion-generative
+    title: Diffusion & Generative Models
+    emoji: "🎨"
+    blurb: Looped DiTs, looped diffusion language models, flow matching, tokenizers and world models.
+  - id: vision-multimodal
+    title: Vision, Multimodal & Beyond
+    emoji: "👁️"
+    blurb: Looped ViTs and VLMs, vision-language-action models, 3D, speech, audio and other domains.
   - id: foundations
     title: Foundations & Weight-Shared Architectures
     emoji: "🧱"
@@ -46,14 +50,6 @@ categories:
     title: Efficiency, Parameter Sharing & Compression
     emoji: "⚡"
     blurb: Doing more with fewer parameters. Recursive conversion of pretrained LLMs, layer tying, KV sharing and fast inference.
-  - id: diffusion-generative
-    title: Diffusion & Generative Models
-    emoji: "🎨"
-    blurb: Looped and recurrent-depth backbones for diffusion, flow matching, diffusion LMs and other generative models.
-  - id: vision-multimodal
-    title: Vision, Multimodal & Beyond
-    emoji: "👁️"
-    blurb: Looped ViTs, recurrent-depth multimodal models, video, speech and robotics.
   - id: equilibrium-implicit
     title: Equilibrium & Implicit Models
     emoji: "♾️"
@@ -62,6 +58,10 @@ categories:
     title: Analysis & Interpretability
     emoji: "🔬"
     blurb: What happens inside the loop. Probing, mechanistic studies, failure modes and empirical comparisons.
+  - id: surveys
+    title: Surveys & Position Papers
+    emoji: "📚"
+    blurb: Overviews of looped, recurrent-depth and latent-reasoning models, plus opinionated position pieces.
 
 # Paper "type" values and the short label shown in tables.
 types: [Method, Theory, Analysis, Survey, Benchmark, Model, Position]

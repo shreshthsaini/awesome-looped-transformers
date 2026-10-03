@@ -31,40 +31,14 @@ models that get deeper by running the same block again.**
 
 ---
 
-## 🔄 What is a looped transformer?
-
-A standard transformer stacks *L* distinct layers. A **looped** (a.k.a. *recurrent-depth*, *universal*,
-*weight-tied* or *recursive*) transformer instead applies **one shared block (or a small stack) R times**,
-feeding its output back in as input. Depth becomes a knob you can turn at inference time, parameters stay
-fixed, and the model can "think longer" in its hidden state instead of in generated tokens.
-
-```mermaid
-flowchart LR
-    x([input tokens]) --> P[Prelude<br/>embed + few layers]
-    P --> B
-    subgraph loop [" repeat R times (fixed, sampled, or adaptive) "]
-        B[Shared transformer block<br/>same weights every pass] -->|hidden state| B
-    end
-    B --> C[Coda<br/>few layers + head]
-    C --> y([output])
-```
-
-This list tracks the whole family: the original **Universal Transformer**, the **theory** of what loops can
-express, **recursive reasoning** (HRM, TRM), **looped LLMs** at scale (Huginn, Ouro, Mixture-of-Recursions),
-**adaptive depth**, **compression** of pretrained models into recursive ones, **looped diffusion and vision**
-backbones, and **fixed-point / equilibrium transformers**.
-
-> **Scope.** Only work where a transformer (or transformer-style) block is **reused across depth with shared
-> weights** is listed, plus theory and analysis of such models. Recurrence over time or tokens, recurrent CNNs,
-> generic implicit/DEQ layers, energy-based refinement and token-level latent CoT are out of scope.
-
 ## 🆕 Recently added
 
 {{NEWS}}
 
 ## 📄 Papers
 
-Each table is sorted newest first. **Type** is one of `Method`, `Theory`, `Analysis`, `Survey`,
+Only work where a transformer (or transformer-style) block is **looped, i.e. reused across depth with
+shared weights**, is listed, plus theory and analysis of such models. Each table is sorted newest first. **Type** is one of `Method`, `Theory`, `Analysis`, `Survey`,
 `Benchmark`, `Model` or `Position`. The **Code** column shows live GitHub stars for the official
 implementation.
 
