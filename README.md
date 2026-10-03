@@ -12,13 +12,13 @@ models that get deeper by running the same block again.**
 [![Papers](https://img.shields.io/badge/papers-235-2a78d6?style=flat)](#-papers)
 [![With code](https://img.shields.io/badge/with%20code-101-1baf7a?style=flat)](#-papers)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-7b61ff?style=flat)](CONTRIBUTING.md)
-[![Last commit](https://img.shields.io/github/last-commit/shreshthsaini/Rough-Claude-Cloud?style=flat&color=eb6834)](https://github.com/shreshthsaini/Rough-Claude-Cloud/commits)
-[![GitHub stars](https://img.shields.io/github/stars/shreshthsaini/Rough-Claude-Cloud?style=flat&color=eda100)](https://github.com/shreshthsaini/Rough-Claude-Cloud/stargazers)
+[![Last commit](https://img.shields.io/github/last-commit/shreshthsaini/Awesome-Looped-Transformers?style=flat&color=eb6834)](https://github.com/shreshthsaini/Awesome-Looped-Transformers/commits)
+[![GitHub stars](https://img.shields.io/github/stars/shreshthsaini/Awesome-Looped-Transformers?style=flat&color=eda100)](https://github.com/shreshthsaini/Awesome-Looped-Transformers/stargazers)
 [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey?style=flat)](LICENSE)
 
-**[📝 Add a paper](https://github.com/shreshthsaini/Rough-Claude-Cloud/issues/new?template=add-paper.yml)** ·
-**[🔗 Add a resource](https://github.com/shreshthsaini/Rough-Claude-Cloud/issues/new?template=add-resource.yml)** ·
-**[🐛 Report a mistake](https://github.com/shreshthsaini/Rough-Claude-Cloud/issues/new?template=fix-entry.yml)**
+**[📝 Add a paper](https://github.com/shreshthsaini/Awesome-Looped-Transformers/issues/new?template=add-paper.yml)** ·
+**[🔗 Add a resource](https://github.com/shreshthsaini/Awesome-Looped-Transformers/issues/new?template=add-resource.yml)** ·
+**[🐛 Report a mistake](https://github.com/shreshthsaini/Awesome-Looped-Transformers/issues/new?template=fix-entry.yml)**
 
 <sub>235 papers · 13 categories · 2015–2026 · newest paper 2026-09-30</sub>
 
@@ -544,7 +544,7 @@ implementation.
 
 Contributions are very welcome, and the fastest path is fully automated:
 
-1. **[Open an "Add a paper" issue](https://github.com/shreshthsaini/Rough-Claude-Cloud/issues/new?template=add-paper.yml)**
+1. **[Open an "Add a paper" issue](https://github.com/shreshthsaini/Awesome-Looped-Transformers/issues/new?template=add-paper.yml)**
    and paste an arXiv link. Everything else is optional.
 2. A bot fetches the **title, authors, date, venue and code link** from arXiv, files it in the category you
    picked, regenerates this README, and **opens a pull request** for you.
@@ -578,10 +578,10 @@ reference and inclusion criteria.
 
 ### ⭐ Star history
 
-<a href="https://star-history.com/#shreshthsaini/Rough-Claude-Cloud&Date">
+<a href="https://star-history.com/#shreshthsaini/Awesome-Looped-Transformers&Date">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=shreshthsaini/Rough-Claude-Cloud&type=Date&theme=dark">
-    <img alt="Star history chart" src="https://api.star-history.com/svg?repos=shreshthsaini/Rough-Claude-Cloud&type=Date" width="600">
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=shreshthsaini/Awesome-Looped-Transformers&type=Date&theme=dark">
+    <img alt="Star history chart" src="https://api.star-history.com/svg?repos=shreshthsaini/Awesome-Looped-Transformers&type=Date" width="600">
   </picture>
 </a>
 
@@ -594,7 +594,7 @@ If this list helps your research, please consider citing it:
   title        = {Awesome Looped Transformers: A Curated List of Looped, Recurrent-Depth and Weight-Tied Transformer Research},
   author       = {Shreshth Saini},
   year         = {2026},
-  howpublished = {\url{https://github.com/shreshthsaini/Rough-Claude-Cloud}},
+  howpublished = {\url{https://github.com/shreshthsaini/Awesome-Looped-Transformers}},
   note         = {GitHub repository}
 }
 ```
