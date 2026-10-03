@@ -1,0 +1,19 @@
+name: "🐛 Fix an entry"
+description: Report a wrong date, venue, link, category or missing code.
+title: "[Fix] "
+labels: ["fix-entry"]
+body:
+  - type: input
+    id: paper
+    attributes:
+      label: Which paper or resource?
+      description: Title or link.
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: What should change?
+      placeholder: "The paper was accepted at ICLR 2026; official code is at https://github.com/..."
+    validations:
+      required: true

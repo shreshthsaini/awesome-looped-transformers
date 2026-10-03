@@ -1,0 +1,98 @@
+# Global settings for the list. The README, plots and citation are rendered from these values.
+title: Awesome Looped Transformers
+# Fallback "owner/name" used for links when GITHUB_REPOSITORY is not set (CI sets it automatically,
+# so renaming the repository on GitHub fixes every link on the next build).
+repository: shreshthsaini/Rough-Claude-Cloud
+maintainer: Shreshth Saini
+maintainer_github: shreshthsaini
+citation_key: awesome-looped-transformers
+year_started: 2026
+
+# Display order, titles and blurbs for each category. `id` is what papers.yaml uses.
+categories:
+  - id: surveys
+    title: Surveys & Position Papers
+    emoji: "📚"
+    blurb: Overviews of looped, recurrent-depth and latent-reasoning models, plus opinionated position pieces.
+  - id: foundations
+    title: Foundations & Weight-Shared Architectures
+    emoji: "🧱"
+    blurb: The architectures that started it all. Universal Transformers, cross-layer sharing, and looped blocks as a design primitive.
+  - id: theory
+    title: Theory & Expressivity
+    emoji: "📐"
+    blurb: What can a looped transformer compute? Expressivity, Turing completeness, CoT equivalence, approximation and training dynamics.
+  - id: in-context-learning
+    title: In-Context Learning & Learned Optimizers
+    emoji: "🔁"
+    blurb: Looped transformers that implement gradient descent and other iterative learning algorithms in context.
+  - id: algorithmic-reasoning
+    title: Algorithmic Reasoning & Length Generalization
+    emoji: "🧮"
+    blurb: Thinking longer to solve harder instances. Arithmetic, graphs, puzzles and easy-to-hard extrapolation.
+  - id: latent-reasoning
+    title: Recursive & Latent Reasoning
+    emoji: "🧠"
+    blurb: Reasoning in hidden state instead of tokens. HRM, TRM, latent thoughts and iterative refinement.
+  - id: language-models
+    title: Looped & Recurrent-Depth Language Models
+    emoji: "💬"
+    blurb: Pretraining, scaling and test-time compute for looped LLMs such as Huginn, Ouro and Mixture-of-Recursions.
+  - id: adaptive-computation
+    title: Adaptive Computation & Dynamic Depth
+    emoji: "⏱️"
+    blurb: Deciding how many loops to run. Halting, pondering, routing tokens to different recursion depths, early exit.
+  - id: efficiency
+    title: Efficiency, Parameter Sharing & Compression
+    emoji: "⚡"
+    blurb: Doing more with fewer parameters. Recursive conversion of pretrained LLMs, layer tying, KV sharing and fast inference.
+  - id: diffusion-generative
+    title: Diffusion & Generative Models
+    emoji: "🎨"
+    blurb: Looped and recurrent-depth backbones for diffusion, flow matching, diffusion LMs and other generative models.
+  - id: vision-multimodal
+    title: Vision, Multimodal & Beyond
+    emoji: "👁️"
+    blurb: Looped ViTs, recurrent-depth multimodal models, video, speech and robotics.
+  - id: equilibrium-implicit
+    title: Equilibrium & Implicit Models
+    emoji: "♾️"
+    blurb: The infinite-loop limit. Deep equilibrium models and fixed-point transformers.
+  - id: analysis-interpretability
+    title: Analysis & Interpretability
+    emoji: "🔬"
+    blurb: What happens inside the loop. Probing, mechanistic studies, failure modes and empirical comparisons.
+
+# Paper "type" values and the short label shown in tables.
+types: [Method, Theory, Analysis, Survey, Benchmark, Model, Position]
+
+# Allowed tags (free-form topics shown as small labels).
+tags: [language, vision, diffusion, theory, reasoning, algorithmic, graph, icl, efficiency, adaptive,
+       multimodal, rl, interpretability, scaling, pretraining, test-time-compute, audio, video, robotics]
+
+# Groups used in the progress plot (keeps the chart to 4 readable colors).
+plot_groups:
+  - name: Theory & Foundations
+    categories: [surveys, foundations, theory, in-context-learning, equilibrium-implicit]
+  - name: Reasoning
+    categories: [algorithmic-reasoning, latent-reasoning, analysis-interpretability]
+  - name: Language Models & Efficiency
+    categories: [language-models, adaptive-computation, efficiency]
+  - name: Diffusion, Vision & Multimodal
+    categories: [diffusion-generative, vision-multimodal]
+
+resource_kinds:
+  - id: code
+    title: Code & Libraries
+  - id: model
+    title: Open Checkpoints
+  - id: benchmark
+    title: Benchmarks & Datasets
+  - id: blog
+    title: Blog Posts
+  - id: talk
+    title: Talks & Videos
+  - id: tutorial
+    title: Tutorials
+  - id: related
+    title: Related Lists & Community Surveys

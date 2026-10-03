@@ -1,0 +1,40 @@
+# Every Monday, searches arXiv for new looped-transformer papers and opens a triage issue.
+name: arXiv watch
+
+on:
+  schedule:
+    - cron: "41 6 * * 1"
+  workflow_dispatch:
+    inputs:
+      days:
+        description: Look back this many days
+        default: "8"
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python scripts/arxiv_watch.py --days "${DAYS:-8}" --out candidates.md
+        env:
+          DAYS: ${{ github.event.inputs.days }}
+      - name: Open triage issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if grep -q "^- \[ \]" candidates.md; then
+            gh issue create --repo "$GITHUB_REPOSITORY" \
+              --title "arXiv watch: new candidates ($(date -u +%Y-%m-%d))" \
+              --label arxiv-watch --body-file candidates.md
+          else
+            echo "No new candidates."
+          fi

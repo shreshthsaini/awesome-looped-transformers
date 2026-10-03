@@ -1,0 +1,26 @@
+# Checks every pull request: schema, duplicates, and that the README still renders.
+name: Validate
+
+on:
+  pull_request:
+    paths: ["data/**", "templates/**", "scripts/**", ".github/**"]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python scripts/validate.py
+      - name: README renders
+        run: |
+          python scripts/plot_progress.py
+          python scripts/build_readme.py
+          git diff --stat

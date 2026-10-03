@@ -1,0 +1,120 @@
+# Turns "Add a paper" / "Add a resource" issues and maintainer `/add-paper` comments into pull requests.
+name: Add entry from issue
+
+on:
+  issues:
+    types: [opened, edited, labeled]
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: add-entry-${{ github.event.issue.number }}
+  cancel-in-progress: true
+
+jobs:
+  add:
+    if: >-
+      (github.event_name == 'issues' && github.event.issue.state == 'open' &&
+        (github.event.action != 'labeled' || github.event.label.name == 'new-paper' ||
+         github.event.label.name == 'new-resource') &&
+        (contains(github.event.issue.labels.*.name, 'new-paper') ||
+         contains(github.event.issue.labels.*.name, 'new-resource') ||
+         startsWith(github.event.issue.title, '[Paper]') ||
+         startsWith(github.event.issue.title, '[Resource]'))) ||
+      (github.event_name == 'issue_comment' && startsWith(github.event.comment.body, '/add-paper') &&
+        contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association))
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Parse submission and update data
+        id: add
+        continue-on-error: true
+        env:
+          # Untrusted text is only ever passed through env vars, never interpolated into the script.
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          LABELS: ${{ join(github.event.issue.labels.*.name, ',') }}
+          COMMENT_BODY: ${{ github.event.comment.body }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          if [ "$EVENT" = "issue_comment" ]; then
+            python scripts/add_entry.py command
+          elif [[ ",$LABELS," == *",new-resource,"* || "$ISSUE_TITLE" == "[Resource]"* ]]; then
+            python scripts/add_entry.py resource --issue-body-env ISSUE_BODY
+          else
+            python scripts/add_entry.py paper --issue-body-env ISSUE_BODY
+          fi
+
+      - name: Rebuild README and charts
+        if: steps.add.outcome == 'success'
+        env:
+          SUMMARY_FILE: ${{ steps.add.outputs.summary_file }}
+          ISSUE: ${{ github.event.issue.number }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          python scripts/plot_progress.py
+          python scripts/build_readme.py
+          # Issue submissions close their issue on merge; /add-paper comments only reference it.
+          keyword=$([ "$EVENT" = "issues" ] && echo "Closes" || echo "Requested in")
+          { cat "$SUMMARY_FILE"; printf '\n%s #%s\n' "$keyword" "$ISSUE"; } > "$RUNNER_TEMP/pr_body.md"
+
+      - name: Open pull request
+        if: steps.add.outcome == 'success'
+        id: cpr
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: bot/add-entry-${{ github.event.issue.number }}${{ github.event_name == 'issue_comment' && format('-{0}', github.event.comment.id) || '' }}
+          commit-message: "Add ${{ steps.add.outputs.id }}"
+          title: "Add: ${{ steps.add.outputs.title }}"
+          body-path: ${{ runner.temp }}/pr_body.md
+          labels: automated
+          delete-branch: true
+          add-paths: |
+            data/
+            README.md
+            assets/
+
+      - name: Report back on the issue
+        if: always() && steps.add.outputs.summary_file != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{ steps.cpr.outputs.pull-request-url }}
+          SUMMARY_FILE: ${{ steps.add.outputs.summary_file }}
+          ISSUE: ${{ github.event.issue.number }}
+          OK: ${{ steps.add.outcome }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          {
+            cat "$SUMMARY_FILE"
+            echo
+            if [ "$OK" = "success" ] && [ -n "$PR_URL" ]; then
+              if [ "$EVENT" = "issues" ]; then
+                echo "🤖 Opened $PR_URL. This issue will close automatically when it is merged."
+              else
+                echo "🤖 Opened $PR_URL."
+              fi
+            elif [ "$OK" != "success" ]; then
+              echo "🤖 Please edit the issue to fix this, and the bot will try again."
+            fi
+            printf '\n---\n_Automated by [add_entry.py](https://github.com/%s/blob/HEAD/scripts/add_entry.py)_\n' "$GITHUB_REPOSITORY"
+          } > comment.md
+          gh issue comment "$ISSUE" --repo "$GITHUB_REPOSITORY" --body-file comment.md
+          if [ "$OK" != "success" ]; then
+            gh issue edit "$ISSUE" --repo "$GITHUB_REPOSITORY" --add-label needs-info || true
+          fi

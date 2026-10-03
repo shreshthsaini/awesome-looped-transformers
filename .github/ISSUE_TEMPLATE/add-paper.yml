@@ -1,0 +1,104 @@
+name: "📝 Add a paper"
+description: Suggest a paper. A bot fills in the details from arXiv and opens a pull request for you.
+title: "[Paper] "
+labels: ["new-paper"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing! Only the **paper link** and **category** are required.
+        For arXiv papers the bot fetches title, authors, date, venue hints and code links automatically.
+        Anything you fill in below overrides the auto-fetched value.
+  - type: input
+    id: paper_url
+    attributes:
+      label: Paper link
+      description: arXiv URL or id (preferred), or an OpenReview / proceedings URL.
+      placeholder: https://arxiv.org/abs/2502.05171
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Pick the single best fit. See the README for what each category covers.
+      options:
+        - "surveys: Surveys & Position Papers"
+        - "foundations: Foundations & Weight-Shared Architectures"
+        - "theory: Theory & Expressivity"
+        - "in-context-learning: In-Context Learning & Learned Optimizers"
+        - "algorithmic-reasoning: Algorithmic Reasoning & Length Generalization"
+        - "latent-reasoning: Recursive & Latent Reasoning"
+        - "language-models: Looped & Recurrent-Depth Language Models"
+        - "adaptive-computation: Adaptive Computation & Dynamic Depth"
+        - "efficiency: Efficiency, Parameter Sharing & Compression"
+        - "diffusion-generative: Diffusion & Generative Models"
+        - "vision-multimodal: Vision, Multimodal & Beyond"
+        - "equilibrium-implicit: Equilibrium & Implicit Models"
+        - "analysis-interpretability: Analysis & Interpretability"
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - Method
+        - Theory
+        - Analysis
+        - Survey
+        - Benchmark
+        - Model
+        - Position
+      default: 0
+    validations:
+      required: true
+  - type: input
+    id: code_url
+    attributes:
+      label: Official code (optional)
+      placeholder: https://github.com/owner/repo
+  - type: input
+    id: project_url
+    attributes:
+      label: Project page / model checkpoint (optional)
+  - type: input
+    id: venue
+    attributes:
+      label: Venue (optional)
+      description: e.g. "ICLR 2026", "NeurIPS 2025". Leave empty for arXiv-only.
+  - type: input
+    id: title
+    attributes:
+      label: Title (only needed for non-arXiv papers)
+  - type: input
+    id: authors
+    attributes:
+      label: Authors (only needed for non-arXiv papers)
+      description: Comma separated.
+  - type: input
+    id: date
+    attributes:
+      label: Date (only needed for non-arXiv papers)
+      placeholder: YYYY-MM-DD
+  - type: input
+    id: tags
+    attributes:
+      label: Tags (optional)
+      description: "Comma separated, from: language, vision, diffusion, theory, reasoning, algorithmic, graph, icl, efficiency, adaptive, multimodal, rl, interpretability, scaling, pretraining, test-time-compute, audio, video, robotics"
+  - type: textarea
+    id: tldr
+    attributes:
+      label: One-sentence TL;DR
+      description: What does the paper contribute? Keep it under ~25 words.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: Looping / recurrence in depth / weight-tied depth is central to this paper (see CONTRIBUTING.md).
+          required: true
+        - label: I searched the list and this paper is not already included.
+          required: true
