@@ -763,7 +763,7 @@
 
 - id: lab2026-nanbeige4-2-3b
   title: 'Nanbeige4.2-3B: Unlocking Agentic Capabilities in a Compact Model'
-  authors: [Nanbeige Lab, ':', Chen Yang, Chengrui Huang, Fufeng Lan, et al.]
+  authors: [Nanbeige Lab, Chen Yang, Chengrui Huang, Fufeng Lan, et al.]
   date: '2026-07-24'
   venue: arXiv
   type: Model
@@ -2361,7 +2361,7 @@
   added: '2026-10-03'
 
 - id: li2025-mor-vit-efficient
-  title: 'MOR-VIT: Efficient Vision Transformer with Mixture-of-Recursions'
+  title: 'IMC-Net: A Lightweight Content-Conditioned Encoder with Multi-Pass Processing for Image Classification'
   authors: [YiZhou Li]
   date: '2025-07-29'
   venue: arXiv
@@ -2370,8 +2370,8 @@
   tags: [vision, efficiency, adaptive]
   arxiv: '2507.21761'
   paper_url: https://arxiv.org/abs/2507.21761
-  tldr: Brings token-level mixture-of-recursions to ViTs, letting each token pick its recursion depth through shared
-    blocks for fewer parameters and faster inference.
+  tldr: Re-applies one lightweight core block a few times, with a score-based selector deciding per region whether
+    another pass helps (formerly titled MOR-VIT).
   added: '2026-10-03'
 
 - id: bae2025-mixture-recursions-learning

@@ -1,0 +1,43 @@
+# Maintainer tool: dump every arXiv paper in a time window that matches the looped-transformer phrases
+# (with abstracts) to the `arxiv-candidates` branch as candidates.json, for bulk triage.
+name: arXiv backfill
+
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: Look back this many days
+        default: "365"
+      max_results:
+        description: Maximum arXiv results to scan
+        default: "3000"
+
+permissions:
+  contents: write
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Search arXiv
+        env:
+          DAYS: ${{ github.event.inputs.days }}
+          MAX: ${{ github.event.inputs.max_results }}
+        run: python scripts/arxiv_watch.py --broad --days "$DAYS" --max-results "$MAX" --out "$RUNNER_TEMP/c.md" --json "$RUNNER_TEMP/candidates.json"
+      - name: Publish candidates to the arxiv-candidates branch
+        run: |
+          cp "$RUNNER_TEMP/candidates.json" /tmp/candidates.json
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan arxiv-candidates
+          git rm -rq --cached .
+          cp /tmp/candidates.json candidates.json
+          git add candidates.json
+          git commit -qm "arXiv candidates ($(date -u +%Y-%m-%d))"
+          git push -f origin arxiv-candidates
