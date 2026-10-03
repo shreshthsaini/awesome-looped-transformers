@@ -71,7 +71,8 @@ def _query(params: dict, retries: int = 3) -> list[dict]:
     for attempt in range(retries):
         try:
             root = ET.fromstring(http_get(url, timeout=60))
-            return [_entry_to_dict(e) for e in root.findall("a:entry", NS) if e.find("a:title", NS) is not None]
+            return [_entry_to_dict(e) for e in root.findall("a:entry", NS)
+                    if e.find("a:title", NS) is not None and "api/errors" not in (e.findtext("a:id", "", NS))]
         except Exception:  # noqa: BLE001 - arXiv is flaky; retry politely
             if attempt == retries - 1:
                 raise

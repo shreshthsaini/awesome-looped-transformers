@@ -30,6 +30,17 @@ jobs:
       - name: Sync titles, authors and dates from arXiv
         run: python scripts/sync_arxiv.py
         continue-on-error: true
+      - name: Report entries that arXiv disagrees with
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          f="$RUNNER_TEMP/arxiv_sync_problems.md"
+          [ -f "$f" ] || exit 0
+          title="arXiv sync: entries need attention"
+          n=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --search "in:title \"$title\"" --json number -q '.[0].number')
+          if [ -n "$n" ]; then gh issue edit "$n" --repo "$GITHUB_REPOSITORY" --body-file "$f"
+          else gh issue create --repo "$GITHUB_REPOSITORY" --title "$title" --body-file "$f" --label fix-entry || \
+               gh issue create --repo "$GITHUB_REPOSITORY" --title "$title" --body-file "$f"; fi
       - run: python scripts/validate.py
       - run: python scripts/plot_progress.py
       - run: python scripts/build_readme.py

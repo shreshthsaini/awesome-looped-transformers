@@ -94,3 +94,5 @@ resource_kinds:
     title: Talks & Videos
   - id: tutorial
     title: Tutorials
+  - id: related
+    title: Related Lists & Community Surveys

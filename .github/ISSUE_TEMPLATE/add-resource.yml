@@ -19,7 +19,7 @@ body:
     id: kind
     attributes:
       label: Kind
-      options: [code, model, benchmark, blog, talk, tutorial]
+      options: [code, model, benchmark, blog, talk, tutorial, related]
     validations:
       required: true
   - type: textarea

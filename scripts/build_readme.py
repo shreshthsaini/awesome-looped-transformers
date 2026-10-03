@@ -47,11 +47,13 @@ def stars_badge(url: str | None) -> str:
 
 
 def links(p: dict) -> str:
-    out = [f"[Paper]({p['paper_url']})"]
+    out = []
+    if p.get("arxiv"):
+        out.append(f"[PDF](https://arxiv.org/pdf/{p['arxiv']})")
     if p.get("code_url") and "github.com" not in p["code_url"]:
         out.append(f"[Code]({p['code_url']})")
     if p.get("project_url"):
-        out.append(f"[Project]({p['project_url']})")
+        out.append(f"[Project / Model]({p['project_url']})")
     return " · ".join(out)
 
 
@@ -60,7 +62,7 @@ def paper_row(p: dict) -> str:
     meta = f"<sub>{esc(fmt_authors(p['authors']))}</sub>"
     tldr = f"<br><sub>💡 {esc(p['tldr'])}</sub>" if p.get("tldr") else ""
     code = stars_badge(p.get("code_url")) or ("—" if not p.get("code_url") else f"[Code]({p['code_url']})")
-    extra = f"<br><sub>{links(p)}</sub>"
+    extra = f"<br><sub>{links(p)}</sub>" if links(p) else ""
     return (f"| {p['date'][:7]} | {title}<br>{meta}{tldr}{extra} | {esc(p['venue'])} | `{p['type']}` "
             f"| {code} |")
 

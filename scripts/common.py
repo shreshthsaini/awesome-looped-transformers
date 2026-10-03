@@ -39,6 +39,11 @@ class _Dumper(yaml.SafeDumper):
         return super().increase_indent(flow, False)
 
 
+# Records are block mappings; short lists (authors, tags) stay inline for readability.
+_Dumper.add_representer(list, lambda d, v: d.represent_sequence(
+    "tag:yaml.org,2002:seq", v, flow_style=all(not isinstance(x, (dict, list)) for x in v)))
+
+
 def load_yaml(path: Path):
     with open(path, encoding="utf-8") as fh:
         return yaml.safe_load(fh) or []
@@ -77,7 +82,7 @@ HEADER = (
 def save_papers(papers: list[dict]) -> None:
     papers = sorted(papers, key=lambda p: (p.get("date", ""), p.get("title", "")), reverse=True)
     body = yaml.dump([_ordered(p, FIELD_ORDER) for p in papers], Dumper=_Dumper, sort_keys=False,
-                     allow_unicode=True, width=110, default_flow_style=None)
+                     allow_unicode=True, width=110, default_flow_style=False)
     body = re.sub(r"\n- id:", "\n\n- id:", body)
     PAPERS_PATH.write_text(HEADER + body, encoding="utf-8")
 
@@ -85,7 +90,7 @@ def save_papers(papers: list[dict]) -> None:
 def save_resources(resources: list[dict]) -> None:
     resources = sorted(resources, key=lambda r: (r.get("kind", ""), (r.get("name") or "").lower()))
     body = yaml.dump([_ordered(r, RESOURCE_FIELD_ORDER) for r in resources], Dumper=_Dumper,
-                     sort_keys=False, allow_unicode=True, width=110, default_flow_style=None)
+                     sort_keys=False, allow_unicode=True, width=110, default_flow_style=False)
     body = re.sub(r"\n- name:", "\n\n- name:", body)
     RESOURCES_PATH.write_text(
         "# Code, checkpoints, blogs, talks and other non-paper resources.\n\n" + body, encoding="utf-8")

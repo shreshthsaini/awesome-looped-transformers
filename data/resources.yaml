@@ -1,1 +1,263 @@
-[]
+# Code, checkpoints, blogs, talks and other non-paper resources.
+
+- name: Adaptive Computation Time (ACT) in Neural Networks [3/3]
+  kind: blog
+  url: https://moocaholic.medium.com/adaptive-computation-time-act-in-neural-networks-3-3-99452b2eff18
+  date: 2020-01
+  description: Reviews ACT in transformers, including Universal Transformers with per-position halting and ALBERT-style
+    sharing.
+  related_arxiv: '1807.03819'
+
+- name: Exact Input Writes Improve Stable Looped Language Models
+  kind: blog
+  url: https://huskydoge.github.io/husky-blog/posts/recursive_models/improve-parcae/
+  date: 2026-04
+  description: Proposes an exact zero-order-hold input write for Parcae-style looped LMs and reports lower validation
+    loss.
+  related_arxiv: '2604.12946'
+
+- name: Loop-Model FLOPs and Memory in an Ablation Chain
+  kind: blog
+  url: https://huskydoge.github.io/husky-blog/posts/recursive_models/loop-cost/
+  date: 2026-04
+  description: Walks through FLOPs and memory costs of loop-model training choices such as weight sharing, detach
+    and truncation.
+
+- name: 'Looped-GPT: Looping During Pre-training improves Generalization'
+  kind: blog
+  url: https://sanyalsunny111.github.io/posts/2026-01-15-post1-looped-gpt/
+  date: 2026-01
+  description: Blog post reporting that looped GPT pretraining improves generalization under matched parameters
+    and FLOPs.
+
+- name: The Hidden Drivers of HRM's Performance on ARC-AGI
+  kind: blog
+  url: https://arcprize.org/blog/hrm-analysis
+  date: 2025-08
+  description: ARC Prize analysis finding that HRM's outer refinement loop and augmentation, not its hierarchy,
+    drive its ARC results.
+  related_arxiv: '2506.21734'
+
+- name: Towards Looped Models Done Right, Part I
+  kind: blog
+  url: https://ifm-research.notion.site/Towards-Looped-Models-Done-Right-3ade511912ec8128987dfeb7a5580043
+  date: 2026-07
+  description: Compute-matched ablations of loop topology, input injection and recurrent-state design for looped
+    LMs.
+
+- name: ANIRA
+  kind: code
+  url: https://github.com/merlresearch/ANIRA
+  date: 2026-02
+  description: Controlled recurrent-transformer framework for studying per-token dynamic compute allocation.
+  related_arxiv: '2602.08864'
+
+- name: Deep Equilibrium Models
+  kind: code
+  url: https://github.com/locuslab/deq
+  date: 2019-09
+  description: Official DEQ code for fixed-point weight-tied models with implicit differentiation.
+  related_arxiv: '1909.01377'
+
+- name: deep-thinking
+  kind: code
+  url: https://github.com/aks2203/deep-thinking
+  date: 2022-02
+  description: Deep Thinking networks with recall and progressive loss for easy-to-hard extrapolation in recurrent
+    networks.
+  related_arxiv: '2202.05826'
+
+- name: HRM
+  kind: code
+  url: https://github.com/sapientinc/HRM
+  date: 2025-06
+  description: Official implementation of the Hierarchical Reasoning Model with released Sudoku, maze and ARC checkpoints.
+  related_arxiv: '2506.21734'
+
+- name: HRM analysis (ARC Prize)
+  kind: code
+  url: https://github.com/arcprize/hierarchical-reasoning-model-analysis
+  date: 2025-08
+  description: ARC Prize ablation code used to replicate HRM and isolate what drives its ARC-AGI performance.
+  related_arxiv: '2506.21734'
+
+- name: huginn-latent-cot
+  kind: code
+  url: https://github.com/wenquanlu/huginn-latent-cot
+  date: 2025-07
+  description: Probing code (logit lens, coda lens, rank trajectories) for decoding latent reasoning in Huginn.
+  related_arxiv: '2507.02199'
+
+- name: Loop-Think-Generalize
+  kind: code
+  url: https://github.com/OSU-NLP-Group/Loop-Think-Generalize
+  date: 2026-04
+  description: Code for studying implicit multi-hop reasoning and depth extrapolation in recurrent-depth transformers.
+  related_arxiv: '2604.07822'
+
+- name: Looped-GPT
+  kind: code
+  url: https://github.com/sanyalsunny111/Looped-GPT
+  date: 2026-01
+  description: Minimal, hackable nanoGPT-style implementation for pretraining looped GPT models.
+
+- name: looped-lm-scaling
+  kind: code
+  url: https://github.com/kschwethelm/looped-lm-scaling
+  date: 2026-04
+  description: Code and checkpoints for iso-depth scaling laws of looped language models.
+  related_arxiv: '2604.21106'
+
+- name: looped_transformer
+  kind: code
+  url: https://github.com/leiay/looped_transformer
+  date: 2023-11
+  description: Code for looped transformers that learn in-context learning algorithms with input injection.
+  related_arxiv: '2311.12424'
+
+- name: LoopFormer
+  kind: code
+  url: https://github.com/armenjeddi/loopformer
+  date: 2026-02
+  description: Official code for elastic-depth looped transformers trained with shortcut modulation.
+  related_arxiv: '2602.11451'
+
+- name: loopscape
+  kind: code
+  url: https://github.com/GilpinLab/loopscape
+  date: 2026-09
+  description: Tools for probing fractal convergence basins of recurrent reasoning models such as looped transformers
+    and TRM-style solvers.
+  related_arxiv: '2609.04963'
+
+- name: Mixture-of-Recursions
+  kind: code
+  url: https://github.com/raymin0223/mixture_of_recursions
+  date: 2025-07
+  description: Official implementation of Mixture-of-Recursions, which routes tokens to different recursion depths
+    of a shared block.
+  related_arxiv: '2507.10524'
+
+- name: MoEUT
+  kind: code
+  url: https://github.com/robertcsordas/moeut
+  date: 2024-05
+  description: Official implementation of Mixture-of-Experts Universal Transformers.
+  related_arxiv: '2405.16039'
+
+- name: Parcae
+  kind: code
+  url: https://github.com/sandyresearch/parcae
+  date: 2026-04
+  description: Code for Parcae, a stabilized looped language model architecture with scaling laws.
+  related_arxiv: '2604.12946'
+
+- name: recurrent-pretraining (Huginn)
+  kind: code
+  url: https://github.com/seal-rg/recurrent-pretraining
+  date: 2025-02
+  description: Official pretraining and inference code for the Huginn-0125 recurrent-depth language model trained
+    on Frontier.
+  related_arxiv: '2502.05171'
+
+- name: retrofitting-recurrence
+  kind: code
+  url: https://github.com/mcleish7/retrofitting-recurrence
+  date: 2025-11
+  description: Code for converting pretrained language models into depth-recurrent models with a recurrence curriculum.
+  related_arxiv: '2511.07384'
+
+- name: Sparse Universal Transformer
+  kind: code
+  url: https://github.com/shawntan/SUT
+  date: 2023-10
+  description: Implementation of Sparse Universal Transformers with stick-breaking halting for machine translation.
+  related_arxiv: '2310.07096'
+
+- name: Tensor2Tensor (Universal Transformer)
+  kind: code
+  url: https://github.com/tensorflow/tensor2tensor
+  description: Google library containing the original Universal Transformer implementation.
+  related_arxiv: '1807.03819'
+
+- name: Think-at-Hard (TaH)
+  kind: code
+  url: https://github.com/thu-nics/TaH
+  date: 2025-11
+  description: Official code for Think-at-Hard, which selectively applies extra latent iterations only to hard tokens.
+  related_arxiv: '2511.08577'
+
+- name: TinyRecursiveModels (TRM)
+  kind: code
+  url: https://github.com/SamsungSAILMontreal/TinyRecursiveModels
+  date: 2025-10
+  description: Official code for Tiny Recursive Models, a two-layer network applied recursively for puzzle reasoning.
+  related_arxiv: '2510.04871'
+
+- name: utm-jax
+  kind: code
+  url: https://github.com/che-shr-cat/utm-jax
+  date: 2026-04
+  description: JAX/Flax Universal Transformer with memory tokens and ACT for studying depth-state trade-offs.
+  related_arxiv: '2604.21999'
+
+- name: HRM checkpoint (ARC-2)
+  kind: model
+  url: https://huggingface.co/sapientinc/HRM-checkpoint-ARC-2
+  description: Released Hierarchical Reasoning Model checkpoint for ARC-AGI-2.
+  related_arxiv: '2506.21734'
+
+- name: Huginn-0125
+  kind: model
+  url: https://huggingface.co/tomg-group-umd/huginn-0125
+  date: 2025-02
+  description: 3.5B-parameter recurrent-depth language model trained on 800B tokens with test-time adjustable recurrence.
+  related_arxiv: '2502.05171'
+
+- name: Ouro-1.4B
+  kind: model
+  url: https://huggingface.co/ByteDance/Ouro-1.4B
+  date: 2025-10
+  description: ByteDance Seed 1.4B looped language model pretrained on 7.7T tokens; a Thinking variant is also released.
+  related_arxiv: '2510.25741'
+
+- name: Ouro-2.6B
+  kind: model
+  url: https://huggingface.co/ByteDance/Ouro-2.6B
+  date: 2025-10
+  description: ByteDance Seed 2.6B looped language model with shared recurrent layers and learned early exit; a
+    Thinking variant is also released.
+  related_arxiv: '2510.25741'
+
+- name: Retrofitted recurrence models
+  kind: model
+  url: https://huggingface.co/collections/tomg-group-umd/retrofitting-recurrence
+  date: 2025-11
+  description: Collection of pretrained LMs converted into depth-recurrent models.
+  related_arxiv: '2511.07384'
+
+- name: TaH-plus-1.7B
+  kind: model
+  url: https://huggingface.co/nics-efc/TaH-plus-1.7B
+  date: 2025-11
+  description: Qwen3-1.7B-based model that iterates latently only on hard tokens.
+  related_arxiv: '2511.08577'
+
+- name: Awesome Loop Transformer survey (EN)
+  kind: related
+  url: https://github.com/asimfish/awesome_loop_transformer/blob/main/survey/en/survey_en.md
+  date: 2026-09
+  description: Community survey of looped transformers with taxonomy, timeline, paper map and open problems, plus
+    slides.
+
+- name: Awesome-Loop-Models
+  kind: related
+  url: https://github.com/huskydoge/Awesome-Loop-Models
+  date: 2026-10
+  description: Curated catalog of about 250 loop-model papers and blogs with an interactive browser and daily briefings.
+
+- name: 'Looped Transformers: A Survey of Recurrent-Depth Architectures for Language Models'
+  kind: related
+  url: https://github.com/ngocdaobao/A-Survey-on-Looped-Transformers
+  description: GitHub taxonomy of looped LMs by loop topology, loop-count policy, state, sharing, training recipe
+    and KV strategy.

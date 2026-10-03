@@ -40,8 +40,11 @@ def _style(ax, t):
 
 
 def _title(ax, t, title, subtitle):
-    ax.set_title(title, loc="left", fontsize=12, fontweight="bold", color=t["ink"], pad=22)
-    ax.text(0, 1.035, subtitle, transform=ax.transAxes, fontsize=9, color=t["ink2"], va="bottom")
+    # Offsets in points so spacing is identical regardless of figure height.
+    ax.annotate(title, xy=(0, 1), xycoords="axes fraction", xytext=(0, 26), textcoords="offset points",
+                fontsize=12, fontweight="bold", color=t["ink"], va="bottom")
+    ax.annotate(subtitle, xy=(0, 1), xycoords="axes fraction", xytext=(0, 12), textcoords="offset points",
+                fontsize=9, color=t["ink2"], va="bottom")
 
 
 def timeline(papers, config, t, out):
@@ -99,7 +102,8 @@ def timeline(papers, config, t, out):
     _title(ax2, t, "Cumulative papers", "Everything in the list, by first arXiv / publication date")
 
     fig.tight_layout(w_pad=3)
-    fig.savefig(out, format="svg", facecolor=t["surface"], metadata={"Date": None})
+    fig.savefig(out, format="svg", facecolor=t["surface"], metadata={"Date": None}, bbox_inches="tight",
+                pad_inches=0.25)
     plt.close(fig)
 
 
@@ -125,7 +129,8 @@ def by_category(papers, config, t, out):
     ax.xaxis.set_major_locator(MaxNLocator(integer=True))
     _title(ax, t, "Papers per category", "Each paper is filed under one primary category")
     fig.tight_layout()
-    fig.savefig(out, format="svg", facecolor=t["surface"], metadata={"Date": None})
+    fig.savefig(out, format="svg", facecolor=t["surface"], metadata={"Date": None}, bbox_inches="tight",
+                pad_inches=0.25)
     plt.close(fig)
 
 
