@@ -61,14 +61,13 @@ jobs:
             python scripts/add_entry.py paper --issue-body-env ISSUE_BODY
           fi
 
-      - name: Rebuild README and charts
+      - name: Rebuild README
         if: steps.add.outcome == 'success'
         env:
           SUMMARY_FILE: ${{ steps.add.outputs.summary_file }}
           ISSUE: ${{ github.event.issue.number }}
           EVENT: ${{ github.event_name }}
         run: |
-          python scripts/plot_progress.py
           python scripts/build_readme.py
           # Issue submissions close their issue on merge; /add-paper comments only reference it.
           keyword=$([ "$EVENT" = "issues" ] && echo "Closes" || echo "Requested in")
@@ -88,7 +87,6 @@ jobs:
           add-paths: |
             data/
             README.md
-            assets/
 
       - name: Report back on the issue
         if: always() && steps.add.outputs.summary_file != ''

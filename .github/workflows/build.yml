@@ -1,4 +1,4 @@
-# Regenerates README.md and the progress charts whenever the data or templates change on the default branch.
+# Regenerates README.md whenever the data or templates change on the default branch.
 name: Build README
 
 on:
@@ -42,14 +42,13 @@ jobs:
           else gh issue create --repo "$GITHUB_REPOSITORY" --title "$title" --body-file "$f" --label fix-entry || \
                gh issue create --repo "$GITHUB_REPOSITORY" --title "$title" --body-file "$f"; fi
       - run: python scripts/validate.py
-      - run: python scripts/plot_progress.py
       - run: python scripts/build_readme.py
       - name: Commit if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/ README.md assets/
-          git diff --cached --quiet || { git commit -m "chore: rebuild README and charts"; git push; }
+          git add data/ README.md
+          git diff --cached --quiet || { git commit -m "Update README"; git push; }
       - name: Make sure the bot labels exist
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

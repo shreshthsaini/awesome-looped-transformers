@@ -1,4 +1,4 @@
-.PHONY: install build validate stars plots
+.PHONY: install build validate sync
 
 install:
 	pip install -r requirements.txt
@@ -6,11 +6,8 @@ install:
 validate:
 	python scripts/validate.py
 
-plots:
-	python scripts/plot_progress.py
-
-build: validate plots
+build: validate
 	python scripts/build_readme.py
 
-stars:
-	python scripts/update_stars.py
+sync:
+	python scripts/sync_arxiv.py

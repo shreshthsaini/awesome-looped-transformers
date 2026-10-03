@@ -78,7 +78,7 @@ def section(cat: dict, papers: list[dict]) -> str:
     if len(rows) > 12:
         body = (f"<details open>\n<summary><b>{len(rows)} papers</b> (click to collapse)</summary>\n\n"
                 f"{body}\n\n</details>")
-    return head + body + "\n\n<div align=\"right\"><a href=\"#-contents\">⬆ back to top</a></div>\n"
+    return head + body + "\n\n<div align=\"right\"><a href=\"#-table-of-contents\">⬆ back to top</a></div>\n"
 
 
 def news(papers: list[dict], n: int = 10) -> str:
@@ -90,51 +90,38 @@ def news(papers: list[dict], n: int = 10) -> str:
     return "\n".join(lines)
 
 
-def stats_table(papers: list[dict], config: dict) -> str:
-    by_cat = collections.defaultdict(list)
-    for p in papers:
-        by_cat[p["category"]].append(p)
-    rows = ["| Category | Papers | With code | Newest |", "|:---|:---:|:---:|:---:|"]
-    for c in config["categories"]:
-        ps = by_cat.get(c["id"], [])
-        newest = max((p["date"][:7] for p in ps), default="—")
-        with_code = sum(1 for p in ps if p.get("code_url"))
-        rows.append(f"| {c['emoji']} [{c['title']}](#{anchor(c['emoji'] + ' ' + c['title'])}) | "
-                    f"{len(ps)} | {with_code} | {newest} |")
-    total_code = sum(1 for p in papers if p.get("code_url"))
-    rows.append(f"| **Total** | **{len(papers)}** | **{total_code}** | |")
-    types = collections.Counter(p["type"] for p in papers)
-    type_line = " · ".join(f"`{t}` {types[t]}" for t in config["types"] if types.get(t))
-    return "\n".join(rows) + f"\n\n**By type:** {type_line}"
+def progress(papers: list[dict]) -> str:
+    """A plain-text progress tracker: papers per year with a simple bar."""
+    years = collections.Counter(p["date"][:4] for p in papers)
+    if not years:
+        return "_No papers yet._"
+    top = max(years.values())
+    rows = ["| Year | Papers | |", "|:---:|:---:|:---|"]
+    for y in sorted(years, reverse=True):
+        bar = "█" * max(1, round(28 * years[y] / top))
+        rows.append(f"| {y} | {years[y]} | `{bar}` |")
+    with_code = sum(1 for p in papers if p.get("code_url"))
+    return (f"**{len(papers)} papers** · **{with_code}** with official code · newest "
+            f"{max(p['date'] for p in papers)}\n\n" + "\n".join(rows))
 
 
-def top_starred(papers: list[dict], n: int = 10) -> str:
-    ranked = sorted((p for p in papers if p.get("stars")), key=lambda p: -p["stars"])[:n]
-    if not ranked:
-        return "_Star counts appear after the first daily refresh._"
-    rows = ["| # | Paper | Repository | Stars |", "|:---:|:---|:---|:---:|"]
-    for i, p in enumerate(ranked, 1):
-        repo = "/".join(urllib.parse.urlparse(p["code_url"]).path.strip("/").split("/")[:2])
-        rows.append(f"| {i} | [{esc(p['title'])}]({p['paper_url']}) | [{repo}]({p['code_url']}) "
-                    f"| {p['stars']:,} |")
-    return "\n".join(rows)
-
-
-def toc(config: dict, has_resources: bool) -> str:
-    lines = [
-        "- [What is a looped transformer?](#-what-is-a-looped-transformer)",
-        "- [Recently added](#-recently-added)",
-        "- [Progress tracker](#-progress-tracker)",
-        "- [Papers](#-papers)",
-    ]
-    for c in config["categories"]:
-        heading = f"{c['emoji']} {c['title']}"
-        lines.append(f"  - [{c['title']}](#{anchor(heading)})")
+def toc(config: dict, papers: list[dict], has_resources: bool) -> str:
+    counts = collections.Counter(p["category"] for p in papers)
+    cells = [f"{c['emoji']} [{c['title']}](#{anchor(c['emoji'] + ' ' + c['title'])}) `{counts.get(c['id'], 0)}`"
+             for c in config["categories"]]
+    cols = 2
+    while len(cells) % cols:
+        cells.append("")
+    rows = ["| " + " | ".join(["Papers by category"] + [""] * (cols - 1)) + " |",
+            "|" + ":---|" * cols]
+    for i in range(0, len(cells), cols):
+        rows.append("| " + " | ".join(cells[i:i + cols]) + " |")
+    links = ["[What is a looped transformer?](#-what-is-a-looped-transformer)",
+             "[Recently added](#-recently-added)", "[Papers](#-papers)"]
     if has_resources:
-        lines.append("- [Resources](#-resources)")
-    lines += ["- [Contributing](#-contributing)", "- [Star history](#-star-history)",
-              "- [Citation](#-citation)"]
-    return "\n".join(lines)
+        links.append("[Resources](#-resources)")
+    links += ["[Contributing](#-contributing)", "[Progress](#-progress)", "[Citation](#-citation)"]
+    return " · ".join(links) + "\n\n" + "\n".join(rows)
 
 
 def resources_md(resources: list[dict], config: dict) -> str:
@@ -177,10 +164,9 @@ def render() -> str:
         "CATEGORY_COUNT": str(len(config["categories"])),
         "YEAR_RANGE": f"{years[0]}–{years[-1]}",
         "LAST_PAPER_DATE": max((p["date"] for p in papers), default="—"),
-        "TOC": toc(config, bool(resources)),
+        "TOC": toc(config, papers, bool(resources)),
         "NEWS": news(papers),
-        "STATS_TABLE": stats_table(papers, config),
-        "TOP_STARRED": top_starred(papers),
+        "PROGRESS": progress(papers),
         "SECTIONS": sections,
         "RESOURCES": resources_md(resources, config),
         "MAINTAINER": config["maintainer"],

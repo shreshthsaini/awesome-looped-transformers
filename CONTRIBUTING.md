@@ -14,7 +14,7 @@ For **"Add a paper"**, paste the arXiv link, pick a category and write a one-sen
 
 1. fetches the title, authors, first-submission date, venue hints and code link from the arXiv API,
 2. checks the paper is not already listed (by arXiv id and by normalized title),
-3. writes the entry to `data/papers.yaml`, regenerates `README.md` and the progress charts,
+3. writes the entry to `data/papers.yaml` and regenerates `README.md`,
 4. opens a pull request that closes your issue on merge, and comments back with what it found.
 
 If something goes wrong (duplicate, broken link, unknown category) the bot explains on the issue and adds
@@ -39,7 +39,7 @@ recurrent-depth transformers, each with a ready-to-paste `/add-paper` line.
 ```bash
 pip install -r requirements.txt
 # edit data/papers.yaml or data/resources.yaml
-make build          # = validate + charts + README
+make build          # = validate + README
 ```
 
 ### Paper fields (`data/papers.yaml`)
@@ -58,7 +58,6 @@ make build          # = validate + charts + README
 | `paper_url` | ✅ | Canonical link (arXiv abs page when available) |
 | `code_url` | | **Official** implementation only |
 | `project_url` | | Project page or released checkpoint |
-| `stars` | | Filled in daily by the bot; do not edit |
 | `tldr` | ✅ | One sentence, about 25 words, in your own words |
 | `added` | | Date the entry was added (set by the bot) |
 
@@ -95,8 +94,8 @@ data/papers.yaml        every paper (single source of truth)
 data/resources.yaml     code, checkpoints, blogs, talks, benchmarks
 templates/              README template
 scripts/                build, validation, arXiv + GitHub helpers, bots
-assets/                 logo and generated charts
-.github/workflows/      add-entry bot, README build, validation, star refresh, arXiv watch, link check
+assets/                 logo
+.github/workflows/      add-entry bot, README build + arXiv sync, validation, arXiv watch, link check
 ```
 
 ## One-time setup for forks / maintainers

@@ -70,17 +70,6 @@ types: [Method, Theory, Analysis, Survey, Benchmark, Model, Position]
 tags: [language, vision, diffusion, theory, reasoning, algorithmic, graph, icl, efficiency, adaptive,
        multimodal, rl, interpretability, scaling, pretraining, test-time-compute, audio, video, robotics]
 
-# Groups used in the progress plot (keeps the chart to 4 readable colors).
-plot_groups:
-  - name: Theory & Foundations
-    categories: [surveys, foundations, theory, in-context-learning, equilibrium-implicit]
-  - name: Reasoning
-    categories: [algorithmic-reasoning, latent-reasoning, analysis-interpretability]
-  - name: Language Models & Efficiency
-    categories: [language-models, adaptive-computation, efficiency]
-  - name: Diffusion, Vision & Multimodal
-    categories: [diffusion-generative, vision-multimodal]
-
 resource_kinds:
   - id: code
     title: Code & Libraries

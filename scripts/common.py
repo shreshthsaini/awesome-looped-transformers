@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import datetime as dt
-import json
 import os
 import re
 import unicodedata
@@ -21,9 +20,9 @@ RESOURCES_PATH = DATA / "resources.yaml"
 
 FIELD_ORDER = [
     "id", "title", "authors", "date", "venue", "type", "category", "tags",
-    "arxiv", "paper_url", "code_url", "project_url", "stars", "tldr", "added",
+    "arxiv", "paper_url", "code_url", "project_url", "tldr", "added",
 ]
-RESOURCE_FIELD_ORDER = ["name", "kind", "url", "date", "description", "related_arxiv", "stars"]
+RESOURCE_FIELD_ORDER = ["name", "kind", "url", "date", "description", "related_arxiv"]
 
 ARXIV_RE = re.compile(r"(?:arxiv\.org/(?:abs|pdf|html)/|arxiv:\s*)?(\d{4}\.\d{4,5})(?:v\d+)?", re.I)
 GITHUB_RE = re.compile(r"https?://github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)")
@@ -162,17 +161,6 @@ def http_get(url: str, token: str | None = None, accept: str | None = None, time
         req.add_header("Accept", accept)
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return resp.read()
-
-
-def github_stars(url: str | None, token: str | None = None) -> int | None:
-    gh = parse_github(url)
-    if not gh:
-        return None
-    try:
-        data = json.loads(http_get(f"https://api.github.com/repos/{gh[0]}/{gh[1]}", token=token))
-        return int(data.get("stargazers_count", 0))
-    except (urllib.error.URLError, ValueError, TimeoutError):
-        return None
 
 
 # --------------------------------------------------------------------- validation

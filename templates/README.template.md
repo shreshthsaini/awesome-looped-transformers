@@ -9,7 +9,7 @@ models that get deeper by running the same block again.**
 
 [![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)
 [![Papers](https://img.shields.io/badge/papers-{{PAPER_COUNT}}-2a78d6?style=flat)](#-papers)
-[![With code](https://img.shields.io/badge/with%20code-{{CODE_COUNT}}-1baf7a?style=flat)](#-progress-tracker)
+[![With code](https://img.shields.io/badge/with%20code-{{CODE_COUNT}}-1baf7a?style=flat)](#-papers)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-7b61ff?style=flat)](CONTRIBUTING.md)
 [![Last commit](https://img.shields.io/github/last-commit/{{REPO}}?style=flat&color=eb6834)](https://github.com/{{REPO}}/commits)
 [![GitHub stars](https://img.shields.io/github/stars/{{REPO}}?style=flat&color=eda100)](https://github.com/{{REPO}}/stargazers)
@@ -19,9 +19,15 @@ models that get deeper by running the same block again.**
 **[🔗 Add a resource](https://github.com/{{REPO}}/issues/new?template=add-resource.yml)** ·
 **[🐛 Report a mistake](https://github.com/{{REPO}}/issues/new?template=fix-entry.yml)**
 
-<sub>{{PAPER_COUNT}} papers · {{CATEGORY_COUNT}} categories · {{YEAR_RANGE}} · newest paper {{LAST_PAPER_DATE}} · star counts refreshed daily</sub>
+<sub>{{PAPER_COUNT}} papers · {{CATEGORY_COUNT}} categories · {{YEAR_RANGE}} · newest paper {{LAST_PAPER_DATE}}</sub>
 
 </div>
+
+---
+
+## 📑 Table of Contents
+
+{{TOC}}
 
 ---
 
@@ -49,41 +55,9 @@ Ouro, Mixture-of-Recursions), **adaptive depth**, **compression** of pretrained 
 ones, **looped diffusion and vision** backbones, and their infinite-depth cousins, **deep equilibrium
 models**.
 
-## 📑 Contents
-
-{{TOC}}
-
 ## 🆕 Recently added
 
 {{NEWS}}
-
-## 📈 Progress tracker
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-timeline-dark.svg">
-  <img alt="Bar chart of looped-transformer papers per year by research area, and a line chart of the cumulative number of papers in this list" src="assets/stats-timeline-light.svg" width="100%">
-</picture>
-
-<details>
-<summary><b>Papers per category</b> (chart + table)</summary>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-categories-dark.svg">
-  <img alt="Horizontal bar chart of the number of papers in each category" src="assets/stats-categories-light.svg" width="100%">
-</picture>
-
-{{STATS_TABLE}}
-
-</details>
-
-<details>
-<summary><b>🔥 Most-starred implementations</b></summary>
-
-{{TOP_STARRED}}
-
-</details>
-
-<sub>Charts and counts are regenerated automatically by GitHub Actions on every change to <code>data/papers.yaml</code>.</sub>
 
 ## 📄 Papers
 
@@ -104,7 +78,7 @@ Contributions are very welcome, and the fastest path is fully automated:
 1. **[Open an "Add a paper" issue](https://github.com/{{REPO}}/issues/new?template=add-paper.yml)**
    and paste an arXiv link. Everything else is optional.
 2. A bot fetches the **title, authors, date, venue and code link** from arXiv, files it in the category you
-   picked, regenerates this README and the charts, and **opens a pull request** for you.
+   picked, regenerates this README, and **opens a pull request** for you.
 3. A maintainer reviews and merges. Done.
 
 Maintainers can also add a paper from any issue or PR comment with
@@ -115,7 +89,11 @@ Prefer editing by hand? Add an entry to [`data/papers.yaml`](data/papers.yaml) a
 validates it and the README is rebuilt on merge. See **[CONTRIBUTING.md](CONTRIBUTING.md)** for the field
 reference and inclusion criteria.
 
-## ⭐ Star history
+## 📈 Progress
+
+{{PROGRESS}}
+
+### ⭐ Star history
 
 <a href="https://star-history.com/#{{REPO}}&Date">
   <picture>
@@ -131,7 +109,7 @@ If this list helps your research, please consider citing it:
 ```bibtex
 @misc{{{CITATION_KEY}},
   title        = {Awesome Looped Transformers: A Curated List of Looped, Recurrent-Depth and Weight-Tied Transformer Research},
-  author       = {{{MAINTAINER}} and contributors},
+  author       = {{{MAINTAINER}}},
   year         = {{{YEAR}}},
   howpublished = {\url{https://github.com/{{REPO}}}},
   note         = {GitHub repository}
@@ -145,5 +123,5 @@ button works too.
 
 [![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
 
-To the extent possible under law, the contributors have waived all copyright and related rights to this
+To the extent possible under law, the author has waived all copyright and related rights to this
 list. Paper titles, abstracts and code belong to their respective authors.

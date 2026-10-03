@@ -21,6 +21,5 @@ jobs:
       - run: python scripts/validate.py
       - name: README renders
         run: |
-          python scripts/plot_progress.py
           python scripts/build_readme.py
           git diff --stat

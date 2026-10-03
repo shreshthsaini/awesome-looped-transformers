@@ -20,7 +20,7 @@ import sys
 from pathlib import Path
 
 import arxiv_api
-from common import (find_duplicate, github_stars, load_config, load_papers, load_resources, make_id,
+from common import (find_duplicate, load_config, load_papers, load_resources, make_id,
                     parse_arxiv_id, save_papers, save_resources, today, validate_all)
 
 SUMMARY = Path(os.environ.get("RUNNER_TEMP", "/tmp")) / "add_entry_summary.md"
@@ -115,7 +115,6 @@ def build_paper(raw: dict, config: dict) -> dict:
     }
     if paper["code_url"]:
         paper["code_url"] = paper["code_url"].rstrip("/")
-        paper["stars"] = github_stars(paper["code_url"], os.environ.get("GITHUB_TOKEN"))
     if unknown:
         paper["_unknown_tags"] = unknown
     return paper

@@ -10,7 +10,7 @@ models that get deeper by running the same block again.**
 
 [![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)
 [![Papers](https://img.shields.io/badge/papers-235-2a78d6?style=flat)](#-papers)
-[![With code](https://img.shields.io/badge/with%20code-97-1baf7a?style=flat)](#-progress-tracker)
+[![With code](https://img.shields.io/badge/with%20code-97-1baf7a?style=flat)](#-papers)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-7b61ff?style=flat)](CONTRIBUTING.md)
 [![Last commit](https://img.shields.io/github/last-commit/shreshthsaini/Rough-Claude-Cloud?style=flat&color=eb6834)](https://github.com/shreshthsaini/Rough-Claude-Cloud/commits)
 [![GitHub stars](https://img.shields.io/github/stars/shreshthsaini/Rough-Claude-Cloud?style=flat&color=eda100)](https://github.com/shreshthsaini/Rough-Claude-Cloud/stargazers)
@@ -20,9 +20,25 @@ models that get deeper by running the same block again.**
 **[🔗 Add a resource](https://github.com/shreshthsaini/Rough-Claude-Cloud/issues/new?template=add-resource.yml)** ·
 **[🐛 Report a mistake](https://github.com/shreshthsaini/Rough-Claude-Cloud/issues/new?template=fix-entry.yml)**
 
-<sub>235 papers · 13 categories · 2015–2026 · newest paper 2026-09-30 · star counts refreshed daily</sub>
+<sub>235 papers · 13 categories · 2015–2026 · newest paper 2026-09-30</sub>
 
 </div>
+
+---
+
+## 📑 Table of Contents
+
+[What is a looped transformer?](#-what-is-a-looped-transformer) · [Recently added](#-recently-added) · [Papers](#-papers) · [Resources](#-resources) · [Contributing](#-contributing) · [Progress](#-progress) · [Citation](#-citation)
+
+| Papers by category |  |
+|:---|:---|
+| 📚 [Surveys & Position Papers](#-surveys--position-papers) `3` | 🧱 [Foundations & Weight-Shared Architectures](#-foundations--weight-shared-architectures) `8` |
+| 📐 [Theory & Expressivity](#-theory--expressivity) `15` | 🔁 [In-Context Learning & Learned Optimizers](#-in-context-learning--learned-optimizers) `5` |
+| 🧮 [Algorithmic Reasoning & Length Generalization](#-algorithmic-reasoning--length-generalization) `16` | 🧠 [Recursive & Latent Reasoning](#-recursive--latent-reasoning) `22` |
+| 💬 [Looped & Recurrent-Depth Language Models](#-looped--recurrent-depth-language-models) `25` | ⏱️ [Adaptive Computation & Dynamic Depth](#-adaptive-computation--dynamic-depth) `21` |
+| ⚡ [Efficiency, Parameter Sharing & Compression](#-efficiency-parameter-sharing--compression) `28` | 🎨 [Diffusion & Generative Models](#-diffusion--generative-models) `16` |
+| 👁️ [Vision, Multimodal & Beyond](#-vision-multimodal--beyond) `26` | ♾️ [Equilibrium & Implicit Models](#-equilibrium--implicit-models) `15` |
+| 🔬 [Analysis & Interpretability](#-analysis--interpretability) `35` |  |
 
 ---
 
@@ -50,30 +66,6 @@ Ouro, Mixture-of-Recursions), **adaptive depth**, **compression** of pretrained 
 ones, **looped diffusion and vision** backbones, and their infinite-depth cousins, **deep equilibrium
 models**.
 
-## 📑 Contents
-
-- [What is a looped transformer?](#-what-is-a-looped-transformer)
-- [Recently added](#-recently-added)
-- [Progress tracker](#-progress-tracker)
-- [Papers](#-papers)
-  - [Surveys & Position Papers](#-surveys--position-papers)
-  - [Foundations & Weight-Shared Architectures](#-foundations--weight-shared-architectures)
-  - [Theory & Expressivity](#-theory--expressivity)
-  - [In-Context Learning & Learned Optimizers](#-in-context-learning--learned-optimizers)
-  - [Algorithmic Reasoning & Length Generalization](#-algorithmic-reasoning--length-generalization)
-  - [Recursive & Latent Reasoning](#-recursive--latent-reasoning)
-  - [Looped & Recurrent-Depth Language Models](#-looped--recurrent-depth-language-models)
-  - [Adaptive Computation & Dynamic Depth](#-adaptive-computation--dynamic-depth)
-  - [Efficiency, Parameter Sharing & Compression](#-efficiency-parameter-sharing--compression)
-  - [Diffusion & Generative Models](#-diffusion--generative-models)
-  - [Vision, Multimodal & Beyond](#-vision-multimodal--beyond)
-  - [Equilibrium & Implicit Models](#-equilibrium--implicit-models)
-  - [Analysis & Interpretability](#-analysis--interpretability)
-- [Resources](#-resources)
-- [Contributing](#-contributing)
-- [Star history](#-star-history)
-- [Citation](#-citation)
-
 ## 🆕 Recently added
 
 - **2026-09** · [Looped Diffusion Transformer](https://arxiv.org/abs/2609.40305) <sub>(arXiv)</sub>
@@ -86,51 +78,6 @@ models**.
 - **2026-09** · [Reasoning on the Simplex: Geometric Fixed-Point Models](https://arxiv.org/abs/2609.33540) <sub>(arXiv)</sub>
 - **2026-09** · [LoopTrack: A Simple Baseline for Parameter-Efficient Transformer Tracking](https://arxiv.org/abs/2609.33306) <sub>(arXiv)</sub>
 - **2026-09** · [Beyond the Training Horizon: Mechanisms and Limits of Length Generalization in Looped Transformers](https://arxiv.org/abs/2609.33144) <sub>(arXiv)</sub>
-
-## 📈 Progress tracker
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-timeline-dark.svg">
-  <img alt="Bar chart of looped-transformer papers per year by research area, and a line chart of the cumulative number of papers in this list" src="assets/stats-timeline-light.svg" width="100%">
-</picture>
-
-<details>
-<summary><b>Papers per category</b> (chart + table)</summary>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-categories-dark.svg">
-  <img alt="Horizontal bar chart of the number of papers in each category" src="assets/stats-categories-light.svg" width="100%">
-</picture>
-
-| Category | Papers | With code | Newest |
-|:---|:---:|:---:|:---:|
-| 📚 [Surveys & Position Papers](#-surveys--position-papers) | 3 | 3 | 2025-09 |
-| 🧱 [Foundations & Weight-Shared Architectures](#-foundations--weight-shared-architectures) | 8 | 6 | 2026-07 |
-| 📐 [Theory & Expressivity](#-theory--expressivity) | 15 | 3 | 2026-09 |
-| 🔁 [In-Context Learning & Learned Optimizers](#-in-context-learning--learned-optimizers) | 5 | 1 | 2026-05 |
-| 🧮 [Algorithmic Reasoning & Length Generalization](#-algorithmic-reasoning--length-generalization) | 16 | 8 | 2026-09 |
-| 🧠 [Recursive & Latent Reasoning](#-recursive--latent-reasoning) | 22 | 9 | 2026-09 |
-| 💬 [Looped & Recurrent-Depth Language Models](#-looped--recurrent-depth-language-models) | 25 | 11 | 2026-09 |
-| ⏱️ [Adaptive Computation & Dynamic Depth](#-adaptive-computation--dynamic-depth) | 21 | 11 | 2026-09 |
-| ⚡ [Efficiency, Parameter Sharing & Compression](#-efficiency-parameter-sharing--compression) | 28 | 11 | 2026-09 |
-| 🎨 [Diffusion & Generative Models](#-diffusion--generative-models) | 16 | 6 | 2026-09 |
-| 👁️ [Vision, Multimodal & Beyond](#-vision-multimodal--beyond) | 26 | 8 | 2026-09 |
-| ♾️ [Equilibrium & Implicit Models](#-equilibrium--implicit-models) | 15 | 11 | 2026-09 |
-| 🔬 [Analysis & Interpretability](#-analysis--interpretability) | 35 | 9 | 2026-09 |
-| **Total** | **235** | **97** | |
-
-**By type:** `Method` 152 · `Theory` 19 · `Analysis` 51 · `Survey` 3 · `Benchmark` 1 · `Model` 9
-
-</details>
-
-<details>
-<summary><b>🔥 Most-starred implementations</b></summary>
-
-_Star counts appear after the first daily refresh._
-
-</details>
-
-<sub>Charts and counts are regenerated automatically by GitHub Actions on every change to <code>data/papers.yaml</code>.</sub>
 
 ## 📄 Papers
 
@@ -148,7 +95,7 @@ implementation.
 | 2025-07 | **[A Survey on Latent Reasoning](https://arxiv.org/abs/2507.06203)**<br><sub>Rui-Jie Zhu, Tianhao Peng, Tianhao Cheng et al.</sub><br><sub>💡 Surveys latent reasoning, splitting it into vertical recurrence (looped, recurrent-depth activations) and horizontal recurrence over hidden states.</sub><br><sub>[PDF](https://arxiv.org/pdf/2507.06203)</sub> | arXiv | `Survey` | [![GitHub stars](https://img.shields.io/github/stars/multimodal-art-projection/LatentCoT-Horizon?style=flat&logo=github&label=&color=4c1)](https://github.com/multimodal-art-projection/LatentCoT-Horizon) |
 | 2025-05 | **[Reasoning Beyond Language: A Comprehensive Survey on Latent Chain-of-Thought Reasoning](https://arxiv.org/abs/2505.16782)**<br><sub>Xinghao Chen, Anhao Zhao, Heming Xia et al.</sub><br><sub>💡 Surveys latent chain-of-thought methods that reason in continuous hidden states, including recurrent-depth and looped approaches.</sub><br><sub>[PDF](https://arxiv.org/pdf/2505.16782)</sub> | arXiv | `Survey` | [![GitHub stars](https://img.shields.io/github/stars/EIT-NLP/Awesome-Latent-CoT?style=flat&logo=github&label=&color=4c1)](https://github.com/EIT-NLP/Awesome-Latent-CoT) |
 
-<div align="right"><a href="#-contents">⬆ back to top</a></div>
+<div align="right"><a href="#-table-of-contents">⬆ back to top</a></div>
 
 ### 🧱 Foundations & Weight-Shared Architectures
 
@@ -165,7 +112,7 @@ implementation.
 | 2018-07 | **[Recurrent Stacking of Layers for Compact Neural Machine Translation Models](https://arxiv.org/abs/1807.05353)**<br><sub>Raj Dabre, Atsushi Fujita</sub><br><sub>💡 Reuses a single encoder or decoder layer across all depths in NMT, nearly matching a six-layer baseline with a fraction of the parameters.</sub><br><sub>[PDF](https://arxiv.org/pdf/1807.05353)</sub> | AAAI 2019 | `Method` | — |
 | 2018-07 | **[Universal Transformers](https://arxiv.org/abs/1807.03819)**<br><sub>Mostafa Dehghani, Stephan Gouws, Oriol Vinyals et al.</sub><br><sub>💡 Weight-tied transformer that applies one block recurrently over depth with optional per-position ACT halting, gaining Turing-completeness under assumptions.</sub><br><sub>[PDF](https://arxiv.org/pdf/1807.03819)</sub> | ICLR 2019 | `Method` | [![GitHub stars](https://img.shields.io/github/stars/tensorflow/tensor2tensor?style=flat&logo=github&label=&color=4c1)](https://github.com/tensorflow/tensor2tensor) |
 
-<div align="right"><a href="#-contents">⬆ back to top</a></div>
+<div align="right"><a href="#-table-of-contents">⬆ back to top</a></div>
 
 ### 📐 Theory & Expressivity
 
@@ -194,7 +141,7 @@ implementation.
 
 </details>
 
-<div align="right"><a href="#-contents">⬆ back to top</a></div>
+<div align="right"><a href="#-table-of-contents">⬆ back to top</a></div>
 
 ### 🔁 In-Context Learning & Learned Optimizers
 
@@ -208,7 +155,7 @@ implementation.
 | 2024-10 | **[Can Looped Transformers Learn to Implement Multi-step Gradient Descent for In-context Learning?](https://arxiv.org/abs/2410.08292)**<br><sub>Khashayar Gatmiry, Nikunj Saunshi, Sashank J. Reddi et al.</sub><br><sub>💡 Shows the global minimizer of a linear looped Transformer's ICL loss implements multi-step preconditioned gradient descent and that training provably converges despite non-convexity.</sub><br><sub>[PDF](https://arxiv.org/pdf/2410.08292)</sub> | ICML 2024 | `Theory` | — |
 | 2023-11 | **[Looped Transformers are Better at Learning Learning Algorithms](https://arxiv.org/abs/2311.12424)**<br><sub>Liu Yang, Kangwook Lee, Robert Nowak et al.</sub><br><sub>💡 Trains looped Transformers on in-context regression tasks, matching a 12-layer Transformer with under 10 percent of the parameters and stable behaviour beyond trained loops.</sub><br><sub>[PDF](https://arxiv.org/pdf/2311.12424)</sub> | ICLR 2024 | `Method` | [![GitHub stars](https://img.shields.io/github/stars/Leiay/looped_transformer?style=flat&logo=github&label=&color=4c1)](https://github.com/Leiay/looped_transformer) |
 
-<div align="right"><a href="#-contents">⬆ back to top</a></div>
+<div align="right"><a href="#-table-of-contents">⬆ back to top</a></div>
 
 ### 🧮 Algorithmic Reasoning & Length Generalization
 
@@ -238,7 +185,7 @@ implementation.
 
 </details>
 
-<div align="right"><a href="#-contents">⬆ back to top</a></div>
+<div align="right"><a href="#-table-of-contents">⬆ back to top</a></div>
 
 ### 🧠 Recursive & Latent Reasoning
 
@@ -274,7 +221,7 @@ implementation.
 
 </details>
 
-<div align="right"><a href="#-contents">⬆ back to top</a></div>
+<div align="right"><a href="#-table-of-contents">⬆ back to top</a></div>
 
 ### 💬 Looped & Recurrent-Depth Language Models
 
@@ -313,7 +260,7 @@ implementation.
 
 </details>
 
-<div align="right"><a href="#-contents">⬆ back to top</a></div>
+<div align="right"><a href="#-table-of-contents">⬆ back to top</a></div>
 
 ### ⏱️ Adaptive Computation & Dynamic Depth
 
@@ -348,7 +295,7 @@ implementation.
 
 </details>
 
-<div align="right"><a href="#-contents">⬆ back to top</a></div>
+<div align="right"><a href="#-table-of-contents">⬆ back to top</a></div>
 
 ### ⚡ Efficiency, Parameter Sharing & Compression
 
@@ -390,7 +337,7 @@ implementation.
 
 </details>
 
-<div align="right"><a href="#-contents">⬆ back to top</a></div>
+<div align="right"><a href="#-table-of-contents">⬆ back to top</a></div>
 
 ### 🎨 Diffusion & Generative Models
 
@@ -420,7 +367,7 @@ implementation.
 
 </details>
 
-<div align="right"><a href="#-contents">⬆ back to top</a></div>
+<div align="right"><a href="#-table-of-contents">⬆ back to top</a></div>
 
 ### 👁️ Vision, Multimodal & Beyond
 
@@ -460,7 +407,7 @@ implementation.
 
 </details>
 
-<div align="right"><a href="#-contents">⬆ back to top</a></div>
+<div align="right"><a href="#-table-of-contents">⬆ back to top</a></div>
 
 ### ♾️ Equilibrium & Implicit Models
 
@@ -489,7 +436,7 @@ implementation.
 
 </details>
 
-<div align="right"><a href="#-contents">⬆ back to top</a></div>
+<div align="right"><a href="#-table-of-contents">⬆ back to top</a></div>
 
 ### 🔬 Analysis & Interpretability
 
@@ -538,7 +485,7 @@ implementation.
 
 </details>
 
-<div align="right"><a href="#-contents">⬆ back to top</a></div>
+<div align="right"><a href="#-table-of-contents">⬆ back to top</a></div>
 
 
 ## 🧰 Resources
@@ -600,7 +547,7 @@ Contributions are very welcome, and the fastest path is fully automated:
 1. **[Open an "Add a paper" issue](https://github.com/shreshthsaini/Rough-Claude-Cloud/issues/new?template=add-paper.yml)**
    and paste an arXiv link. Everything else is optional.
 2. A bot fetches the **title, authors, date, venue and code link** from arXiv, files it in the category you
-   picked, regenerates this README and the charts, and **opens a pull request** for you.
+   picked, regenerates this README, and **opens a pull request** for you.
 3. A maintainer reviews and merges. Done.
 
 Maintainers can also add a paper from any issue or PR comment with
@@ -611,7 +558,25 @@ Prefer editing by hand? Add an entry to [`data/papers.yaml`](data/papers.yaml) a
 validates it and the README is rebuilt on merge. See **[CONTRIBUTING.md](CONTRIBUTING.md)** for the field
 reference and inclusion criteria.
 
-## ⭐ Star history
+## 📈 Progress
+
+**235 papers** · **97** with official code · newest 2026-09-30
+
+| Year | Papers | |
+|:---:|:---:|:---|
+| 2026 | 141 | `████████████████████████████` |
+| 2025 | 42 | `████████` |
+| 2024 | 20 | `████` |
+| 2023 | 6 | `█` |
+| 2022 | 7 | `█` |
+| 2021 | 9 | `██` |
+| 2020 | 4 | `█` |
+| 2019 | 2 | `█` |
+| 2018 | 2 | `█` |
+| 2016 | 1 | `█` |
+| 2015 | 1 | `█` |
+
+### ⭐ Star history
 
 <a href="https://star-history.com/#shreshthsaini/Rough-Claude-Cloud&Date">
   <picture>
@@ -627,7 +592,7 @@ If this list helps your research, please consider citing it:
 ```bibtex
 @misc{awesome-looped-transformers,
   title        = {Awesome Looped Transformers: A Curated List of Looped, Recurrent-Depth and Weight-Tied Transformer Research},
-  author       = {Shreshth Saini and contributors},
+  author       = {Shreshth Saini},
   year         = {2026},
   howpublished = {\url{https://github.com/shreshthsaini/Rough-Claude-Cloud}},
   note         = {GitHub repository}
@@ -641,5 +606,5 @@ button works too.
 
 [![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
 
-To the extent possible under law, the contributors have waived all copyright and related rights to this
+To the extent possible under law, the author has waived all copyright and related rights to this
 list. Paper titles, abstracts and code belong to their respective authors.
