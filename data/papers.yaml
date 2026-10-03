@@ -2,6 +2,20 @@
 # Add papers through the "Add a paper" issue form, or edit by hand and run `make build`.
 # Field reference: CONTRIBUTING.md
 
+- id: marcotte2026-universal-interpolation-deep
+  title: Universal interpolation for deep residual self-attention networks
+  authors: [Sibylle Marcotte, Joan Bruna]
+  date: '2026-10-01'
+  venue: arXiv
+  type: Theory
+  category: theory
+  tags: [theory]
+  arxiv: '2610.01981'
+  paper_url: https://arxiv.org/abs/2610.01981
+  tldr: Proves deep residual self-attention networks built from a finite set of shared attention blocks can interpolate
+    data universally, motivated by looped transformers.
+  added: '2026-10-03'
+
 - id: he2026-looping-beyond-twice
   title: 'Looping Beyond Twice: A Scalable Recipe for Looped Mixture-of-Experts'
   authors: [Di He, Pengxiang Li, Da Chang, Qingyan Meng, Lu Yin, Shiwei Liu]
@@ -29,6 +43,20 @@
   paper_url: https://arxiv.org/abs/2610.01926
   tldr: Looped audio spectrogram transformer reuses blocks to refine only the class token, beating a 12-layer model
     on AudioSet with half the parameters.
+  added: '2026-10-03'
+
+- id: jin2026-deepjepa-scaling-world
+  title: 'DeepJEPA: Scaling World Models from Within'
+  authors: [Zijian Jin, Yunbei Zhang, Yuanzhe Liu, Ming Liu, Baian Chen, et al.]
+  date: '2026-10-01'
+  venue: arXiv
+  type: Method
+  category: diffusion-generative
+  tags: [robotics, adaptive, test-time-compute, vision]
+  arxiv: '2610.00368'
+  paper_url: https://arxiv.org/abs/2610.00368
+  tldr: A weight-tied JEPA world model that treats transition depth as a test-time axis and learns when extra recurrent
+    updates help planning.
   added: '2026-10-03'
 
 - id: liu2026-decoding-looped-transformers
@@ -159,6 +187,21 @@
     can hurt knowledge tasks.'
   added: '2026-10-03'
 
+- id: cai2026-thinking-depth-speaking
+  title: 'Thinking in Depth, Speaking Directly: Recurrent Latent Reasoning for Paralinguistically Grounded Spoken
+    Dialogue'
+  authors: [Shengbo Cai, Yuxiang Wang, Jingran Xie, Zhisheng Zhang, Shun Lei, et al.]
+  date: '2026-09-29'
+  venue: arXiv
+  type: Method
+  category: latent-reasoning
+  tags: [audio, reasoning, language, multimodal]
+  arxiv: '2609.37818'
+  paper_url: https://arxiv.org/abs/2609.37818
+  tldr: LoopSLM reuses a decoder block to refine acoustically grounded hidden states, replacing explicit CoT in
+    empathetic spoken dialogue with lower latency.
+  added: '2026-10-03'
+
 - id: wang2026-scheduling-recursive-reasoning
   title: Scheduling Recursive Reasoning in Looped Transformers
   authors: [Boyuan Wang, Chengyao Yu, Jiaxi Ren, Hongxin Wei, Bingyi Jing, Yuxin Tao]
@@ -214,6 +257,20 @@
   paper_url: https://arxiv.org/abs/2609.38426
   tldr: Vision-language model trained from scratch with module-level and model-level loops over a shared multimodal
     state, outperforming larger non-recurrent VLMs.
+  added: '2026-10-03'
+
+- id: chopra2026-beyond-interaction-capacity
+  title: 'Beyond Interaction Capacity: Estimator Scaling with Recursive Models for CTR Prediction'
+  authors: [Shivang Chopra, Fotis Iliopoulos, Zsolt Kira, Gaurav Menghani]
+  date: '2026-09-29'
+  venue: arXiv
+  type: Method
+  category: vision-multimodal
+  tags: [scaling, efficiency]
+  arxiv: '2609.37905'
+  paper_url: https://arxiv.org/abs/2609.37905
+  tldr: For click-through-rate prediction, aggregates multiple inference-time routes through a weight-shared recursive
+    backbone to scale estimators cheaply instead of interaction capacity.
   added: '2026-10-03'
 
 - id: li2026-shallow-queries-mature
@@ -373,6 +430,21 @@
     and why both break beyond trained depths.
   added: '2026-10-03'
 
+- id: yu2026-learning-when-recur
+  title: 'Learning When to Recur: Token-Adaptive Recursion for Imbalanced Ophthalmic Domain Incremental Learning'
+  authors: [Nanxi Yu, Kang Li, Ye Du, Xiaowei Hu, Weihua Yang, Shujun Wang]
+  date: '2026-09-26'
+  venue: arXiv
+  type: Method
+  category: vision-multimodal
+  tags: [vision, adaptive, efficiency]
+  arxiv: '2609.32785'
+  paper_url: https://arxiv.org/abs/2609.32785
+  code_url: https://github.com/Nancyolo/ToRe
+  tldr: ToRe adds token-adaptive recursion on frozen ophthalmic foundation models, letting lesion tokens recur deeper,
+    for rehearsal-free domain-incremental learning under imbalance.
+  added: '2026-10-03'
+
 - id: li2026-quantizing-looped-transformers
   title: 'Quantizing Looped Transformers: Feedback Exposure and Calibration Blindness'
   authors: [Nux Li]
@@ -429,6 +501,20 @@
   paper_url: https://arxiv.org/abs/2609.29768
   tldr: Studies amount, order and placement of weight reuse in flow-matching text-to-speech transformers, retaining
     quality with about 47% fewer parameters.
+  added: '2026-10-03'
+
+- id: sorensen2026-stream-recursion-model
+  title: Stream Recursion Model (SRM)
+  authors: [Asael Sorensen, Charles Brock, David Chamberlain, Jennifer Minnich, Matthew Hoffman, Ramyaa Ramyaa]
+  date: '2026-09-23'
+  venue: arXiv
+  type: Method
+  category: language-models
+  tags: [language, interpretability, pretraining]
+  arxiv: '2609.28809'
+  paper_url: https://arxiv.org/abs/2609.28809
+  tldr: Reworks HRM into multiple latent streams refined by shared recursive step functions, matching GPT-2 per
+    parameter while exposing interpretable stream dynamics.
   added: '2026-10-03'
 
 - id: wan2026-attention-routing-stabilizes
@@ -489,6 +575,21 @@
     and improve reasoning accuracy.
   added: '2026-10-03'
 
+- id: lu2026-adaptive-depth-expert
+  title: Adaptive Depth and Expert Refinement for Efficient Speech Enhancement
+  authors: [Xikun Lu, Yujian Ma, Yunda Chen, Xianquan Jiang, Jinqiu Sang]
+  date: '2026-09-21'
+  venue: arXiv
+  type: Method
+  category: vision-multimodal
+  tags: [audio, adaptive, efficiency]
+  arxiv: '2609.22824'
+  paper_url: https://arxiv.org/abs/2609.22824
+  code_url: https://github.com/Luxikun669/ADER
+  tldr: ADER loops one shared TS-Transformer block for speech enhancement with a depth controller for early exit
+    and per-step expert adapters.
+  added: '2026-10-03'
+
 - id: ha2026-wavefront-decoding-parallelized
   title: 'WaveFront Decoding: Parallelized Self-Speculative Decoding for Looped Language Models'
   authors: [Hyeongju Ha, Jae-Joon Kim]
@@ -532,6 +633,20 @@
     state that extrapolates to unseen depths.
   added: '2026-10-03'
 
+- id: feng2026-coreloop-parameter-efficient
+  title: 'CoRELoop: Parameter-Efficient Controlled Recurrent Refinement for Audio Deepfake Detection'
+  authors: [Kunyu Feng, Yuxiang Wang, Li Wang, Wan Lin, Zhizheng Wu]
+  date: '2026-09-17'
+  venue: arXiv
+  type: Method
+  category: adaptive-computation
+  tags: [audio, adaptive, efficiency]
+  arxiv: '2609.19818'
+  paper_url: https://arxiv.org/abs/2609.19818
+  tldr: Reuses a frozen audio encoder core through gated recurrent passes with loop-specific LoRA and adaptive halting
+    for cross-domain deepfake detection.
+  added: '2026-10-03'
+
 - id: dau2026-beyond-depth-truncation
   title: 'Beyond Depth Truncation: Controlled Evaluation of Depth Utilization in Recursive Language Models'
   authors: [Ha Van Dau, Thanh Tung Khuat, Nguyen Thanh Dung]
@@ -544,6 +659,21 @@
   paper_url: https://arxiv.org/abs/2609.19934
   tldr: Proposes a Depth Control Protocol that disentangles block application, distinct depth, and readout calibration
     effects confounded by simple loop truncation.
+  added: '2026-10-03'
+
+- id: chen2026-how-model-growth
+  title: How Model Growth, Recursion, and Boundary Operators Influence Scaling Exponents
+  authors: [Zixi Chen, Akshay Vegesna, Samip Dahal, Andrew Gordon Wilson]
+  date: '2026-09-16'
+  venue: arXiv
+  type: Analysis
+  category: analysis-interpretability
+  tags: [language, scaling, pretraining]
+  arxiv: '2609.19107'
+  paper_url: https://arxiv.org/abs/2609.19107
+  code_url: https://github.com/qlabs-eng/scaling-exponents
+  tldr: Fits compute-optimal scaling laws showing growing loop count during training improves the scaling exponent,
+    and looping regularizes data-constrained multi-epoch training.
   added: '2026-10-03'
 
 - id: guo2026-right-direction-wrong
@@ -605,6 +735,20 @@
     fewer parameters but different representation dynamics.
   added: '2026-10-03'
 
+- id: abdessalem2026-flowtsfm-turning-encoder
+  title: 'FlowTSFM: Turning Encoder Depth into Quantile Transport'
+  authors: [Bahaeddine Abdessalem, Shifeng Xie, Zehao Xiao, Youssef Attia El Hili, Ambroise Odonnat, et al.]
+  date: '2026-09-12'
+  venue: arXiv
+  type: Method
+  category: vision-multimodal
+  tags: [efficiency, pretraining]
+  arxiv: '2609.13640'
+  paper_url: https://arxiv.org/abs/2609.13640
+  tldr: Time-series foundation model that replaces stacked encoder layers with one shared block iterated as quantile
+    transport, supervising intermediate forecasts along the trajectory.
+  added: '2026-10-03'
+
 - id: suleymanzade2026-thinking-looped-flows
   title: Thinking with Looped Flows
   authors: [Ayhan Suleymanzade, Chanhyuk Lee, Floor Eijkelboom, Nicholas M. Boffi, İsmail İlkan Ceylan, Jinwoo Kim]
@@ -646,6 +790,20 @@
   code_url: https://github.com/Survivor613/BabyLM-2026
   tldr: Reuses a four-layer GPT-BERT stack across twelve traversals, trading parameters for recurrent compute in
     small-data language modeling.
+  added: '2026-10-03'
+
+- id: park2026-reason-through-latent
+  title: Reason Through the Latent! Making Latent Visual Reasoning Necessary
+  authors: [Suhyeong Park, Junha Jung, Jaewoo Kang]
+  date: '2026-09-06'
+  venue: arXiv
+  type: Method
+  category: vision-multimodal
+  tags: [vision, multimodal, reasoning]
+  arxiv: '2609.06746'
+  paper_url: https://arxiv.org/abs/2609.06746
+  tldr: CVRR loops a shared decoder layer with LoRA over a VLM question state, re-reading visual evidence so the
+    recurrent state is the only image path.
   added: '2026-10-03'
 
 - id: bao2026-dart-distributional-adversarial
@@ -691,6 +849,35 @@
     block, improving matched-compute reasoning.
   added: '2026-10-03'
 
+- id: lin2026-ziptok3d-high-fidelity
+  title: 'ZipTok3D: High-Fidelity 3D Tokenization with Compact Token Prefixes'
+  authors: [Mingda Lin, Weijie Wang, Zeyu Zhang, Bowen Cui, Yefei He, et al.]
+  date: '2026-09-02'
+  venue: arXiv
+  type: Method
+  category: diffusion-generative
+  tags: [vision, efficiency]
+  arxiv: '2609.01740'
+  paper_url: https://arxiv.org/abs/2609.01740
+  tldr: A 3D tokenizer whose decoder repeatedly applies one parameter-shared transformer block to unfold very short
+    token prefixes into detailed geometry.
+  added: '2026-10-03'
+
+- id: hojjat2026-progresvit-progressive-resolution
+  title: 'ProgResViT: Progressive Resolution and Width for Adaptive Vision Transformers'
+  authors: [Ali Hojjat, Janek Haberer, Olaf Landsiedel]
+  date: '2026-09-02'
+  venue: arXiv
+  type: Method
+  category: adaptive-computation
+  tags: [vision, adaptive, efficiency]
+  arxiv: '2609.03216'
+  paper_url: https://arxiv.org/abs/2609.03216
+  code_url: https://github.com/ds-kiel/ProgResViT
+  tldr: Reuses the same ViT blocks across confidence-routed rounds of growing resolution and width, cutting average
+    ImageNet compute by up to 31 percent.
+  added: '2026-10-03'
+
 - id: wang2026-smelt-scaling-laws
   title: 'SMELT: Scaling Laws for Compute-Matched MoE Looped Transformers'
   authors: [Shaowen Wang, Ge Zhang, Kairong Luo, Yuhao Wu, Shaofan Liu, et al.]
@@ -731,6 +918,20 @@
   paper_url: https://arxiv.org/abs/2609.01117
   tldr: A tiny TRM-style block repeatedly refines proposed latent thoughts that a frozen LLM then decodes into the
     answer.
+  added: '2026-10-03'
+
+- id: drozdova2026-diffusion-as-training
+  title: Diffusion as a Training Curriculum for Timestep-Free Iterative Reasoning
+  authors: [Mariia Drozdova, Aidan Sirbu, Pietro Miotti, Robert Obryk, Mayalen Etcheverry, et al.]
+  date: '2026-09-01'
+  venue: arXiv
+  type: Method
+  category: diffusion-generative
+  tags: [diffusion, reasoning, algorithmic, test-time-compute]
+  arxiv: '2609.01449'
+  paper_url: https://arxiv.org/abs/2609.01449
+  tldr: Adds a persistent hidden state and drops timestep conditioning so a looped denoiser becomes one shared update
+    runnable to arbitrary depth on Sudoku and mazes.
   added: '2026-10-03'
 
 - id: ito2026-universal-transformers-circuit
@@ -832,6 +1033,20 @@
     reasoners at test time without retraining.
   added: '2026-10-03'
 
+- id: huang2026-curriculum-aware-interpolate
+  title: 'Curriculum-Aware Interpolate-then-Refine: Learned Physiological Time-Series Imputation under Realistic
+    Missingness'
+  authors: [Yu-Chao Huang, Haochen Zhang, Nicholas Konz, Tianlong Chen]
+  date: '2026-08-21'
+  venue: arXiv
+  type: Method
+  category: vision-multimodal
+  arxiv: '2608.21207'
+  paper_url: https://arxiv.org/abs/2608.21207
+  tldr: CAIR pairs a GRU interpolator with one tied-weight Transformer refiner applied over three passes to impute
+    clinical time series under realistic gaps.
+  added: '2026-10-03'
+
 - id: viakhirev2026-think-shallow-solve
   title: 'Think Shallow, Solve Deep: Controlling Recurrent Dynamics for Reliable Test-Time Depth'
   authors: [Ivan Viakhirev, Kirill Borodin, Amirah Almutairi, Serguei Barannikov, Maxim Abramov, Grach Mkrtchian]
@@ -872,6 +1087,22 @@
   paper_url: https://arxiv.org/abs/2608.18171
   tldr: Evaluates native and retrofitted looped LMs on compositional tool calling, finding recurrent depth most
     reliably helps multi-call dependencies.
+  added: '2026-10-03'
+
+- id: lammuir2026-behaviour-incomplete-measure
+  title: 'Behaviour Is an Incomplete Measure of Reasoning Development: Cross-surface pre-arrival accessibility and
+    the limits of developmental inference in a recurrent-depth reasoner'
+  authors: [Simon Lam-Muir]
+  date: '2026-08-17'
+  venue: arXiv
+  type: Analysis
+  category: analysis-interpretability
+  tags: [reasoning, interpretability]
+  arxiv: '2608.16085'
+  paper_url: https://arxiv.org/abs/2608.16085
+  code_url: https://github.com/primecalibre-research/ltg-replication-receipts
+  tldr: Across training of a 30M looped reasoner, answer information becomes decodable from hidden states before
+    behaviour shows it, under preregistered controls.
   added: '2026-10-03'
 
 - id: hegazy2026-gated-recurrent-transformers
@@ -976,6 +1207,20 @@
     depth.
   added: '2026-10-03'
 
+- id: batorski2026-macro-markov-chain
+  title: 'MACRO: Markov Chain Routing of Transformer Layers'
+  authors: [Paweł Batorski, Abtin Pourhadi, Akylgali Aitaza, Przemysław Spurek, Paul Swoboda]
+  date: '2026-08-06'
+  venue: arXiv
+  type: Method
+  category: adaptive-computation
+  tags: [language, adaptive, reasoning]
+  arxiv: '2608.05872'
+  paper_url: https://arxiv.org/abs/2608.05872
+  tldr: Learns task-specific Markov routing policies over frozen LLM layers with skip, repeat and rewind moves,
+    beating Dr.LLM at far lower search cost.
+  added: '2026-10-03'
+
 - id: gruszczynski2026-training-crossroads-recurrent
   title: 'Training Crossroads for Recurrent Vision Transformers: Recurrence, Neural ODEs, and Deep Supervision'
   authors: [Grzegorz Gruszczynski, Pawel Olszowiec, Michal Byra, Grzegorz Stefanski, Alberto Presta]
@@ -988,6 +1233,22 @@
   paper_url: https://arxiv.org/abs/2608.04879
   tldr: 'Controlled study of single-block recurrent ViTs: recurrence wins under parameter-memory budgets but not
     FLOP budgets; also probes ODE solvers and deep supervision.'
+  added: '2026-10-03'
+
+- id: lammuir2026-ignition-real-it
+  title: 'The Ignition Is Real, and It Lives at the Readout: Latent composition, difficulty-clocked ignition, and
+    the interface-constituted commit in a recurrent-depth reasoner'
+  authors: [Simon Lam-Muir]
+  date: '2026-08-04'
+  venue: arXiv
+  type: Analysis
+  category: analysis-interpretability
+  tags: [reasoning, interpretability]
+  arxiv: '2608.03263'
+  paper_url: https://arxiv.org/abs/2608.03263
+  code_url: https://github.com/primecalibre-research/ltg-replication-receipts
+  tldr: Tracks iteration-by-iteration answer commitment in a 30M recurrent-depth reasoner, finding a difficulty-dependent
+    transition located at the readout rather than hidden states.
   added: '2026-10-03'
 
 - id: shomali2026-loopmtp-looped-transformer
@@ -1004,6 +1265,20 @@
     to reduce overthinking.
   added: '2026-10-03'
 
+- id: ng2026-reimu-efficient-heterogeneous
+  title: 'REIMU: Efficient Heterogeneous Hierarchical Reasoning for SSL-Based Speech Deepfake Detection'
+  authors: [Kwok-Ho Ng, Tingting Song, Bingwen Feng, Peiya Li]
+  date: '2026-08-03'
+  venue: arXiv
+  type: Analysis
+  category: vision-multimodal
+  tags: [audio]
+  arxiv: '2608.00857'
+  paper_url: https://arxiv.org/abs/2608.00857
+  tldr: Controlled comparison of single-pass, weight-shared recurrent, and HRM-style backbones for speech deepfake
+    detection, finding recurrence alone does not help.
+  added: '2026-10-03'
+
 - id: manzari2026-recursive-vision-language
   title: Recursive Vision Language Models for General Symbolic Reasoning
   authors: [Omid Nejati Manzari, Guillaume Lajoie, Hassan Rivaz]
@@ -1016,6 +1291,20 @@
   paper_url: https://arxiv.org/abs/2608.01534
   tldr: R-Qwen brings TRM-style recursive refinement and deep supervision to a pretrained Qwen backbone for Sudoku,
     maze and ARC reasoning.
+  added: '2026-10-03'
+
+- id: liu2026-tracevit-grounded-trace
+  title: 'TraceViT: Grounded Trace Supervision for Visual Abstract Reasoning'
+  authors: [Binnan Liu, Yechi Ma, Tian Xie, Wei Hua]
+  date: '2026-07-31'
+  venue: arXiv
+  type: Method
+  category: vision-multimodal
+  tags: [vision, reasoning]
+  arxiv: '2607.29586'
+  paper_url: https://arxiv.org/abs/2607.29586
+  tldr: Supervises each iteration of a looped visual reasoner with verified intermediate transformation chains,
+    reaching 67.8 percent pass@2 on ARC-AGI-1.
   added: '2026-10-03'
 
 - id: shapiro2026-retrofitting-recurrent-depth
@@ -1090,6 +1379,20 @@
     and agentic tasks.
   added: '2026-10-03'
 
+- id: jaber2026-memoir-should-model
+  title: 'Memoir: Should a Model Write to Its Memory While It Thinks?'
+  authors: [Jaber Jaber, Osama Jaber]
+  date: '2026-07-23'
+  venue: arXiv
+  type: Method
+  category: adaptive-computation
+  tags: [adaptive, reasoning]
+  arxiv: '2607.20792'
+  paper_url: https://arxiv.org/abs/2607.20792
+  tldr: Memoir tests whether variable-depth latent pondering should rewrite per-sample fast memory while reading
+    it, using tightly matched recall experiments.
+  added: '2026-10-03'
+
 - id: zhang2026-when-does-recurrence
   title: When Does Recurrence Become an Algorithm? Convergence Selection in Weight-Tied Looped Transformers
   authors: [Tong Zhang, Junhao Hu, Yun Peng, Tao Xie]
@@ -1102,6 +1405,21 @@
   paper_url: https://arxiv.org/abs/2607.20594
   tldr: On group word problems, shows weight tying makes SGD select serial frontier algorithms whose speed follows
     a budget law, yielding a principled halting rule.
+  added: '2026-10-03'
+
+- id: chen2026-latentmt-machine-translation
+  title: 'LatentMT: Machine Translation with Latent Reasoning'
+  authors: [Wei-Rui Chen, Samar M. Magdy, Chiyu Zhang, Wenhui Zhu, Zhipeng Wang, Muhammad Abdul-Mageed]
+  date: '2026-07-21'
+  venue: arXiv
+  type: Method
+  category: language-models
+  tags: [language, reasoning]
+  arxiv: '2607.18618'
+  paper_url: https://arxiv.org/abs/2607.18618
+  code_url: https://github.com/UBC-NLP/LatentMT
+  tldr: Trains looped language models for machine translation, using recurrent latent computation to rival much
+    larger systems across 32 translation directions.
   added: '2026-10-03'
 
 - id: kirin2026-operational-proto-introspection
@@ -1175,6 +1493,34 @@
   code_url: https://github.com/lszshu/DeepLoop
   tldr: Studies depth scaling of looped transformers and shows residual scaling stabilizes many recurrent rounds
     of a compact physical block.
+  added: '2026-10-03'
+
+- id: deng2026-recrec-latent-interests
+  title: 'RecRec: Latent Interests Recursive Reasoning for Sequential Recommendation'
+  authors: [Wenhao Deng, Junchen Fu, Hanwen Du, Alexandros Karatzoglou, Ioannis Arapakis, et al.]
+  date: '2026-07-14'
+  venue: arXiv
+  type: Method
+  category: vision-multimodal
+  tags: [reasoning, adaptive]
+  arxiv: '2607.12945'
+  paper_url: https://arxiv.org/abs/2607.12945
+  tldr: Compresses user history into latent interests then refines them with a deeply supervised recursive reasoner
+    whose depth is adjustable at inference.
+  added: '2026-10-03'
+
+- id: shaik2026-recrec-recursive-refinement
+  title: 'RecRec: Recursive Refinement for Sequential Recommendation'
+  authors: [Pervez Shaik, Prosenjit Biswas, Abhinav Thorat, Ravi Kolla, Niranjan Pedanekar]
+  date: '2026-07-12'
+  venue: arXiv
+  type: Method
+  category: vision-multimodal
+  tags: [reasoning, efficiency]
+  arxiv: '2607.10541'
+  paper_url: https://arxiv.org/abs/2607.10541
+  tldr: Models user preference as a latent state refined by a shared recursive module with evidence-anchored correction,
+    rivaling larger sequential recommenders.
   added: '2026-10-03'
 
 - id: buehlmaier2026-layernorm-as-implicit
@@ -1261,6 +1607,34 @@
   paper_url: https://arxiv.org/abs/2607.00774
   tldr: Replaces hard recursion-depth routing with a learned soft mixture over all recursion outputs; recursive
     ViT-S gains 2.6 points top-1 with minimal extra parameters.
+  added: '2026-10-03'
+
+- id: fu2026-discoloop-looping-discrete
+  title: 'DiscoLoop: Looping Discrete Embeddings and Continuous Hidden States for Multi-hop Reasoning'
+  authors: [Hengyu Fu, Tianyu Guo, Zixuan Wang, Hanlin Zhu, Jason D. Lee, et al.]
+  date: '2026-07-01'
+  venue: arXiv
+  type: Method
+  category: latent-reasoning
+  tags: [language, reasoning, theory]
+  arxiv: '2607.00341'
+  paper_url: https://arxiv.org/abs/2607.00341
+  tldr: Shows looped Transformers ease the depth-local storage problem in two-hop reasoning and loops both discrete
+    embeddings and hidden states to improve it.
+  added: '2026-10-03'
+
+- id: kwon2026-cherry-compressed-hierarchical
+  title: 'CHERRY: Compressed Hierarchical Experts with Recurrent Representational Yield'
+  authors: [Dohyeon Kwon, Youngjin Park]
+  date: '2026-06-30'
+  venue: arXiv
+  type: Method
+  category: efficiency
+  tags: [language, efficiency, pretraining]
+  arxiv: '2606.31796'
+  paper_url: https://arxiv.org/abs/2606.31796
+  tldr: Compresses a 48-layer language model into 6 unique blocks, restores depth with learned recurrent unrolling,
+    and fuses compressed recurrent models into an MoE.
   added: '2026-10-03'
 
 - id: fan2026-bridging-gap-between
@@ -1407,6 +1781,20 @@
     adapting compute per input end to end.
   added: '2026-10-03'
 
+- id: bhattacharjee2026-entropy-gated-latent
+  title: Entropy-Gated Latent Recursion
+  authors: [Soham Bhattacharjee, Dushyant Singh Chauhan, Salem Lahlou, Martin Takac, Nils Lukas]
+  date: '2026-06-15'
+  venue: arXiv
+  type: Method
+  category: adaptive-computation
+  tags: [language, test-time-compute, adaptive, reasoning]
+  arxiv: '2606.16620'
+  paper_url: https://arxiv.org/abs/2606.16620
+  tldr: Re-applies a frozen LLM's top decoder layers at high-entropy tokens until convergence, using the recursion
+    span as a new axis for diverse rollouts.
+  added: '2026-10-03'
+
 - id: sharma2026-dense-supervision-not
   title: 'Dense Supervision Is Not Enough: The Readout Blind Spot in Looped Language Models'
   authors: [Rituraj Sharma, Tu Vu]
@@ -1419,6 +1807,20 @@
   paper_url: https://arxiv.org/abs/2606.24898
   tldr: Argues that dense per-loop supervision leaves a readout blind spot in looped language models, limiting what
     intermediate loop states reveal.
+  added: '2026-10-03'
+
+- id: gao2026-slots-transitions-loops
+  title: 'Slots, Transitions, Loops: Learning Composable World Models for ARC'
+  authors: [Gege Gao, Bernhard Schölkopf, Andreas Geiger]
+  date: '2026-06-10'
+  venue: arXiv
+  type: Method
+  category: algorithmic-reasoning
+  tags: [reasoning, algorithmic, vision]
+  arxiv: '2606.12316'
+  paper_url: https://arxiv.org/abs/2606.12316
+  tldr: Loop-OWM learns ARC rules as object-centric world-model transitions using a looped transition model, beating
+    non-looped and looped baselines at similar size.
   added: '2026-10-03'
 
 - id: rolland2026-rethinking-depth-study
@@ -1476,6 +1878,21 @@
   code_url: https://github.com/tianyi-lab/PoLar
   tldr: Learns input-specific programs over pretrained LLM layers that skip or repeat layers, yielding shorter or
     looped execution paths than fixed depth.
+  added: '2026-10-03'
+
+- id: zhang2026-mpcot-reward-guided
+  title: 'MPCoT: Reward-Guided Multi-Path Latent Reasoning for Test-Time Scalable Vision-Language-Action'
+  authors: [Boyang Zhang, Lianlei Shan]
+  date: '2026-06-04'
+  venue: arXiv
+  type: Method
+  category: vision-multimodal
+  tags: [robotics, multimodal, reasoning, test-time-compute]
+  arxiv: '2606.06245'
+  paper_url: https://arxiv.org/abs/2606.06245
+  code_url: https://github.com/EDGSCOUT/MPCoT
+  tldr: VLA action head that refines multiple latent path hypotheses for K weight-tied steps, scores and aggregates
+    them before decoding robot actions.
   added: '2026-10-03'
 
 - id: kaloga2026-test-time-compute
@@ -1565,6 +1982,20 @@
     method, one iteration per loop, which fails without normalization.
   added: '2026-10-03'
 
+- id: svete2026-revisiting-padded-transformer
+  title: 'Revisiting Padded Transformer Expressivity: Which Architectural Choices Matter and Which Don''t'
+  authors: [Anej Svete, William Merrill, Ryan Cotterell, Ashish Sabharwal]
+  date: '2026-05-29'
+  venue: arXiv
+  type: Theory
+  category: theory
+  tags: [theory]
+  arxiv: '2605.30523'
+  paper_url: https://arxiv.org/abs/2605.30523
+  tldr: Shows looped padded transformers with polylog loops capture AC^d or TC^d depending on precision, while attention
+    type and width barely matter.
+  added: '2026-10-03'
+
 - id: miele2026-fixed-point-masked
   title: Fixed-Point Masked Generative Modeling
   authors: [Andrea Miele, Yiming Qin, Alba Carballo-Castro, Justin Deschenaux, Pascal Frossard]
@@ -1638,6 +2069,21 @@
     recursion depth and width to image and channel conditions.
   added: '2026-10-03'
 
+- id: lakkapragada2026-cosmicfish-hrm-adaptive
+  title: 'CosmicFish-HRM: Adaptive Reasoning via Hierarchical Recurrent Mechanisms in Compact Language Models'
+  authors: [Venkat Akhil Lakkapragada]
+  date: '2026-05-27'
+  venue: arXiv
+  type: Method
+  category: adaptive-computation
+  tags: [language, adaptive, reasoning]
+  arxiv: '2605.28919'
+  paper_url: https://arxiv.org/abs/2605.28919
+  code_url: https://github.com/MistyozAI/CosmicFish-HRM
+  tldr: Adds an HRM-style high/low-level recurrent reasoning module with learned input-dependent halting to a compact
+    autoregressive language model.
+  added: '2026-10-03'
+
 - id: yang2026-stabilizing-recurrent-dynamics
   title: Stabilizing Recurrent Dynamics for Test-Time Scalable Latent Reasoning in Looped Language Models
   authors: [Xiao-Wen Yang, Ziyu Han, Xi-Hua Zhang, Wen-Da Wei, Jie-Jing Shao, et al.]
@@ -1707,6 +2153,20 @@
   paper_url: https://arxiv.org/abs/2605.23872
   tldr: Loops a mid-stack block of a frozen pretrained transformer at inference with damped residual sub-steps,
     improving reasoning without any training.
+  added: '2026-10-03'
+
+- id: hamdi2026-fasttab-fast-table
+  title: 'FastTab: A Fast Table Recognizer with a Tiny Recursive Module and 1D Transformers'
+  authors: [Laziz Hamdi, Amine Tamasna, Pascal Boisson, Thierry Paquet]
+  date: '2026-05-21'
+  venue: arXiv
+  type: Method
+  category: vision-multimodal
+  tags: [vision, efficiency]
+  arxiv: '2605.22422'
+  paper_url: https://arxiv.org/abs/2605.22422
+  tldr: FastTab recognizes table structure with a tiny recursive module for global reasoning plus axial 1D transformers,
+    avoiding slow autoregressive HTML decoding.
   added: '2026-10-03'
 
 - id: deng2026-lt2-linear-time
@@ -1799,6 +2259,20 @@
     and inference-time scaling over depth and samples.
   added: '2026-10-03'
 
+- id: carnemolla2026-perl-parameter-efficient
+  title: 'PERL: Parameter Efficient Reasoning in CLIP Latent Space'
+  authors: [Simone Carnemolla, Salvatore Calcagno, Daniela Giordano, Concetto Spampinato, Matteo Pennisi]
+  date: '2026-05-18'
+  venue: arXiv
+  type: Method
+  category: vision-multimodal
+  tags: [vision, multimodal, efficiency]
+  arxiv: '2605.18464'
+  paper_url: https://arxiv.org/abs/2605.18464
+  tldr: PERL adapts frozen CLIP by recurrently applying a compact shared reasoning module that injects latent reasoning
+    tokens across refinement steps.
+  added: '2026-10-03'
+
 - id: shen2026-one-model-two
   title: 'One Model, Two Roles: Emergent Specialization in a Shared Recurrent Transformer'
   authors: [Jucheng Shen, Barbara Su, Anastasios Kyrillidis]
@@ -1812,6 +2286,22 @@
   code_url: https://github.com/juchengshen/air
   tldr: Shows one shared recurrent transformer updating two states develops distinct proposal and uncertainty roles
     driven by asymmetric input injection.
+  added: '2026-10-03'
+
+- id: esmaeilzadeh2026-one-pass-not
+  title: 'One Pass Is Not Enough: Recursive Latent Refinement for Generative Models'
+  authors: [Mehdi Esmaeilzadeh, Alexia Jolicoeur-Martineau, Chirag Vashist, Ke Li]
+  date: '2026-05-14'
+  venue: arXiv
+  type: Method
+  category: diffusion-generative
+  tags: [vision, efficiency]
+  arxiv: '2605.15309'
+  paper_url: https://arxiv.org/abs/2605.15309
+  code_url: https://github.com/mehdie79/RTM_latent_refinement
+  project_url: https://mehdie79.github.io/Portfolio_Mehdi_Esmaeilzadeh/project/rtm-imle/
+  tldr: Replaces the single-pass mapping network of style-based generators with a TRM-style recursive token mapper,
+    improving quality and diversity for IMLE and StyleGAN2.
   added: '2026-10-03'
 
 - id: feinashley2026-solve-loop-attractor
@@ -1828,6 +2318,20 @@
   project_url: https://attractor-models.github.io/
   tldr: Attractor modules iteratively solve for a fixed point over backbone outputs with implicit differentiation,
     giving depth-independent training memory for LMs and puzzles.
+  added: '2026-10-03'
+
+- id: artemasov2026-recurrent-transformer-based
+  title: Recurrent Transformer-Based Near- and Far-Field THz Wideband Channel Estimation for UM-MIMO
+  authors: [Dmitry Artemasov, Alexander Shmatok, Kirill Andreev, Alexey Frolov, Manjesh K. Hanawal, Nikola Zlatanov]
+  date: '2026-05-12'
+  venue: IEEE Access
+  type: Method
+  category: vision-multimodal
+  tags: [efficiency]
+  arxiv: '2605.12578'
+  paper_url: https://arxiv.org/abs/2605.12578
+  tldr: Applies one transformer block with state memory recurrently to refine hybrid near and far-field THz channel
+    estimates at fixed parameter count.
   added: '2026-10-03'
 
 - id: fu2026-simply-stabilizing-loop
@@ -1960,6 +2464,20 @@
     and that a looped single attention layer converges with OOD guarantees.
   added: '2026-10-03'
 
+- id: jindal2026-smollm-small-language
+  title: 'SMolLM: Small Language Models Learn Small Molecular Grammar'
+  authors: [Akhil Jindal, Harang Ju]
+  date: '2026-05-07'
+  venue: arXiv
+  type: Analysis
+  category: vision-multimodal
+  tags: [interpretability, efficiency]
+  arxiv: '2605.06322'
+  paper_url: https://arxiv.org/abs/2605.06322
+  tldr: A 53K-parameter weight-shared looped transformer generates valid SMILES, resolving brackets, rings, then
+    valence across successive passes of the same block.
+  added: '2026-10-03'
+
 - id: balef2026-one-layer-enough
   title: Is One Layer Enough? Understanding Inference Dynamics in Tabular Foundation Models
   authors: [Amir Rezaei Balef, Mykhailo Koshil, Katharina Eggensperger]
@@ -2005,6 +2523,20 @@
     giving per-scale iteration control and fewer parameters.
   added: '2026-10-03'
 
+- id: sun2026-thinking-pixel-recursive
+  title: 'The Thinking Pixel: Recursive Sparse Reasoning in Multimodal Diffusion Latents'
+  authors: [Yuwei Sun, Yuxuan Yao, Hui Li, Siyu Zhu]
+  date: '2026-04-28'
+  venue: arXiv
+  type: Method
+  category: diffusion-generative
+  tags: [diffusion, vision, multimodal, adaptive, reasoning]
+  arxiv: '2604.25299'
+  paper_url: https://arxiv.org/abs/2604.25299
+  tldr: Inserts a recursive sparse mixture-of-experts unit into diffusion transformer joint attention, reusing gated
+    shared modules to refine visual tokens over latent steps.
+  added: '2026-10-03'
+
 - id: sapunov2026-universal-transformers-need
   title: 'Universal Transformers Need Memory: Depth-State Trade-offs in Adaptive Recursive Reasoning'
   authors: [Grigory Sapunov]
@@ -2047,6 +2579,20 @@
   code_url: https://github.com/kschwethelm/looped-lm-scaling
   tldr: Fits iso-depth scaling laws to measure how much an extra recurrent pass is worth relative to unique layers
     and training compute.
+  added: '2026-10-03'
+
+- id: tang2026-loopctr-unlocking-loop
+  title: 'LoopCTR: Unlocking the Loop Scaling Power for Click-Through Rate Prediction'
+  authors: [Jiakai Tang, Runfeng Zhang, Weiqiu Wang, Yifei Liu, Chuan Wang, et al.]
+  date: '2026-04-21'
+  venue: arXiv
+  type: Method
+  category: efficiency
+  tags: [efficiency, scaling]
+  arxiv: '2604.19550'
+  paper_url: https://arxiv.org/abs/2604.19550
+  tldr: Recursively reuses shared layers with per-loop process supervision for CTR prediction, so a zero-loop forward
+    pass at inference already beats baselines.
   added: '2026-10-03'
 
 - id: cameron2026-one-step-forward
@@ -2107,6 +2653,20 @@
     finding hierarchical recurrence beats a matched Universal Transformer.
   added: '2026-10-03'
 
+- id: kubo2026-c-voting-confidence
+  title: 'C-voting: Confidence-Based Test-Time Voting without Explicit Energy Functions'
+  authors: [Kenji Kubo, Shunsuke Kamiya, Masanori Koyama, Kohei Hayashi, Yusuke Iwasawa, Yutaka Matsuo]
+  date: '2026-04-15'
+  venue: arXiv
+  type: Method
+  category: latent-reasoning
+  tags: [reasoning, test-time-compute]
+  arxiv: '2604.13521'
+  paper_url: https://arxiv.org/abs/2604.13521
+  tldr: 'Test-time scaling for recurrent latent reasoners such as HRM: run several randomly initialized latent trajectories
+    and vote using model confidence.'
+  added: '2026-10-03'
+
 - id: prairie2026-parcae-scaling-laws
   title: 'Parcae: Scaling Laws For Stable Looped Language Models'
   authors: [Hayden Prairie, Zachary Novack, Taylor Berg-Kirkpatrick, Daniel Y. Fu]
@@ -2148,6 +2708,20 @@
   paper_url: https://arxiv.org/abs/2604.09870
   tldr: Probes frozen Ouro loop states on HH-RLHF and finds preference labels are mainly decodable from pairwise
     differences between loop states.
+  added: '2026-10-03'
+
+- id: turkcan2026-loom-scalable-analytical
+  title: 'Loom: A Scalable Analytical Neural Computer Architecture'
+  authors: [Mehmet Kerem Turkcan]
+  date: '2026-04-10'
+  venue: arXiv
+  type: Method
+  category: theory
+  tags: [theory, algorithmic]
+  arxiv: '2604.08816'
+  paper_url: https://arxiv.org/abs/2604.08816
+  tldr: Loom compiles C programs into an analytically weighted looped transformer that executes one instruction
+    per pass over a fixed-size machine state.
   added: '2026-10-03'
 
 - id: goyal2026-elt-elastic-looped
@@ -2208,6 +2782,20 @@
     train-short test-long generalization on algorithmic and RL tasks.
   added: '2026-10-03'
 
+- id: sun2026-universal-yoco-efficient
+  title: Universal YOCO for Efficient Depth Scaling
+  authors: [Yutao Sun, Li Dong, Tianzhu Ye, Shaohan Huang, Jianyong Wang, Furu Wei]
+  date: '2026-04-01'
+  venue: arXiv
+  type: Method
+  category: efficiency
+  tags: [language, efficiency, test-time-compute]
+  arxiv: '2604.01220'
+  paper_url: https://arxiv.org/abs/2604.01220
+  tldr: Loops only YOCO's shallow efficient-attention self-decoder with shared weights, keeping a constant global
+    KV cache while gaining recursive depth.
+  added: '2026-10-03'
+
 - id: xiao2026-associative-state-universal
   title: 'Associative-State Universal Transformers: Sparse Retrieval Meets Structured Recurrence'
   authors: [Liu Xiao]
@@ -2234,6 +2822,20 @@
   paper_url: https://arxiv.org/abs/2603.29057
   tldr: Looped transformer for skeleton-based sign language recognition that refines motion features by recurrence
     instead of stacking layers.
+  added: '2026-10-03'
+
+- id: chen2026-sparse-growing-transformer
+  title: 'Sparse Growing Transformer: Training-Time Sparse Depth Allocation via Progressive Attention Looping'
+  authors: [Yao Chen, Yilong Chen, Yinqi Yang, Junyuan Shang, Zhenyu Zhang, et al.]
+  date: '2026-03-25'
+  venue: arXiv
+  type: Method
+  category: efficiency
+  tags: [language, efficiency, pretraining]
+  arxiv: '2603.23998'
+  paper_url: https://arxiv.org/abs/2603.23998
+  tldr: Progressively loops only informative attention heads from deep to shallow layers during training, cutting
+    extra looping FLOPs from about 18 to 2 percent.
   added: '2026-10-03'
 
 - id: eskin2026-dynamical-systems-theory
@@ -2291,6 +2893,21 @@
   arxiv: '2603.19503'
   paper_url: https://arxiv.org/abs/2603.19503
   tldr: Replaces a ViT encoder with a tiny 3-layer block applied recursively, giving parameter-efficient image classification.
+  added: '2026-10-03'
+
+- id: yang2026-iquest-coder-v1
+  title: IQuest-Coder-V1 Technical Report
+  authors: [Jian Yang, Wei Zhang, Shawn Guo, Zhengmao Ye, Lin Jing, et al.]
+  date: '2026-03-17'
+  venue: arXiv
+  type: Model
+  category: language-models
+  tags: [language, reasoning, rl]
+  arxiv: '2603.16733'
+  paper_url: https://arxiv.org/abs/2603.16733
+  code_url: https://github.com/IQuestLab/IQuest-Coder-V1
+  tldr: Code LLM family whose 40B Loop variants share parameters across two iterations, with global-local gated
+    attention refining the first pass.
   added: '2026-10-03'
 
 - id: abubacar2026-parameter-efficient-quality
@@ -2380,6 +2997,20 @@
     9x9 to 25x25 and competitive ARC-AGI with 2M parameters.
   added: '2026-10-03'
 
+- id: li2026-ponderlm-3-adaptive
+  title: 'PonderLM-3: Adaptive Token-Wise Pondering with Differentiable Masking'
+  authors: [He Li, Feichen Song, Boyi Zeng, Shixiang Song, Zhiqin John Xu, et al.]
+  date: '2026-03-02'
+  venue: arXiv
+  type: Method
+  category: adaptive-computation
+  tags: [language, adaptive, pretraining, test-time-compute]
+  arxiv: '2603.02023'
+  paper_url: https://arxiv.org/abs/2603.02023
+  tldr: Extends PonderLM-2 pretraining with a differentiable attention mask so each token learns whether to receive
+    extra pondering computation.
+  added: '2026-10-03'
+
 - id: song2026-adaponderlm-gated-pondering
   title: 'AdaPonderLM: Gated Pondering Language Models with Token-Wise Adaptive Depth'
   authors: [Shixiang Song, He Li, Zitong Wang, Boyi Zeng, Feichen Song, et al.]
@@ -2406,6 +3037,20 @@
   paper_url: https://arxiv.org/abs/2602.16490
   tldr: Shows looped and depth-grown LLMs share depth-wise signatures and that looping the middle of a grown model
     improves reasoning.
+  added: '2026-10-03'
+
+- id: lys2026-inner-loop-inference
+  title: 'Inner Loop Inference for Pretrained Transformers: Unlocking Latent Capabilities Without Training'
+  authors: [Jonathan Lys, Vincent Gripon, Bastien Pasdeloup, Axel Marmoret, Lukas Mauch, et al.]
+  date: '2026-02-16'
+  venue: arXiv
+  type: Method
+  category: efficiency
+  tags: [language, test-time-compute, efficiency]
+  arxiv: '2602.14759'
+  paper_url: https://arxiv.org/abs/2602.14759
+  tldr: Re-applies a selected block range of a frozen pretrained LLM at inference, with representation interpolation
+    for stability, yielding modest consistent accuracy gains.
   added: '2026-10-03'
 
 - id: wang2026-tiny-recursive-reasoning
@@ -2528,6 +3173,20 @@
     with constant memory for manipulation.
   added: '2026-10-03'
 
+- id: zhang2026-multimodal-latent-reasoning
+  title: Multimodal Latent Reasoning via Hierarchical Visual Cues Injection
+  authors: [Yiming Zhang, Qiangyu Yan, Borui Jiang, Kai Han]
+  date: '2026-02-05'
+  venue: arXiv
+  type: Method
+  category: vision-multimodal
+  tags: [vision, multimodal, reasoning, test-time-compute]
+  arxiv: '2602.05359'
+  paper_url: https://arxiv.org/abs/2602.05359
+  tldr: HIVE recursively extends MLLM transformer blocks into an internal loop, injecting hierarchical visual cues
+    each iteration for grounded latent reasoning.
+  added: '2026-10-03'
+
 - id: shu2026-loopvit-scaling-visual
   title: 'LoopViT: Scaling Visual ARC with Looped Transformers'
   authors: [Wen-Jie Shu, Xuerui Qiu, Rui-Jie Zhu, Harold Haodong Chen, Yexin Liu, Harry Yang]
@@ -2543,6 +3202,20 @@
     with 18M parameters.
   added: '2026-10-03'
 
+- id: xue2026-beyond-what-seems
+  title: 'Beyond What Seems Necessary: Hidden Gains from Scaling Training-Time Reasoning Length under Outcome Supervision'
+  authors: [Yihao Xue, Allan N. Zhang, Jianhao Huang, A. Sahai, Baharan Mirzasoleiman]
+  date: '2026-02-01'
+  venue: arXiv
+  type: Theory
+  category: theory
+  tags: [theory, reasoning]
+  arxiv: '2602.00927'
+  paper_url: https://arxiv.org/abs/2602.00927
+  tldr: Finds OOD accuracy keeps improving as training loop count or RL token budget grows after in-distribution
+    saturation, with theory explaining why.
+  added: '2026-10-03'
+
 - id: knupp2026-depth-recurrent-attention
   title: 'Depth-Recurrent Attention Mixtures: Giving Latent Reasoning the Attention it Deserves'
   authors: [Jonas Knupp, Jan Hendrik Metzen, Jeremias Bohn, Georg Groh, Kristian Kersting]
@@ -2555,6 +3228,21 @@
   paper_url: https://arxiv.org/abs/2601.21582
   tldr: Dreamer adds depth attention and sparse expert attention to depth-recurrent LMs, easing the hidden-size
     bottleneck and needing 2-8x fewer training tokens.
+  added: '2026-10-03'
+
+- id: dillon2026-speed-confidence
+  title: Speed is Confidence
+  authors: [Joshua V. Dillon]
+  date: '2026-01-27'
+  venue: arXiv
+  type: Method
+  category: latent-reasoning
+  tags: [reasoning, test-time-compute, adaptive]
+  arxiv: '2601.19085'
+  paper_url: https://arxiv.org/abs/2601.19085
+  code_url: https://github.com/rekursiv-ai/sic
+  tldr: Ensembles tiny recursive models by trusting whichever halts first, reaching 97% Sudoku-Extreme with ten
+    times less compute than test-time augmentation.
   added: '2026-10-03'
 
 - id: he2026-vision-mor-scaling
@@ -2682,6 +3370,20 @@
     optimal control.
   added: '2026-10-03'
 
+- id: nie2025-versatileffn-achieving-parameter
+  title: 'VersatileFFN: Achieving Parameter Efficiency in LLMs via Adaptive Wide-and-Deep Reuse'
+  authors: [Ying Nie, Kai Han, Hongguang Li, Hang Zhou, Tianyu Guo, et al.]
+  date: '2025-12-16'
+  venue: arXiv
+  type: Method
+  category: efficiency
+  tags: [language, efficiency, adaptive]
+  arxiv: '2512.14531'
+  paper_url: https://arxiv.org/abs/2512.14531
+  tldr: An FFN that reuses one parameter set both as width-wise sub-experts and as a recursively applied depth path,
+    adaptively mixed per token.
+  added: '2026-10-03'
+
 - id: gao2025-universal-reasoning-model
   title: Universal Reasoning Model
   authors: [Zitian Gao, Lynx Chen, Yihao Xiao, He Xing, Ran Tao, et al.]
@@ -2695,6 +3397,20 @@
   code_url: https://github.com/UbiquantAI/URM
   tldr: Attributes HRM and TRM gains to recurrence and nonlinearity, then adds short convolution and truncated backprop
     to a Universal Transformer, reaching 53.8% ARC-AGI-1.
+  added: '2026-10-03'
+
+- id: sahni2025-liquid-reasoning-transformers
+  title: 'Liquid Reasoning Transformers: A Sudoku-Based Prototype for Chess-Scale Algorithmic Tasks'
+  authors: [Shivansh Sahni, Wenzhi Zhang]
+  date: '2025-12-14'
+  venue: arXiv
+  type: Method
+  category: algorithmic-reasoning
+  tags: [algorithmic, adaptive, reasoning]
+  arxiv: '2512.12792'
+  paper_url: https://arxiv.org/abs/2512.12792
+  tldr: Liquid Reasoning Transformer updates a recurrent reasoning token over adaptive internal steps with discard
+    and stop gates, tested on Sudoku.
   added: '2026-10-03'
 
 - id: nouriborji2025-improving-recursive-transformers
@@ -2723,6 +3439,20 @@
   paper_url: https://arxiv.org/abs/2512.11847
   tldr: Finds TRM's ARC-AGI-1 results rely heavily on augmentation voting and puzzle-ID conditioning, with most
     accuracy reached at the first recursion step.
+  added: '2026-10-03'
+
+- id: naeem2025-reftr-recurrent-refinement
+  title: 'RefTr: Recurrent Refinement of Confluent Trajectories for 3D Vascular Tree Centerline Graphs'
+  authors: [Roman Naeem, David Hagerman, Jennifer Alvén, Fredrik Kahl]
+  date: '2025-11-25'
+  venue: arXiv
+  type: Method
+  category: vision-multimodal
+  tags: [vision, efficiency]
+  arxiv: '2511.20823'
+  paper_url: https://arxiv.org/abs/2511.20823
+  tldr: Producer-refiner transformer decoder that reuses one refiner block across steps to extract vascular centerline
+    trees, with 2.4x fewer decoder parameters.
   added: '2026-10-03'
 
 - id: asadulaev2025-latent-reasoning-trms
@@ -2842,6 +3572,20 @@
     mazes.
   added: '2026-10-03'
 
+- id: hao2025-scalenet-scaling-up
+  title: 'ScaleNet: Scaling up Pretrained Neural Networks with Incremental Parameters'
+  authors: [Zhiwei Hao, Jianyuan Guo, Li Shen, Kai Han, Yehui Tang, et al.]
+  date: '2025-10-21'
+  venue: arXiv
+  type: Method
+  category: vision-multimodal
+  tags: [vision, efficiency]
+  arxiv: '2510.18431'
+  paper_url: https://arxiv.org/abs/2510.18431
+  tldr: Expands pretrained ViTs by inserting layers that share weights with existing ones plus small adjustment
+    parameters, scaling depth with negligible new parameters.
+  added: '2026-10-03'
+
 - id: geiping2025-efficient-parallel-samplers
   title: Efficient Parallel Samplers for Recurrent-Depth Models and Their Connection to Diffusion Language Models
   authors: [Jonas Geiping, Xinyu Yang, Guinan Su]
@@ -2855,6 +3599,64 @@
   code_url: https://github.com/seal-rg/recurrent-pretraining
   tldr: Diffusion-forcing sampler that refines recurrent-depth latents for multiple tokens in parallel, speeding
     existing looped LMs up to 5x without retraining.
+  added: '2026-10-03'
+
+- id: altabaa2025-unlocking-out-distribution
+  title: Unlocking Out-of-Distribution Generalization in Transformers via Recursive Latent Space Reasoning
+  authors: [Awni Altabaa, Siyu Chen, John Lafferty, Zhuoran Yang]
+  date: '2025-10-15'
+  venue: arXiv
+  type: Method
+  category: algorithmic-reasoning
+  tags: [algorithmic, reasoning, adaptive, interpretability]
+  arxiv: '2510.14095'
+  paper_url: https://arxiv.org/abs/2510.14095
+  code_url: https://github.com/Awni00/algorithmic-generalization-transformer-architectures
+  tldr: Combines input-adaptive recurrence, algorithmic supervision, discrete anchoring and error correction to
+    get robust OOD generalization on modular arithmetic graphs.
+  added: '2026-10-03'
+
+- id: svete2025-reasoning-abilities-masked
+  title: On the Reasoning Abilities of Masked Diffusion Language Models
+  authors: [Anej Svete, Ashish Sabharwal]
+  date: '2025-10-15'
+  venue: arXiv
+  type: Theory
+  category: theory
+  tags: [diffusion, language, theory, reasoning]
+  arxiv: '2510.13117'
+  paper_url: https://arxiv.org/abs/2510.13117
+  tldr: Proves masked diffusion language models are equivalent to polynomially padded looped transformers in the
+    finite-precision log-width setting and compares them with CoT.
+  added: '2026-10-03'
+
+- id: heakl2025-dr-llm-dynamic
+  title: 'Dr.LLM: Dynamic Layer Routing in LLMs'
+  authors: [Ahmed Heakl, Martin Gubri, Salman Khan, Sangdoo Yun, Seong Joon Oh]
+  date: '2025-10-14'
+  venue: ICLR 2026
+  type: Method
+  category: adaptive-computation
+  tags: [language, adaptive, efficiency, reasoning]
+  arxiv: '2510.12773'
+  paper_url: https://arxiv.org/abs/2510.12773
+  code_url: https://github.com/parameterlab/dr-llm
+  tldr: Adds lightweight per-layer routers to frozen LLMs that skip, execute, or repeat each block, trained on MCTS-discovered
+    layer paths under compute budgets.
+  added: '2026-10-03'
+
+- id: chen2025-dnd-boosting-large
+  title: 'DND: Boosting Large Language Models with Dynamic Nested Depth'
+  authors: [Tieyuan Chen, Xiaodong Chen, Haoxing Chen, Zhenzhong Lan, Weiyao Lin, Jianguo Li]
+  date: '2025-10-13'
+  venue: arXiv
+  type: Method
+  category: adaptive-computation
+  tags: [language, adaptive]
+  arxiv: '2510.11001'
+  paper_url: https://arxiv.org/abs/2510.11001
+  tldr: A router feeds critical tokens back through a layer for an extra pass, added to pretrained dense and MoE
+    LLMs during post-training.
   added: '2026-10-03'
 
 - id: gong2025-what-makes-looped
@@ -2927,6 +3729,21 @@
   paper_url: https://arxiv.org/abs/2510.03598
   tldr: 'Evaluates HRM as an image classifier: strong on MNIST but overfits on CIFAR without augmentation compared
     with small CNNs.'
+  added: '2026-10-03'
+
+- id: du2025-latent-thinking-optimization
+  title: 'Latent Thinking Optimization: Your Latent Reasoning Language Model Secretly Encodes Reward Signals in
+    its Latent Thoughts'
+  authors: [Hanwen Du, Yuxin Dong, Xia Ning]
+  date: '2025-09-30'
+  venue: arXiv
+  type: Method
+  category: language-models
+  tags: [language, reasoning, rl, test-time-compute]
+  arxiv: '2509.26314'
+  paper_url: https://arxiv.org/abs/2509.26314
+  tldr: Shows Huginn-3.5B latent thoughts reveal answer correctness and uses a latent reward model to optimize its
+    recurrent thinking at test time.
   added: '2026-10-03'
 
 - id: ge2025-hierarchical-reasoning-models
@@ -3029,6 +3846,20 @@
     another pass helps (formerly titled MOR-VIT).
   added: '2026-10-03'
 
+- id: mathur2025-change-thought-adaptive
+  title: 'Change of Thought: Adaptive Test-Time Computation'
+  authors: [Mrinal Mathur, Mike Doan, Barak Pearlmutter, Sergey Plis]
+  date: '2025-07-18'
+  venue: arXiv
+  type: Method
+  category: equilibrium-implicit
+  tags: [adaptive, test-time-compute]
+  arxiv: '2507.13569'
+  paper_url: https://arxiv.org/abs/2507.13569
+  tldr: SELF-Transformer encoder layer iteratively refines its own attention matrix to a fixed point, scaling test-time
+    computation with input difficulty.
+  added: '2026-10-03'
+
 - id: bae2025-mixture-recursions-learning
   title: 'Mixture-of-Recursions: Learning Dynamic Recursive Depths for Adaptive Token-Level Computation'
   authors: [Sangmin Bae, Yujin Kim, Reza Bayat, Sungnyun Kim, Jiyoun Ha, et al.]
@@ -3042,6 +3873,20 @@
   code_url: https://github.com/raymin0223/mixture_of_recursions
   tldr: Recursive transformer where lightweight routers assign each token its own recursion depth, with recursion-wise
     KV caching for faster, leaner inference.
+  added: '2026-10-03'
+
+- id: aleksandrov2025-abbie-autoregressive-block
+  title: 'AbbIE: Autoregressive Block-Based Iterative Encoder for Efficient Sequence Modeling'
+  authors: [Preslav Aleksandrov, Meghdad Kurmanji, Fernando Garcia Redondo, David O'Shea, William Shen, et al.]
+  date: '2025-07-11'
+  venue: arXiv
+  type: Method
+  category: language-models
+  tags: [language, test-time-compute, efficiency]
+  arxiv: '2507.08567'
+  paper_url: https://arxiv.org/abs/2507.08567
+  tldr: Recursive generalization of the Transformer that iterates a block in latent space for autoregressive sequence
+    modeling, scaling compute without new parameters.
   added: '2026-10-03'
 
 - id: li2025-skip-layer-or
@@ -3103,6 +3948,34 @@
     and ARC results with 27M parameters and 1000 examples.
   added: '2026-10-03'
 
+- id: zhu2025-4th-dimension-scaling
+  title: The 4th Dimension for Scaling Model Size
+  authors: [Ruike Zhu, Hanwen Zhang, Tianyu Shi, Chi Wang, Tianyi Zhou, Zengyi Qin]
+  date: '2025-06-22'
+  venue: arXiv
+  type: Analysis
+  category: analysis-interpretability
+  tags: [language, scaling, reasoning]
+  arxiv: '2506.18233'
+  paper_url: https://arxiv.org/abs/2506.18233
+  tldr: Treats parameter reuse (virtual logical depth) as a fourth scaling axis, finding it boosts reasoning while
+    knowledge capacity stays tied to parameter count.
+  added: '2026-10-03'
+
+- id: li2025-when-how-unlabeled
+  title: When and How Unlabeled Data Provably Improve In-Context Learning
+  authors: [Yingcong Li, Xiangyu Chang, Muti Kara, Xiaofeng Liu, Amit Roy-Chowdhury, Samet Oymak]
+  date: '2025-06-17'
+  venue: arXiv
+  type: Theory
+  category: in-context-learning
+  tags: [icl, theory]
+  arxiv: '2506.15329'
+  paper_url: https://arxiv.org/abs/2506.15329
+  tldr: Shows one-layer linear attention ignores unlabeled demonstrations, while multilayer or looped transformers
+    build polynomial estimators that exploit them, akin to EM.
+  added: '2026-10-03'
+
 - id: zeng2025-ponderlm-pretraining-language
   title: 'PonderLM: Pretraining Language Models to Ponder in Continuous Space'
   authors: [Boyi Zeng, Shixiang Song, Siyuan Huang, Yixuan Wang, He Li, et al.]
@@ -3146,6 +4019,35 @@
     looping as parallelizable test-time compute.
   added: '2026-10-03'
 
+- id: liu2025-lares-latent-reasoning
+  title: 'LARES: Latent Reasoning for Sequential Recommendation'
+  authors: [Enze Liu, Bowen Zheng, Xiaolei Wang, Wayne Xin Zhao, Jinpeng Wang, et al.]
+  date: '2025-05-22'
+  venue: arXiv
+  type: Method
+  category: latent-reasoning
+  tags: [reasoning, rl, pretraining]
+  arxiv: '2505.16865'
+  paper_url: https://arxiv.org/abs/2505.16865
+  tldr: Depth-recurrent latent reasoning for sequential recommendation that refines all tokens each step, trained
+    with self-supervised pretraining then RL post-training.
+  added: '2026-10-03'
+
+- id: nguyen2025-intra-layer-recurrence
+  title: Intra-Layer Recurrence in Transformers for Language Modeling
+  authors: [Anthony Nguyen, Wenjun Lin]
+  date: '2025-05-03'
+  venue: Canadian AI 2025
+  type: Method
+  category: language-models
+  tags: [language, efficiency]
+  arxiv: '2505.01855'
+  paper_url: https://arxiv.org/abs/2505.01855
+  code_url: https://github.com/ant-8/Layer-Recurrent-Transformers
+  tldr: Applies recurrence selectively to individual transformer layers within one forward pass, finding that looping
+    earlier layers gives the best perplexity per added compute.
+  added: '2026-10-03'
+
 - id: merrill2025-little-depth-goes
   title: 'A Little Depth Goes a Long Way: The Expressive Power of Log-Depth Transformers'
   authors: [William Merrill, Ashish Sabharwal]
@@ -3186,6 +4088,50 @@
   paper_url: https://arxiv.org/abs/2502.13842
   tldr: Treats layer computations as implicit thinking steps, routing hard tokens through extra residual thinking
     iterations to reach larger-model quality with fewer parameters.
+  added: '2026-10-03'
+
+- id: heo2025-ringformer-rethinking-recurrent
+  title: 'RingFormer: Rethinking Recurrent Transformer with Adaptive Level Signals'
+  authors: [Jaemu Heo, Eldor Fozilov, Hyunmin Song, Taehwan Kim]
+  date: '2025-02-18'
+  venue: EMNLP 2025
+  type: Method
+  category: efficiency
+  tags: [language, vision, efficiency]
+  arxiv: '2502.13181'
+  paper_url: https://arxiv.org/abs/2502.13181
+  tldr: Applies one Transformer layer repeatedly with input-dependent low-rank level signals per iteration, approaching
+    full Transformers with far fewer parameters.
+  added: '2026-10-03'
+
+- id: li2025-zero-token-driven
+  title: 'Zero Token-Driven Deep Thinking in LLMs: Unlocking the Full Potential of Existing Parameters via Cyclic
+    Refinement'
+  authors: [Guanghao Li, Wenhao Jiang, Li Shen, Ming Tang, Chun Yuan]
+  date: '2025-02-17'
+  venue: arXiv
+  type: Method
+  category: adaptive-computation
+  tags: [language, adaptive, efficiency]
+  arxiv: '2502.12214'
+  paper_url: https://arxiv.org/abs/2502.12214
+  tldr: Cycles only the intermediate layers of an LLM with a trainable zero-token pool that guides each cycle and
+    enables dynamic early exits.
+  added: '2026-10-03'
+
+- id: hu2025-hyper-set-designing
+  title: 'Hyper-SET: Designing Transformers via Hyperspherical Energy Minimization'
+  authors: [Yunzhe Hu, Difan Zou, Dong Xu]
+  date: '2025-02-17'
+  venue: ICLR 2026
+  type: Method
+  category: equilibrium-implicit
+  tags: [theory, interpretability, vision, language]
+  arxiv: '2502.11646'
+  paper_url: https://arxiv.org/abs/2502.11646
+  code_url: https://github.com/huyunzhe/hyper-set
+  tldr: Derives transformer components from iterative minimization of Hopfield-style hyperspherical energies, yielding
+    a parameter-shared recurrent-depth transformer competitive with standard ones.
   added: '2026-10-03'
 
 - id: yu2025-enhancing-auto-regressive
@@ -3275,6 +4221,20 @@
     sketches continuous depth-wise batching with early exit.
   added: '2026-10-03'
 
+- id: shaw2024-alta-compiler-based
+  title: 'ALTA: Compiler-Based Analysis of Transformers'
+  authors: [Peter Shaw, James Cohan, Jacob Eisenstein, Kenton Lee, Jonathan Berant, Kristina Toutanova]
+  date: '2024-10-22'
+  venue: arXiv
+  type: Method
+  category: theory
+  tags: [theory, algorithmic]
+  arxiv: '2410.18077'
+  paper_url: https://arxiv.org/abs/2410.18077
+  tldr: ALTA language compiles programs with loops into Universal Transformer weights, constructively showing length-invariant
+    parity, addition and SCAN solutions.
+  added: '2026-10-03'
+
 - id: chen2024-bypassing-exponential-dependency
   title: 'Bypassing the Exponential Dependency: Looped Transformers Efficiently Learn In-context by Multi-step Gradient
     Descent'
@@ -3333,6 +4293,20 @@
   project_url: https://sites.google.com/wisc.edu/looped-transformers-for-lengen/home
   tldr: Looped Transformers trained with input-dependent step counts on iterative RASP-L tasks generalize to far
     longer inputs than standard Transformers.
+  added: '2026-10-03'
+
+- id: ng2024-loop-residual-neural
+  title: Loop-Residual Neural Networks for Iterative Refinement
+  authors: [Kei-Sing Ng, Qingchen Wang]
+  date: '2024-09-21'
+  venue: arXiv
+  type: Method
+  category: language-models
+  tags: [language, test-time-compute]
+  arxiv: '2409.14199'
+  paper_url: https://arxiv.org/abs/2409.14199
+  tldr: Loops a subset of GPT-2 blocks with residual predictions, spending more compute per token at fixed parameter
+    count to improve language modeling.
   added: '2026-10-03'
 
 - id: sun2024-transformer-layers-as
@@ -3439,6 +4413,20 @@
     probing length generalization and algorithmic tasks.
   added: '2026-10-03'
 
+- id: davidhay2024-dynamic-layer-tying
+  title: Dynamic Layer Tying for Parameter-Efficient Transformers
+  authors: [Tamir David-Hay, Lior Wolf]
+  date: '2024-01-23'
+  venue: ICLR 2024
+  type: Method
+  category: efficiency
+  tags: [language, efficiency, rl]
+  arxiv: '2401.12819'
+  paper_url: https://arxiv.org/abs/2401.12819
+  tldr: An RL agent decides during training which transformer layers copy weights from earlier layers, tying layers
+    dynamically to cut trainable parameters.
+  added: '2026-10-03'
+
 - id: bai2024-fixed-point-diffusion
   title: Fixed Point Diffusion Models
   authors: [Xingjian Bai, Luke Melas-Kyriazi]
@@ -3529,6 +4517,64 @@
     while keeping compositional generalization.
   added: '2026-10-03'
 
+- id: wang2023-residualtransformer-residual-low
+  title: 'ResidualTransformer: Residual Low-Rank Learning with Weight-Sharing for Transformer Layers'
+  authors: [Yiming Wang, Jinyu Li]
+  date: '2023-10-04'
+  venue: ICASSP 2024
+  type: Method
+  category: efficiency
+  tags: [audio, efficiency]
+  arxiv: '2310.02489'
+  paper_url: https://arxiv.org/abs/2310.02489
+  tldr: Each transformer encoder weight is a full-rank matrix shared with adjacent layers plus a small per-layer
+    low-rank residual, shrinking speech models about threefold.
+  added: '2026-10-03'
+
+- id: pires2023-one-wide-feedforward
+  title: One Wide Feedforward is All You Need
+  authors: [Telmo Pessoa Pires, António V. Lopes, Yannick Assogba, Hendra Setiawan]
+  date: '2023-09-04'
+  venue: WMT 2023
+  type: Analysis
+  category: foundations
+  tags: [language, efficiency]
+  arxiv: '2309.01826'
+  paper_url: https://arxiv.org/abs/2309.01826
+  tldr: Shows transformer FFNs are redundant across layers; sharing one widened FFN across encoder layers and dropping
+    decoder FFNs improves accuracy and latency.
+  added: '2026-10-03'
+
+- id: wang2023-deep-equilibrium-object
+  title: Deep Equilibrium Object Detection
+  authors: [Shuai Wang, Yao Teng, Limin Wang]
+  date: '2023-08-18'
+  venue: ICCV 2023
+  type: Method
+  category: equilibrium-implicit
+  tags: [vision]
+  arxiv: '2308.09564'
+  paper_url: https://arxiv.org/abs/2308.09564
+  code_url: https://github.com/MCG-NJU/DEQDet
+  tldr: DEQDet replaces a stack of query-refinement decoder layers with one implicit layer solved to a fixed point,
+    giving infinite-step refinement with fewer parameters.
+  added: '2026-10-03'
+
+- id: zhao2023-recursivedet-end-end
+  title: 'RecursiveDet: End-to-End Region-based Recursive Object Detection'
+  authors: [Jing Zhao, Li Sun, Qingli Li]
+  date: '2023-07-25'
+  venue: ICCV 2023
+  type: Method
+  category: vision-multimodal
+  tags: [vision, efficiency]
+  arxiv: '2307.13619'
+  paper_url: https://arxiv.org/abs/2307.13619
+  code_url: https://github.com/bravezzzzzz/RecursiveDet
+  tldr: Shares decoder parameters across stages of a region-based detector and adds a short recursion loop, deepening
+    refinement while shrinking model size.
+  added: '2026-10-03'
+
 - id: yang2023-learning-solve-constraint
   title: Learning to Solve Constraint Satisfaction Problems with Recurrent Transformer
   authors: [Zhun Yang, Adam Ishay, Joohyung Lee]
@@ -3542,6 +4588,34 @@
   code_url: https://github.com/azreasoners/recurrent_transformer
   tldr: A Transformer applied recurrently solves Sudoku and other CSPs end to end, beating SATNet and GNNs, and
     benefits from more recurrent steps at inference.
+  added: '2026-10-03'
+
+- id: lin2023-understanding-parameter-sharing
+  title: Understanding Parameter Sharing in Transformers
+  authors: [Ye Lin, Mingxuan Wang, Zhexi Zhang, Xiaohui Wang, Tong Xiao, Jingbo Zhu]
+  date: '2023-06-15'
+  venue: arXiv
+  type: Analysis
+  category: analysis-interpretability
+  tags: [language, efficiency]
+  arxiv: '2306.09380'
+  paper_url: https://arxiv.org/abs/2306.09380
+  tldr: Analyzes why cross-layer parameter sharing helps transformers, attributing most gains to improved training
+    convergence rather than increased model complexity.
+  added: '2026-10-03'
+
+- id: chi2023-transformer-working-memory
+  title: Transformer Working Memory Enables Regular Language Reasoning and Natural Language Length Extrapolation
+  authors: [Ta-Chung Chi, Ting-Han Fan, Alexander I. Rudnicky, Peter J. Ramadge]
+  date: '2023-05-05'
+  venue: arXiv
+  type: Method
+  category: algorithmic-reasoning
+  tags: [language, algorithmic, adaptive]
+  arxiv: '2305.03796'
+  paper_url: https://arxiv.org/abs/2305.03796
+  tldr: RegularGPT combines weight sharing, adaptive depth and sliding dilated attention to build working memory
+    along depth, solving PARITY-style regular languages and extrapolating length.
   added: '2026-10-03'
 
 - id: tang2023-beyond-universal-transformer
@@ -3572,6 +4646,21 @@
     weights, with more repetitions lowering WER.
   added: '2026-10-03'
 
+- id: hoover2023-energy-transformer
+  title: Energy Transformer
+  authors: [Benjamin Hoover, Yuchen Liang, Bao Pham, Rameswar Panda, Hendrik Strobelt, et al.]
+  date: '2023-02-14'
+  venue: NeurIPS 2023
+  type: Method
+  category: equilibrium-implicit
+  tags: [vision, graph, theory]
+  arxiv: '2302.07253'
+  paper_url: https://arxiv.org/abs/2302.07253
+  code_url: https://github.com/bhoov/energy-transformer-jax
+  tldr: Replaces stacked transformer layers with one recurrent attention block that iteratively descends an engineered
+    energy combining attention and Hopfield associative memory.
+  added: '2026-10-03'
+
 - id: giannou2023-looped-transformers-as
   title: Looped Transformers as Programmable Computers
   authors: [Angeliki Giannou, Shashank Rajput, Jy-yong Sohn, Kangwook Lee, Jason D. Lee, Dimitris Papailiopoulos]
@@ -3585,6 +4674,155 @@
   code_url: https://github.com/jysohn1108/Looped-Transformer
   tldr: Constructs a constant-depth Transformer that, placed in a loop, emulates a SUBLEQ-based general-purpose
     computer, including calculators, linear algebra and in-context learning algorithms.
+  added: '2026-10-03'
+
+- id: nouriborji2022-minialbert-model-distillation
+  title: 'MiniALBERT: Model Distillation via Parameter-Efficient Recursive Transformers'
+  authors: [Mohammadmahdi Nouriborji, Omid Rohanian, Samaneh Kouchaki, David A. Clifton]
+  date: '2022-10-12'
+  venue: EACL 2023
+  type: Method
+  category: efficiency
+  tags: [language, efficiency]
+  arxiv: '2210.06425'
+  paper_url: https://arxiv.org/abs/2210.06425
+  tldr: Distills fully parameterized BERT-style teachers into compact recursive students that share one transformer
+    layer across depth, adding bottleneck adapters for layer-wise flexibility.
+  added: '2026-10-03'
+
+- id: lin2022-spin-empirical-evaluation
+  title: 'SPIN: An Empirical Evaluation on Sharing Parameters of Isotropic Networks'
+  authors: [Chien-Yu Lin, Anish Prabhu, Thomas Merth, Sachin Mehta, Anurag Ranjan, et al.]
+  date: '2022-07-21'
+  venue: ECCV 2022
+  type: Analysis
+  category: vision-multimodal
+  tags: [vision, efficiency]
+  arxiv: '2207.10237'
+  paper_url: https://arxiv.org/abs/2207.10237
+  code_url: https://github.com/apple/ml-spin
+  tldr: Systematically studies cross-layer weight sharing in isotropic vision networks like ConvMixer and ViT, proposing
+    sharing strategies with better accuracy per parameter.
+  added: '2026-10-03'
+
+- id: gao2022-lightweight-bimodal-network
+  title: Lightweight Bimodal Network for Single-Image Super-Resolution via Symmetric CNN and Recursive Transformer
+  authors: [Guangwei Gao, Zhengxue Wang, Juncheng Li, Wenjie Li, Yi Yu, Tieyong Zeng]
+  date: '2022-04-28'
+  venue: IJCAI 2022
+  type: Method
+  category: vision-multimodal
+  tags: [vision, efficiency]
+  arxiv: '2204.13286'
+  paper_url: https://arxiv.org/abs/2204.13286
+  code_url: https://github.com/IVIPLab/LBNet
+  project_url: https://guangweigao.github.io/IJCAI22/LBNet.html
+  tldr: LBNet pairs a symmetric CNN with a recursive transformer that reuses its blocks to capture long-range dependencies
+    for lightweight image super-resolution.
+  added: '2026-10-03'
+
+- id: liang2022-drt-lightweight-single
+  title: 'DRT: A Lightweight Single Image Deraining Recursive Transformer'
+  authors: [Yuanchu Liang, Saeed Anwar, Yang Liu]
+  date: '2022-04-25'
+  venue: CVPR 2022 Workshops (NTIRE)
+  type: Method
+  category: vision-multimodal
+  tags: [vision, efficiency]
+  arxiv: '2204.11385'
+  paper_url: https://arxiv.org/abs/2204.11385
+  code_url: https://github.com/YC-Liang/DRT
+  tldr: A deraining network that recursively reapplies weight-shared local-window transformer blocks with residual
+    connections, matching larger models with far fewer parameters.
+  added: '2026-10-03'
+
+- id: zhang2022-minivit-compressing-vision
+  title: 'MiniViT: Compressing Vision Transformers with Weight Multiplexing'
+  authors: [Jinnian Zhang, Houwen Peng, Kan Wu, Mengchen Liu, Bin Xiao, et al.]
+  date: '2022-04-14'
+  venue: CVPR 2022
+  type: Method
+  category: vision-multimodal
+  tags: [vision, efficiency]
+  arxiv: '2204.07154'
+  paper_url: https://arxiv.org/abs/2204.07154
+  code_url: https://github.com/microsoft/Cream/tree/main/MiniViT
+  tldr: Shares weights across consecutive ViT blocks with small per-layer transformations and weight distillation,
+    compressing DeiT-B and Swin models with little accuracy loss.
+  added: '2026-10-03'
+
+- id: balagansky2022-palbert-teaching-albert
+  title: 'PALBERT: Teaching ALBERT to Ponder'
+  authors: [Nikita Balagansky, Daniil Gavrilov]
+  date: '2022-04-07'
+  venue: NeurIPS 2022
+  type: Method
+  category: adaptive-computation
+  tags: [language, adaptive]
+  arxiv: '2204.03276'
+  paper_url: https://arxiv.org/abs/2204.03276
+  code_url: https://github.com/tinkoff-ai/palbert
+  tldr: Adds a PonderNet-style halting mechanism with a deterministic Q-exit criterion to the layer-shared ALBERT,
+    letting it choose how many shared-layer passes to run.
+  added: '2026-10-03'
+
+- id: ge2022-edgeformer-parameter-efficient
+  title: 'EdgeFormer: A Parameter-Efficient Transformer for On-Device Seq2seq Generation'
+  authors: [Tao Ge, Furu Wei]
+  date: '2022-02-16'
+  venue: arXiv
+  type: Method
+  category: efficiency
+  tags: [language, efficiency]
+  arxiv: '2202.07959'
+  paper_url: https://arxiv.org/abs/2202.07959
+  code_url: https://github.com/microsoft/unilm/tree/master/edgelm
+  tldr: An 11M-parameter on-device encoder-decoder that shares layer weights across depth with per-layer LoRA-style
+    adaptation, beating pretrained Universal Transformer baselines.
+  added: '2026-10-03'
+
+- id: tan2022-acort-compact-object
+  title: 'ACORT: A Compact Object Relation Transformer for Parameter Efficient Image Captioning'
+  authors: [Jia Huei Tan, Ying Hua Tan, Chee Seng Chan, Joon Huang Chuah]
+  date: '2022-02-11'
+  venue: Neurocomputing
+  type: Method
+  category: vision-multimodal
+  tags: [vision, multimodal, efficiency]
+  arxiv: '2202.05451'
+  paper_url: https://arxiv.org/abs/2202.05451
+  code_url: https://github.com/jiahuei/sparse-image-captioning
+  tldr: Shrinks image-captioning transformers 3.7x to 21.6x using cross-layer parameter sharing, attention sharing
+    and radix encoding without losing CIDEr.
+  added: '2026-10-03'
+
+- id: guo2022-reconformer-accelerated-mri
+  title: 'ReconFormer: Accelerated MRI Reconstruction Using Recurrent Transformer'
+  authors: [Pengfei Guo, Yiqun Mei, Jinyuan Zhou, Shanshan Jiang, Vishal M. Patel]
+  date: '2022-01-23'
+  venue: arXiv
+  type: Method
+  category: vision-multimodal
+  tags: [vision]
+  arxiv: '2201.09376'
+  paper_url: https://arxiv.org/abs/2201.09376
+  code_url: https://github.com/guopengf/ReconFormer
+  tldr: Iteratively reconstructs MRI from undersampled k-space with recurrent pyramid transformer units whose weights
+    are reused across refinement iterations, keeping the model compact.
+  added: '2026-10-03'
+
+- id: zhang2021-universal-transformer-hawkes
+  title: Universal Transformer Hawkes Process with Adaptive Recursive Iteration
+  authors: [Lu-ning Zhang, Jian-wei Liu, Zhi-yan Song, Xin Zuo]
+  date: '2021-12-29'
+  venue: Engineering Applications of Artificial Intelligence
+  type: Method
+  category: adaptive-computation
+  tags: [adaptive]
+  arxiv: '2112.14479'
+  paper_url: https://arxiv.org/abs/2112.14479
+  tldr: Models asynchronous event sequences with a Universal Transformer Hawkes process whose shared block recurs
+    with adaptive computation time halting.
   added: '2026-10-03'
 
 - id: messina2021-recurrent-vision-transformer
@@ -3630,6 +4868,62 @@
   code_url: https://github.com/RobertCsordas/ndr
   tldr: Copy gates and geometric attention in a shared-layer Transformer give near-perfect length and depth generalization
     on compositional table lookup and ListOps.
+  added: '2026-10-03'
+
+- id: li2021-recurrent-multiple-shared
+  title: Recurrent multiple shared layers in Depth for Neural Machine Translation
+  authors: [GuoLiang Li, Yiyang Li]
+  date: '2021-08-23'
+  venue: arXiv
+  type: Method
+  category: foundations
+  tags: [language, efficiency]
+  arxiv: '2108.10417'
+  paper_url: https://arxiv.org/abs/2108.10417
+  tldr: Deepens NMT transformers by recurrently reapplying a group of shared encoder layers in depth, gaining accuracy
+    without proportional parameter growth.
+  added: '2026-10-03'
+
+- id: zhou2021-semantic-communication-adaptive
+  title: Semantic Communication with Adaptive Universal Transformer
+  authors: [Qingyang Zhou, Rongpeng Li, Zhifeng Zhao, Chenghui Peng, Honggang Zhang]
+  date: '2021-08-20'
+  venue: IEEE Wireless Communications Letters
+  type: Method
+  category: adaptive-computation
+  tags: [language, adaptive]
+  arxiv: '2108.09119'
+  paper_url: https://arxiv.org/abs/2108.09119
+  tldr: Builds a joint semantic source-channel coding system on a Universal Transformer whose adaptive recurrence
+    depth adjusts to sentence content and channel conditions.
+  added: '2026-10-03'
+
+- id: xue2021-go-wider-instead
+  title: Go Wider Instead of Deeper
+  authors: [Fuzhao Xue, Ziji Shi, Futao Wei, Yuxuan Lou, Yong Liu, Yang You]
+  date: '2021-07-25'
+  venue: AAAI 2022
+  type: Method
+  category: foundations
+  tags: [vision, language, efficiency]
+  arxiv: '2107.11817'
+  paper_url: https://arxiv.org/abs/2107.11817
+  tldr: WideNet shares one transformer block across depth, replacing its FFN with mixture-of-experts and keeping
+    per-layer LayerNorms, to scale width instead of parameters.
+  added: '2026-10-03'
+
+- id: dabre2021-recurrent-stacking-layers
+  title: 'Recurrent Stacking of Layers in Neural Networks: An Application to Neural Machine Translation'
+  authors: [Raj Dabre, Atsushi Fujita]
+  date: '2021-06-18'
+  venue: arXiv
+  type: Method
+  category: foundations
+  tags: [language, efficiency]
+  arxiv: '2106.10002'
+  paper_url: https://arxiv.org/abs/2106.10002
+  tldr: Extended study of sharing parameters across all encoder and decoder layers in NMT, recovering accuracy of
+    deep untied models via transfer learning and distillation.
   added: '2026-10-03'
 
 - id: takase2021-lessons-parameter-sharing
@@ -3687,6 +4981,20 @@
   paper_url: https://www.isca-archive.org/interspeech_2020/zhao20i_interspeech.html
   tldr: Adapts the Universal Transformer to speech recognition with shared iterative encoder and decoder computation
     and dynamic depth.
+  added: '2026-10-03'
+
+- id: mohammadshahi2020-recursive-non-autoregressive
+  title: Recursive Non-Autoregressive Graph-to-Graph Transformer for Dependency Parsing with Iterative Refinement
+  authors: [Alireza Mohammadshahi, James Henderson]
+  date: '2020-03-29'
+  venue: TACL 2021
+  type: Method
+  category: foundations
+  tags: [language, graph]
+  arxiv: '2003.13118'
+  paper_url: https://arxiv.org/abs/2003.13118
+  tldr: RNGTr recursively applies the same non-autoregressive graph-to-graph transformer to refine dependency graphs,
+    improving parsers over several refinement iterations.
   added: '2026-10-03'
 
 - id: lan2019-albert-lite-bert
