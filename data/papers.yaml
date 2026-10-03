@@ -2361,7 +2361,7 @@
   added: '2026-10-03'
 
 - id: li2025-mor-vit-efficient
-  title: 'MOR-VIT: Efficient Vision Transformer with Mixture-of-Recursions'
+  title: 'IMC-Net: A Lightweight Content-Conditioned Encoder with Multi-Pass Processing for Image Classification'
   authors: [YiZhou Li]
   date: '2025-07-29'
   venue: arXiv
@@ -2370,8 +2370,8 @@
   tags: [vision, efficiency, adaptive]
   arxiv: '2507.21761'
   paper_url: https://arxiv.org/abs/2507.21761
-  tldr: Brings token-level mixture-of-recursions to ViTs, letting each token pick its recursion depth through shared
-    blocks for fewer parameters and faster inference.
+  tldr: Re-applies one lightweight core block a few times, with a score-based selector deciding per region whether
+    another pass helps (formerly titled MOR-VIT).
   added: '2026-10-03'
 
 - id: bae2025-mixture-recursions-learning
