@@ -86,6 +86,14 @@ def fetch(arxiv_id: str) -> dict | None:
     return results[0] if results else None
 
 
-def search(query: str, max_results: int = 100) -> list[dict]:
-    return _query({"search_query": query, "sortBy": "submittedDate", "sortOrder": "descending",
-                   "max_results": max_results})
+def search(query: str, max_results: int = 100, stop_before: str | None = None, page: int = 200) -> list[dict]:
+    """Newest-first search, paging until `max_results` or until entries are older than `stop_before`."""
+    out: list[dict] = []
+    for start in range(0, max_results, page):
+        batch = _query({"search_query": query, "sortBy": "submittedDate", "sortOrder": "descending",
+                        "start": start, "max_results": min(page, max_results - start)})
+        out += batch
+        if not batch or (stop_before and batch[-1]["date"] < stop_before):
+            break
+        time.sleep(3)
+    return out
