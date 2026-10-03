@@ -12,13 +12,13 @@ models that get deeper by running the same block again.**
 [![Papers](https://img.shields.io/badge/papers-350-2a78d6?style=flat)](#-papers)
 [![With code](https://img.shields.io/badge/with%20code-130-1baf7a?style=flat)](#-papers)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-7b61ff?style=flat)](CONTRIBUTING.md)
-[![Last commit](https://img.shields.io/github/last-commit/shreshthsaini/Awesome-Looped-Transformers?style=flat&color=eb6834)](https://github.com/shreshthsaini/Awesome-Looped-Transformers/commits)
-[![GitHub stars](https://img.shields.io/github/stars/shreshthsaini/Awesome-Looped-Transformers?style=flat&color=eda100)](https://github.com/shreshthsaini/Awesome-Looped-Transformers/stargazers)
+[![Last commit](https://img.shields.io/github/last-commit/shreshthsaini/Rough-Claude-Cloud?style=flat&color=eb6834)](https://github.com/shreshthsaini/Rough-Claude-Cloud/commits)
+[![GitHub stars](https://img.shields.io/github/stars/shreshthsaini/Rough-Claude-Cloud?style=flat&color=eda100)](https://github.com/shreshthsaini/Rough-Claude-Cloud/stargazers)
 [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey?style=flat)](LICENSE)
 
-**[📝 Add a paper](https://github.com/shreshthsaini/Awesome-Looped-Transformers/issues/new?template=add-paper.yml)** ·
-**[🔗 Add a resource](https://github.com/shreshthsaini/Awesome-Looped-Transformers/issues/new?template=add-resource.yml)** ·
-**[🐛 Report a mistake](https://github.com/shreshthsaini/Awesome-Looped-Transformers/issues/new?template=fix-entry.yml)**
+**[📝 Add a paper](https://github.com/shreshthsaini/Rough-Claude-Cloud/issues/new?template=add-paper.yml)** ·
+**[🔗 Add a resource](https://github.com/shreshthsaini/Rough-Claude-Cloud/issues/new?template=add-resource.yml)** ·
+**[🐛 Report a mistake](https://github.com/shreshthsaini/Rough-Claude-Cloud/issues/new?template=fix-entry.yml)**
 
 <sub>350 papers · 13 categories · 2018–2026 · newest paper 2026-10-01</sub>
 
@@ -597,7 +597,7 @@ implementation.
 | 2025-09 | **[Hierarchical Reasoning Models: Perspectives and Misconceptions](https://arxiv.org/abs/2510.00355)**<br><sub>Renee Ge, Qianli Liao, Tomaso Poggio</sub><br><sub>💡 Reviews Hierarchical Reasoning Models, tests alternative variants and design choices, and clarifies common misconceptions about why they work.</sub><br><sub>[PDF](https://arxiv.org/pdf/2510.00355)</sub> | arXiv | `Analysis` | — |
 | 2025-09 | **[Two-Scale Latent Dynamics for Recurrent-Depth Transformers](https://arxiv.org/abs/2509.23314)**<br><sub>Francesco Pappone, Donato Crisostomi, Emanuele Rodolà</sub><br><sub>💡 Shows loop updates in recurrent-depth transformers shrink and become increasingly orthogonal, and derives a second-order early-exit rule from this geometry.</sub><br><sub>[PDF](https://arxiv.org/pdf/2509.23314)</sub> | arXiv | `Analysis` | — |
 | 2025-07 | **[Latent Chain-of-Thought? Decoding the Depth-Recurrent Transformer](https://arxiv.org/abs/2507.02199)**<br><sub>Wenquan Lu, Yuechuan Yang, Kyle Lee et al.</sub><br><sub>💡 Probes Huginn-3.5B with logit and coda lenses and finds little evidence of interpretable latent chain-of-thought across recurrence steps.</sub><br><sub>[PDF](https://arxiv.org/pdf/2507.02199)</sub> | COLM 2025 Workshop | `Analysis` | [![GitHub stars](https://img.shields.io/github/stars/wenquanlu/huginn-latent-cot?style=flat&logo=github&label=&color=4c1)](https://github.com/wenquanlu/huginn-latent-cot) |
-| 2025-06 | **[Beyond Parameters: Exploring Virtual Logic Depth for Scaling Laws](https://arxiv.org/abs/2506.18233)**<br><sub>Ruike Zhu, Hanwen Zhang, Tianyu Shi et al.</sub><br><sub>💡 Treats parameter reuse (virtual logical depth) as a fourth scaling axis, finding it boosts reasoning while knowledge capacity stays tied to parameter count.</sub><br><sub>[PDF](https://arxiv.org/pdf/2506.18233)</sub> | arXiv | `Analysis` | — |
+| 2025-06 | **[Beyond Parameters: Exploring Virtual Logic Depth for Scaling Laws](https://arxiv.org/abs/2506.18233)**<br><sub>Ruike Zhu, Hanwen Zhang, Kevin Li et al.</sub><br><sub>💡 Treats parameter reuse (virtual logical depth) as a fourth scaling axis, finding it boosts reasoning while knowledge capacity stays tied to parameter count.</sub><br><sub>[PDF](https://arxiv.org/pdf/2506.18233)</sub> | arXiv | `Analysis` | — |
 | 2024-07 | **[Transformer Layers as Painters](https://arxiv.org/abs/2407.09298)**<br><sub>Qi Sun, Marc Pickett, Aakash Kumar Nain et al.</sub><br><sub>💡 Shows middle layers of pretrained transformers are surprisingly uniform and can be skipped, reordered, or looped in parallel with modest loss.</sub><br><sub>[PDF](https://arxiv.org/pdf/2407.09298)</sub> | AAAI 2025 | `Analysis` | — |
 | 2023-06 | **[Understanding Parameter Sharing in Transformers](https://arxiv.org/abs/2306.09380)**<br><sub>Ye Lin, Mingxuan Wang, Zhexi Zhang et al.</sub><br><sub>💡 Analyzes why cross-layer parameter sharing helps transformers, attributing most gains to improved training convergence rather than increased model complexity.</sub><br><sub>[PDF](https://arxiv.org/pdf/2306.09380)</sub> | arXiv | `Analysis` | — |
 
@@ -661,7 +661,7 @@ implementation.
 
 Contributions are very welcome, and the fastest path is fully automated:
 
-1. **[Open an "Add a paper" issue](https://github.com/shreshthsaini/Awesome-Looped-Transformers/issues/new?template=add-paper.yml)**
+1. **[Open an "Add a paper" issue](https://github.com/shreshthsaini/Rough-Claude-Cloud/issues/new?template=add-paper.yml)**
    and paste an arXiv link. Everything else is optional.
 2. A bot fetches the **title, authors, date, venue and code link** from arXiv, files it in the category you
    picked, regenerates this README, and **opens a pull request** for you.
@@ -693,10 +693,10 @@ reference and inclusion criteria.
 
 ### ⭐ Star history
 
-<a href="https://star-history.com/#shreshthsaini/Awesome-Looped-Transformers&Date">
+<a href="https://star-history.com/#shreshthsaini/Rough-Claude-Cloud&Date">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=shreshthsaini/Awesome-Looped-Transformers&type=Date&theme=dark">
-    <img alt="Star history chart" src="https://api.star-history.com/svg?repos=shreshthsaini/Awesome-Looped-Transformers&type=Date" width="600">
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=shreshthsaini/Rough-Claude-Cloud&type=Date&theme=dark">
+    <img alt="Star history chart" src="https://api.star-history.com/svg?repos=shreshthsaini/Rough-Claude-Cloud&type=Date" width="600">
   </picture>
 </a>
 
@@ -709,7 +709,7 @@ If this list helps your research, please consider citing it:
   title        = {Awesome Looped Transformers: A Curated List of Looped, Recurrent-Depth and Weight-Tied Transformer Research},
   author       = {Shreshth Saini},
   year         = {2026},
-  howpublished = {\url{https://github.com/shreshthsaini/Awesome-Looped-Transformers}},
+  howpublished = {\url{https://github.com/shreshthsaini/Rough-Claude-Cloud}},
   note         = {GitHub repository}
 }
 ```
