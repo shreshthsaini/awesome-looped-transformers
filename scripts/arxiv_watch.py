@@ -52,7 +52,8 @@ def main() -> None:
 
     known = {p.get("arxiv") for p in load_papers() if p.get("arxiv")}
     cutoff = (dt.date.today() - dt.timedelta(days=args.days)).isoformat()
-    query = "(" + " OR ".join(f'abs:"{p}"' for p in phrases) + f") AND {CATEGORIES}"
+    # Match phrases in titles and abstracts (arXiv's ti: and abs: are separate fields).
+    query = "(" + " OR ".join(f'ti:"{p}" OR abs:"{p}"' for p in phrases) + f") AND {CATEGORIES}"
     seen, found = set(), []
     for entry in arxiv_api.search(query, max_results=args.max_results, stop_before=cutoff):
         if entry["date"] < cutoff or entry["arxiv"] in known or entry["arxiv"] in seen:
