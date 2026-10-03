@@ -45,20 +45,6 @@
     on AudioSet with half the parameters.
   added: '2026-10-03'
 
-- id: jin2026-deepjepa-scaling-world
-  title: 'DeepJEPA: Scaling World Models from Within'
-  authors: [Zijian Jin, Yunbei Zhang, Yuanzhe Liu, Ming Liu, Baian Chen, et al.]
-  date: '2026-10-01'
-  venue: arXiv
-  type: Method
-  category: diffusion-generative
-  tags: [robotics, adaptive, test-time-compute, vision]
-  arxiv: '2610.00368'
-  paper_url: https://arxiv.org/abs/2610.00368
-  tldr: A weight-tied JEPA world model that treats transition depth as a test-time axis and learns when extra recurrent
-    updates help planning.
-  added: '2026-10-03'
-
 - id: liu2026-decoding-looped-transformers
   title: Decoding Looped Transformers Better for (Almost) Free
   authors: [Weihao Liu, Huangjie Zheng, Tianrong Chen, Rohit Dilip, Richard He Bai, et al.]
@@ -143,6 +129,20 @@
   code_url: https://github.com/OpenSenseNova/Looped-DiT
   tldr: Loops shared middle DiT blocks within each denoising step, stabilized by deep supervision and self-modulating
     attention, letting a small text-to-image model beat far larger ones.
+  added: '2026-10-03'
+
+- id: jin2026-deepjepa-scaling-world
+  title: 'DeepJEPA: Scaling World Models from Within'
+  authors: [Zijian Jin, Yunbei Zhang, Yuanzhe Liu, Ming Liu, Baian Chen, et al.]
+  date: '2026-09-30'
+  venue: arXiv
+  type: Method
+  category: diffusion-generative
+  tags: [robotics, adaptive, test-time-compute, vision]
+  arxiv: '2610.00368'
+  paper_url: https://arxiv.org/abs/2610.00368
+  tldr: A weight-tied JEPA world model that treats transition depth as a test-time axis and learns when extra recurrent
+    updates help planning.
   added: '2026-10-03'
 
 - id: marchenko2026-closing-loop-practical
@@ -575,21 +575,6 @@
     and improve reasoning accuracy.
   added: '2026-10-03'
 
-- id: lu2026-adaptive-depth-expert
-  title: Adaptive Depth and Expert Refinement for Efficient Speech Enhancement
-  authors: [Xikun Lu, Yujian Ma, Yunda Chen, Xianquan Jiang, Jinqiu Sang]
-  date: '2026-09-21'
-  venue: arXiv
-  type: Method
-  category: vision-multimodal
-  tags: [audio, adaptive, efficiency]
-  arxiv: '2609.22824'
-  paper_url: https://arxiv.org/abs/2609.22824
-  code_url: https://github.com/Luxikun669/ADER
-  tldr: ADER loops one shared TS-Transformer block for speech enhancement with a depth controller for early exit
-    and per-step expert adapters.
-  added: '2026-10-03'
-
 - id: ha2026-wavefront-decoding-parallelized
   title: 'WaveFront Decoding: Parallelized Self-Speculative Decoding for Looped Language Models'
   authors: [Hyeongju Ha, Jae-Joon Kim]
@@ -603,6 +588,21 @@
   code_url: https://github.com/summerbro-hhj/wavefront-decoding
   tldr: Batches tokens at different positions and loop depths into a diagonal wavefront so drafting and verification
     share recurrent calls in looped LMs.
+  added: '2026-10-03'
+
+- id: lu2026-adaptive-depth-expert
+  title: Adaptive Depth and Expert Refinement for Efficient Speech Enhancement
+  authors: [Xikun Lu, Yujian Ma, Yunda Chen, Xianquan Jiang, Jinqiu Sang]
+  date: '2026-09-19'
+  venue: arXiv
+  type: Method
+  category: vision-multimodal
+  tags: [audio, adaptive, efficiency]
+  arxiv: '2609.22824'
+  paper_url: https://arxiv.org/abs/2609.22824
+  code_url: https://github.com/Luxikun669/ADER
+  tldr: ADER loops one shared TS-Transformer block for speech enhancement with a depth controller for early exit
+    and per-step expert adapters.
   added: '2026-10-03'
 
 - id: luo2026-prediction-dynamics-depth
@@ -634,7 +634,7 @@
   added: '2026-10-03'
 
 - id: feng2026-coreloop-parameter-efficient
-  title: 'CoRELoop: Parameter-Efficient Controlled Recurrent Refinement for Audio Deepfake Detection'
+  title: 'CoReLoop: Parameter-Efficient Controlled Recurrent Refinement for Audio Deepfake Detection'
   authors: [Kunyu Feng, Yuxiang Wang, Li Wang, Wan Lin, Zhizheng Wu]
   date: '2026-09-17'
   venue: arXiv
@@ -849,20 +849,6 @@
     block, improving matched-compute reasoning.
   added: '2026-10-03'
 
-- id: lin2026-ziptok3d-high-fidelity
-  title: 'ZipTok3D: High-Fidelity 3D Tokenization with Compact Token Prefixes'
-  authors: [Mingda Lin, Weijie Wang, Zeyu Zhang, Bowen Cui, Yefei He, et al.]
-  date: '2026-09-02'
-  venue: arXiv
-  type: Method
-  category: diffusion-generative
-  tags: [vision, efficiency]
-  arxiv: '2609.01740'
-  paper_url: https://arxiv.org/abs/2609.01740
-  tldr: A 3D tokenizer whose decoder repeatedly applies one parameter-shared transformer block to unfold very short
-    token prefixes into detailed geometry.
-  added: '2026-10-03'
-
 - id: hojjat2026-progresvit-progressive-resolution
   title: 'ProgResViT: Progressive Resolution and Width for Adaptive Vision Transformers'
   authors: [Ali Hojjat, Janek Haberer, Olaf Landsiedel]
@@ -876,6 +862,20 @@
   code_url: https://github.com/ds-kiel/ProgResViT
   tldr: Reuses the same ViT blocks across confidence-routed rounds of growing resolution and width, cutting average
     ImageNet compute by up to 31 percent.
+  added: '2026-10-03'
+
+- id: lin2026-ziptok3d-high-fidelity
+  title: 'ZipTok3D: High-Fidelity 3D Tokenization with Compact Token Prefixes'
+  authors: [Mingda Lin, Weijie Wang, Zeyu Zhang, Bowen Cui, Yefei He, et al.]
+  date: '2026-09-01'
+  venue: arXiv
+  type: Method
+  category: diffusion-generative
+  tags: [vision, efficiency]
+  arxiv: '2609.01740'
+  paper_url: https://arxiv.org/abs/2609.01740
+  tldr: A 3D tokenizer whose decoder repeatedly applies one parameter-shared transformer block to unfold very short
+    token prefixes into detailed geometry.
   added: '2026-10-03'
 
 - id: wang2026-smelt-scaling-laws
@@ -1217,6 +1217,7 @@
   tags: [language, adaptive, reasoning]
   arxiv: '2608.05872'
   paper_url: https://arxiv.org/abs/2608.05872
+  code_url: https://github.com/Batorskq/MACRO
   tldr: Learns task-specific Markov routing policies over frozen LLM layers with skip, repeat and rewind moves,
     beating Dr.LLM at far lower search cost.
   added: '2026-10-03'
@@ -1265,20 +1266,6 @@
     to reduce overthinking.
   added: '2026-10-03'
 
-- id: ng2026-reimu-efficient-heterogeneous
-  title: 'REIMU: Efficient Heterogeneous Hierarchical Reasoning for SSL-Based Speech Deepfake Detection'
-  authors: [Kwok-Ho Ng, Tingting Song, Bingwen Feng, Peiya Li]
-  date: '2026-08-03'
-  venue: arXiv
-  type: Analysis
-  category: vision-multimodal
-  tags: [audio]
-  arxiv: '2608.00857'
-  paper_url: https://arxiv.org/abs/2608.00857
-  tldr: Controlled comparison of single-pass, weight-shared recurrent, and HRM-style backbones for speech deepfake
-    detection, finding recurrence alone does not help.
-  added: '2026-10-03'
-
 - id: manzari2026-recursive-vision-language
   title: Recursive Vision Language Models for General Symbolic Reasoning
   authors: [Omid Nejati Manzari, Guillaume Lajoie, Hassan Rivaz]
@@ -1293,6 +1280,20 @@
     maze and ARC reasoning.
   added: '2026-10-03'
 
+- id: ng2026-reimu-efficient-heterogeneous
+  title: 'REIMU: Efficient Heterogeneous Hierarchical Reasoning for SSL-Based Speech Deepfake Detection'
+  authors: [Kwok-Ho Ng, Tingting Song, Bingwen Feng, Peiya Li]
+  date: '2026-08-01'
+  venue: arXiv
+  type: Analysis
+  category: vision-multimodal
+  tags: [audio]
+  arxiv: '2608.00857'
+  paper_url: https://arxiv.org/abs/2608.00857
+  tldr: Controlled comparison of single-pass, weight-shared recurrent, and HRM-style backbones for speech deepfake
+    detection, finding recurrence alone does not help.
+  added: '2026-10-03'
+
 - id: liu2026-tracevit-grounded-trace
   title: 'TraceViT: Grounded Trace Supervision for Visual Abstract Reasoning'
   authors: [Binnan Liu, Yechi Ma, Tian Xie, Wei Hua]
@@ -1303,6 +1304,7 @@
   tags: [vision, reasoning]
   arxiv: '2607.29586'
   paper_url: https://arxiv.org/abs/2607.29586
+  code_url: https://github.com/LiuBinnan/TraceViT
   tldr: Supervises each iteration of a looped visual reasoner with verified intermediate transformation chains,
     reaching 67.8 percent pass@2 on ARC-AGI-1.
   added: '2026-10-03'
@@ -1379,20 +1381,6 @@
     and agentic tasks.
   added: '2026-10-03'
 
-- id: jaber2026-memoir-should-model
-  title: 'Memoir: Should a Model Write to Its Memory While It Thinks?'
-  authors: [Jaber Jaber, Osama Jaber]
-  date: '2026-07-23'
-  venue: arXiv
-  type: Method
-  category: adaptive-computation
-  tags: [adaptive, reasoning]
-  arxiv: '2607.20792'
-  paper_url: https://arxiv.org/abs/2607.20792
-  tldr: Memoir tests whether variable-depth latent pondering should rewrite per-sample fast memory while reading
-    it, using tightly matched recall experiments.
-  added: '2026-10-03'
-
 - id: zhang2026-when-does-recurrence
   title: When Does Recurrence Become an Algorithm? Convergence Selection in Weight-Tied Looped Transformers
   authors: [Tong Zhang, Junhao Hu, Yun Peng, Tao Xie]
@@ -1405,6 +1393,21 @@
   paper_url: https://arxiv.org/abs/2607.20594
   tldr: On group word problems, shows weight tying makes SGD select serial frontier algorithms whose speed follows
     a budget law, yielding a principled halting rule.
+  added: '2026-10-03'
+
+- id: jaber2026-memoir-should-model
+  title: 'Memoir: Should a Model Write to Its Memory While It Thinks?'
+  authors: [Jaber Jaber, Osama Jaber]
+  date: '2026-07-22'
+  venue: arXiv
+  type: Method
+  category: adaptive-computation
+  tags: [adaptive, reasoning]
+  arxiv: '2607.20792'
+  paper_url: https://arxiv.org/abs/2607.20792
+  code_url: https://github.com/RightNow-AI/Memoir
+  tldr: Memoir tests whether variable-depth latent pondering should rewrite per-sample fast memory while reading
+    it, using tightly matched recall experiments.
   added: '2026-10-03'
 
 - id: chen2026-latentmt-machine-translation
@@ -1982,20 +1985,6 @@
     method, one iteration per loop, which fails without normalization.
   added: '2026-10-03'
 
-- id: svete2026-revisiting-padded-transformer
-  title: 'Revisiting Padded Transformer Expressivity: Which Architectural Choices Matter and Which Don''t'
-  authors: [Anej Svete, William Merrill, Ryan Cotterell, Ashish Sabharwal]
-  date: '2026-05-29'
-  venue: arXiv
-  type: Theory
-  category: theory
-  tags: [theory]
-  arxiv: '2605.30523'
-  paper_url: https://arxiv.org/abs/2605.30523
-  tldr: Shows looped padded transformers with polylog loops capture AC^d or TC^d depending on precision, while attention
-    type and width barely matter.
-  added: '2026-10-03'
-
 - id: miele2026-fixed-point-masked
   title: Fixed-Point Masked Generative Modeling
   authors: [Andrea Miele, Yiming Qin, Alba Carballo-Castro, Justin Deschenaux, Pascal Frossard]
@@ -2022,6 +2011,20 @@
   paper_url: https://arxiv.org/abs/2605.30757
   tldr: Proves compressed looped Transformers stay bounded by their recurrent-state memory regardless of loop count,
     separating them from memory-rich chain-of-thought.
+  added: '2026-10-03'
+
+- id: svete2026-revisiting-padded-transformer
+  title: 'Revisiting Padded Transformer Expressivity: Which Architectural Choices Matter and Which Don''t'
+  authors: [Anej Svete, William Merrill, Ryan Cotterell, Ashish Sabharwal]
+  date: '2026-05-28'
+  venue: arXiv
+  type: Theory
+  category: theory
+  tags: [theory]
+  arxiv: '2605.30523'
+  paper_url: https://arxiv.org/abs/2605.30523
+  tldr: Shows looped padded transformers with polylog loops capture AC^d or TC^d depending on precision, while attention
+    type and width barely matter.
   added: '2026-10-03'
 
 - id: burzio2026-d-j-view
@@ -2165,6 +2168,7 @@
   tags: [vision, efficiency]
   arxiv: '2605.22422'
   paper_url: https://arxiv.org/abs/2605.22422
+  code_url: https://github.com/hamdilaziz/FastTab
   tldr: FastTab recognizes table structure with a tiny recursive module for global reasoning plus axial 1D transformers,
     avoiding slow autoregressive HTML decoding.
   added: '2026-10-03'
@@ -2710,20 +2714,6 @@
     differences between loop states.
   added: '2026-10-03'
 
-- id: turkcan2026-loom-scalable-analytical
-  title: 'Loom: A Scalable Analytical Neural Computer Architecture'
-  authors: [Mehmet Kerem Turkcan]
-  date: '2026-04-10'
-  venue: arXiv
-  type: Method
-  category: theory
-  tags: [theory, algorithmic]
-  arxiv: '2604.08816'
-  paper_url: https://arxiv.org/abs/2604.08816
-  tldr: Loom compiles C programs into an analytically weighted looped transformer that executes one instruction
-    per pass over a fixed-size machine state.
-  added: '2026-10-03'
-
 - id: goyal2026-elt-elastic-looped
   title: 'ELT: Elastic Looped Transformers for Visual Generation'
   authors: [Sahil Goyal, Swayam Agrawal, Gautham Govind Anil, Prateek Jain, Sujoy Paul, Aditya Kusupati]
@@ -2751,6 +2741,21 @@
   code_url: https://github.com/OSU-NLP-Group/Loop-Think-Generalize
   tldr: Shows recurrent-depth transformers gain systematic generalization and depth extrapolation on implicit multi-hop
     reasoning, but overthink with too many iterations.
+  added: '2026-10-03'
+
+- id: turkcan2026-loom-scalable-analytical
+  title: 'Loom: A Scalable Analytical Neural Computer Architecture'
+  authors: [Mehmet Kerem Turkcan]
+  date: '2026-04-09'
+  venue: arXiv
+  type: Method
+  category: theory
+  tags: [theory, algorithmic]
+  arxiv: '2604.08816'
+  paper_url: https://arxiv.org/abs/2604.08816
+  code_url: https://github.com/mkturkcan/Loom
+  tldr: Loom compiles C programs into an analytically weighted looped transformer that executes one instruction
+    per pass over a fixed-size machine state.
   added: '2026-10-03'
 
 - id: jaber2026-ouroboros-dynamic-weight
@@ -3204,8 +3209,8 @@
 
 - id: xue2026-beyond-what-seems
   title: 'Beyond What Seems Necessary: Hidden Gains from Scaling Training-Time Reasoning Length under Outcome Supervision'
-  authors: [Yihao Xue, Allan N. Zhang, Jianhao Huang, A. Sahai, Baharan Mirzasoleiman]
-  date: '2026-02-01'
+  authors: [Yihao Xue, Allan Zhang, Jianhao Huang, Amit Sahai, Baharan Mirzasoleiman]
+  date: '2026-01-31'
   venue: arXiv
   type: Theory
   category: theory
@@ -3380,6 +3385,7 @@
   tags: [language, efficiency, adaptive]
   arxiv: '2512.14531'
   paper_url: https://arxiv.org/abs/2512.14531
+  code_url: https://github.com/huawei-noah/noah-research
   tldr: An FFN that reuses one parameter set both as width-wise sub-experts and as a recursively applied depth path,
     adaptively mixed per token.
   added: '2026-10-03'
@@ -3442,7 +3448,7 @@
   added: '2026-10-03'
 
 - id: naeem2025-reftr-recurrent-refinement
-  title: 'RefTr: Recurrent Refinement of Confluent Trajectories for 3D Vascular Tree Centerline Graphs'
+  title: 'RefTr: Recurrent Refinement of Confluent Trajectories for 3D Vascular Tree Centerlines'
   authors: [Roman Naeem, David Hagerman, Jennifer Alvén, Fredrik Kahl]
   date: '2025-11-25'
   venue: arXiv
@@ -3649,7 +3655,7 @@
   title: 'DND: Boosting Large Language Models with Dynamic Nested Depth'
   authors: [Tieyuan Chen, Xiaodong Chen, Haoxing Chen, Zhenzhong Lan, Weiyao Lin, Jianguo Li]
   date: '2025-10-13'
-  venue: arXiv
+  venue: ICLR 2026
   type: Method
   category: adaptive-computation
   tags: [language, adaptive]
@@ -3733,7 +3739,7 @@
 
 - id: du2025-latent-thinking-optimization
   title: 'Latent Thinking Optimization: Your Latent Reasoning Language Model Secretly Encodes Reward Signals in
-    its Latent Thoughts'
+    Its Latent Thoughts'
   authors: [Hanwen Du, Yuxin Dong, Xia Ning]
   date: '2025-09-30'
   venue: arXiv
@@ -3849,7 +3855,7 @@
 - id: mathur2025-change-thought-adaptive
   title: 'Change of Thought: Adaptive Test-Time Computation'
   authors: [Mrinal Mathur, Mike Doan, Barak Pearlmutter, Sergey Plis]
-  date: '2025-07-18'
+  date: '2025-07-17'
   venue: arXiv
   type: Method
   category: equilibrium-implicit
@@ -3965,7 +3971,7 @@
 - id: li2025-when-how-unlabeled
   title: When and How Unlabeled Data Provably Improve In-Context Learning
   authors: [Yingcong Li, Xiangyu Chang, Muti Kara, Xiaofeng Liu, Amit Roy-Chowdhury, Samet Oymak]
-  date: '2025-06-17'
+  date: '2025-06-18'
   venue: arXiv
   type: Theory
   category: in-context-learning
@@ -4224,8 +4230,8 @@
 - id: shaw2024-alta-compiler-based
   title: 'ALTA: Compiler-Based Analysis of Transformers'
   authors: [Peter Shaw, James Cohan, Jacob Eisenstein, Kenton Lee, Jonathan Berant, Kristina Toutanova]
-  date: '2024-10-22'
-  venue: arXiv
+  date: '2024-10-23'
+  venue: TMLR 2025
   type: Method
   category: theory
   tags: [theory, algorithmic]
@@ -4296,7 +4302,7 @@
   added: '2026-10-03'
 
 - id: ng2024-loop-residual-neural
-  title: Loop-Residual Neural Networks for Iterative Refinement
+  title: Loop Neural Networks for Parameter Sharing
   authors: [Kei-Sing Ng, Qingchen Wang]
   date: '2024-09-21'
   venue: arXiv
@@ -4415,7 +4421,7 @@
 
 - id: davidhay2024-dynamic-layer-tying
   title: Dynamic Layer Tying for Parameter-Efficient Transformers
-  authors: [Tamir David-Hay, Lior Wolf]
+  authors: [Tamir David Hay, Lior Wolf]
   date: '2024-01-23'
   venue: ICLR 2024
   type: Method
@@ -4520,7 +4526,7 @@
 - id: wang2023-residualtransformer-residual-low
   title: 'ResidualTransformer: Residual Low-Rank Learning with Weight-Sharing for Transformer Layers'
   authors: [Yiming Wang, Jinyu Li]
-  date: '2023-10-04'
+  date: '2023-10-03'
   venue: ICASSP 2024
   type: Method
   category: efficiency
@@ -4686,6 +4692,7 @@
   tags: [language, efficiency]
   arxiv: '2210.06425'
   paper_url: https://arxiv.org/abs/2210.06425
+  code_url: https://github.com/nlpie-research/MiniALBERT
   tldr: Distills fully parameterized BERT-style teachers into compact recursive students that share one transformer
     layer across depth, adding bottleneck adapters for layer-wise flexibility.
   added: '2026-10-03'
@@ -4768,9 +4775,9 @@
 
 - id: ge2022-edgeformer-parameter-efficient
   title: 'EdgeFormer: A Parameter-Efficient Transformer for On-Device Seq2seq Generation'
-  authors: [Tao Ge, Furu Wei]
+  authors: [Tao Ge, Si-Qing Chen, Furu Wei]
   date: '2022-02-16'
-  venue: arXiv
+  venue: EMNLP 2022
   type: Method
   category: efficiency
   tags: [language, efficiency]
