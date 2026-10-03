@@ -108,7 +108,7 @@ def progress(papers: list[dict]) -> str:
 def toc(config: dict, papers: list[dict], has_resources: bool) -> str:
     counts = collections.Counter(p["category"] for p in papers)
     cells = [f"{c['emoji']} [{c['title']}](#{anchor(c['emoji'] + ' ' + c['title'])}) `{counts.get(c['id'], 0)}`"
-             for c in config["categories"]]
+             for c in config["categories"] if counts.get(c["id"])]
     cols = 2
     while len(cells) % cols:
         cells.append("")
@@ -116,8 +116,7 @@ def toc(config: dict, papers: list[dict], has_resources: bool) -> str:
             "|" + ":---|" * cols]
     for i in range(0, len(cells), cols):
         rows.append("| " + " | ".join(cells[i:i + cols]) + " |")
-    links = ["[What is a looped transformer?](#-what-is-a-looped-transformer)",
-             "[Recently added](#-recently-added)", "[Papers](#-papers)"]
+    links = ["[Recently added](#-recently-added)", "[Papers](#-papers)"]
     if has_resources:
         links.append("[Resources](#-resources)")
     links += ["[Contributing](#-contributing)", "[Progress](#-progress)", "[Citation](#-citation)"]
@@ -151,7 +150,8 @@ def render() -> str:
     by_cat = collections.defaultdict(list)
     for p in papers:
         by_cat[p["category"]].append(p)
-    sections = "\n".join(section(c, by_cat.get(c["id"], [])) for c in config["categories"])
+    # Empty categories (e.g. surveys, until a looped-transformer survey exists) are not rendered.
+    sections = "\n".join(section(c, by_cat[c["id"]]) for c in config["categories"] if by_cat.get(c["id"]))
     years = sorted({p["date"][:4] for p in papers}) or ["—"]
 
     values = {
@@ -161,7 +161,7 @@ def render() -> str:
         "TITLE": config["title"],
         "PAPER_COUNT": str(len(papers)),
         "CODE_COUNT": str(sum(1 for p in papers if p.get("code_url"))),
-        "CATEGORY_COUNT": str(len(config["categories"])),
+        "CATEGORY_COUNT": str(len(by_cat)),
         "YEAR_RANGE": f"{years[0]}–{years[-1]}",
         "LAST_PAPER_DATE": max((p["date"] for p in papers), default="—"),
         "TOC": toc(config, papers, bool(resources)),
