@@ -1,0 +1,29 @@
+# Single source of truth for the list. README.md and the plots are generated from this file.
+# Add papers through the "Add a paper" issue form, or edit by hand and run `make build`.
+# Field reference: CONTRIBUTING.md
+
+- id: geiping2025-scaling
+  title: 'Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach'
+  authors: [Jonas Geiping, Sean McLeish, Neel Jain, John Kirchenbauer, Siddharth Singh, et al.]
+  date: '2025-02-07'
+  venue: arXiv
+  type: Model
+  category: language-models
+  arxiv: '2502.05171'
+  paper_url: https://arxiv.org/abs/2502.05171
+  code_url: https://github.com/seal-rg/recurrent-pretraining
+  stars: 800
+  tldr: Pretrains a 3.5B recurrent-depth LM whose shared core block can be iterated more at test time to scale reasoning
+    compute.
+
+- id: dehghani2018-universal-transformers
+  title: Universal Transformers
+  authors: [Mostafa Dehghani, Stephan Gouws, Oriol Vinyals, Jakob Uszkoreit, Łukasz Kaiser]
+  date: '2018-07-10'
+  venue: ICLR 2019
+  type: Method
+  category: foundations
+  arxiv: '1807.03819'
+  paper_url: https://arxiv.org/abs/1807.03819
+  code_url: https://github.com/tensorflow/tensor2tensor
+  tldr: Applies one transformer block recurrently over depth with adaptive halting.

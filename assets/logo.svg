@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="t">
+  <title id="t">Awesome Looped Transformers logo: a transformer block wrapped in a loop arrow</title>
+  <defs>
+    <linearGradient id="ring" x1="60" y1="460" x2="450" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7b61ff"/>
+      <stop offset="0.5" stop-color="#2a78d6"/>
+      <stop offset="1" stop-color="#1baf7a"/>
+    </linearGradient>
+    <linearGradient id="block" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1f2a4d"/>
+      <stop offset="1" stop-color="#141a33"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7b61ff"/>
+      <stop offset="1" stop-color="#1baf7a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- loop arrow: a 320 degree arc ending in an arrowhead that points back into the start -->
+  <path d="M 324.4 68.1 A 200 200 0 1 1 187.6 68.1" fill="none" stroke="url(#ring)" stroke-width="34" stroke-linecap="round"/>
+  <polygon points="236,50 172,24 200,112" fill="url(#ring)" stroke="url(#ring)" stroke-width="6" stroke-linejoin="round"/>
+
+  <!-- shared transformer block -->
+  <rect x="166" y="150" width="180" height="212" rx="30" fill="url(#block)" stroke="url(#edge)" stroke-width="6"/>
+
+  <!-- attention edges between token dots -->
+  <g stroke="#9db8ff" stroke-opacity="0.55" stroke-width="3" stroke-linecap="round">
+    <line x1="206" y1="206" x2="256" y2="256"/>
+    <line x1="256" y1="206" x2="206" y2="256"/>
+    <line x1="306" y1="206" x2="256" y2="256"/>
+    <line x1="256" y1="206" x2="306" y2="256"/>
+    <line x1="206" y1="206" x2="306" y2="256"/>
+  </g>
+  <g>
+    <circle cx="206" cy="206" r="13" fill="#7b61ff"/>
+    <circle cx="256" cy="206" r="13" fill="#2a78d6"/>
+    <circle cx="306" cy="206" r="13" fill="#1baf7a"/>
+    <circle cx="206" cy="256" r="13" fill="#7b61ff"/>
+    <circle cx="256" cy="256" r="13" fill="#2a78d6"/>
+    <circle cx="306" cy="256" r="13" fill="#1baf7a"/>
+  </g>
+
+  <!-- feed-forward layer bar -->
+  <rect x="190" y="292" width="132" height="22" rx="11" fill="url(#ring)"/>
+  <rect x="190" y="324" width="132" height="14" rx="7" fill="#ffffff" fill-opacity="0.18"/>
+</svg>

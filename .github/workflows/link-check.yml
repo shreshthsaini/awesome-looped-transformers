@@ -1,0 +1,28 @@
+# Monthly dead-link check; opens an issue listing broken links.
+name: Link check
+
+on:
+  schedule:
+    - cron: "23 5 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check links
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --max-concurrency 8 --accept 200,206,429 --exclude "img.shields.io|star-history.com|licensebuttons.net" README.md
+          fail: false
+      - name: Open issue on failures
+        if: steps.lychee.outputs.exit_code != 0
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh issue create --repo "$GITHUB_REPOSITORY" --title "Broken links ($(date -u +%Y-%m-%d))" --body-file lychee/out.md

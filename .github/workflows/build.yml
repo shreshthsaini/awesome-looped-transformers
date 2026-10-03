@@ -1,0 +1,51 @@
+# Regenerates README.md and the progress charts whenever the data or templates change on the default branch.
+name: Build README
+
+on:
+  push:
+    branches: [main, master]
+    paths: ["data/**", "templates/**", "scripts/**", ".github/workflows/build.yml"]
+  schedule:
+    - cron: "29 4 * * 0"   # weekly re-sync with arXiv (venues and titles change after acceptance)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: build-readme
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Sync titles, authors and dates from arXiv
+        run: python scripts/sync_arxiv.py
+        continue-on-error: true
+      - run: python scripts/validate.py
+      - run: python scripts/plot_progress.py
+      - run: python scripts/build_readme.py
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ README.md assets/
+          git diff --cached --quiet || { git commit -m "chore: rebuild README and charts"; git push; }
+      - name: Make sure the bot labels exist
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create new-paper    --color 2a78d6 --description "Paper submission (bot opens a PR)" --force
+          gh label create new-resource --color 1baf7a --description "Resource submission (bot opens a PR)" --force
+          gh label create fix-entry    --color eb6834 --description "Correction to an existing entry" --force
+          gh label create needs-info   --color e34948 --description "Bot could not process the submission" --force
+          gh label create automated    --color 7b61ff --description "Opened by a workflow" --force
+          gh label create arxiv-watch  --color eda100 --description "Weekly arXiv candidates to triage" --force
