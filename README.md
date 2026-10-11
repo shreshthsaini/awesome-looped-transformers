@@ -10,7 +10,7 @@ models that get deeper by running the same block again.**
 
 [![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)
 [![Papers](https://img.shields.io/badge/papers-295-2a78d6?style=flat)](#-papers)
-[![With code](https://img.shields.io/badge/with%20code-113-1baf7a?style=flat)](#-papers)
+[![With code](https://img.shields.io/badge/with%20code-114-1baf7a?style=flat)](#-papers)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-7b61ff?style=flat)](CONTRIBUTING.md)
 [![Last commit](https://img.shields.io/github/last-commit/shreshthsaini/awesome-looped-transformers?style=flat&color=eb6834)](https://github.com/shreshthsaini/awesome-looped-transformers/commits)
 [![GitHub stars](https://img.shields.io/github/stars/shreshthsaini/awesome-looped-transformers?style=flat&color=eda100)](https://github.com/shreshthsaini/awesome-looped-transformers/stargazers)
@@ -295,7 +295,7 @@ implementation.
 | 2026-10 | **[Decoding Looped Transformers Better for (Almost) Free](https://arxiv.org/abs/2610.02185)**<br><sub>Weihao Liu, Huangjie Zheng, Tianrong Chen et al.</sub><br><sub>💡 Training-free contrastive decoding that contrasts a looped transformer's final prediction with an earlier loop, boosting Ouro and Huginn reasoning accuracy.</sub><br><sub>[PDF](https://arxiv.org/pdf/2610.02185)</sub> | arXiv | `Method` | — |
 | 2026-09 | **[Scaling Laws for Looped Mixture of Experts](https://arxiv.org/abs/2609.40316)**<br><sub>Yanbei Chen, Anirudh Goyal, Raghuraman Krishnamoorthi</sub><br><sub>💡 Loop scaling laws that jointly model recurrence, MoE sparsity, model size and data, predicting looped MoE loss better than prior forms.</sub><br><sub>[PDF](https://arxiv.org/pdf/2609.40316)</sub> | arXiv | `Analysis` | — |
 | 2026-09 | **[Closing the Loop: Practical Training Recipes for Looped Language Models](https://arxiv.org/abs/2610.00673)**<br><sub>Andrei Marchenko, Viacheslav Bezrukov, Oleg Kashurin et al.</sub><br><sub>💡 Practical from-scratch recipe for looped LMs that cuts Ouro-style training from 7.7T to 310B tokens and beats a parameter-matched dense model on all 12 benchmarks.</sub><br><sub>[PDF](https://arxiv.org/pdf/2610.00673)</sub> | arXiv | `Method` | — |
-| 2026-09 | **[Loop Dropout: Regularizing Shared Updates in Looped Language Models](https://arxiv.org/abs/2609.34218)**<br><sub>Zirui Zhu, Hailun Xu, Xuanlei Zhao et al.</sub><br><sub>💡 Randomly masks per-loop applications of shared LoRA adapters during fine-tuning of looped LMs, fixing a bias toward late loops.</sub><br><sub>[PDF](https://arxiv.org/pdf/2609.34218)</sub> | arXiv | `Method` | — |
+| 2026-09 | **[Loop Dropout: Regularizing Shared Updates in Looped Language Models](https://arxiv.org/abs/2609.34218)**<br><sub>Zirui Zhu, Hailun Xu, Xuanlei Zhao et al.</sub><br><sub>💡 Randomly masks per-loop applications of shared LoRA adapters during fine-tuning of looped LMs, fixing a bias toward late loops.</sub><br><sub>[PDF](https://arxiv.org/pdf/2609.34218)</sub> | arXiv | `Method` | [![GitHub stars](https://img.shields.io/github/stars/NUS-HPC-AI-Lab/loop-dropout?style=flat&logo=github&label=&color=4c1)](https://github.com/NUS-HPC-AI-Lab/loop-dropout) |
 | 2026-09 | **[Stream Recursion Model (SRM)](https://arxiv.org/abs/2609.28809)**<br><sub>Asael Sorensen, Charles Brock, David Chamberlain et al.</sub><br><sub>💡 Reworks HRM into multiple latent streams refined by shared recursive step functions, matching GPT-2 per parameter while exposing interpretable stream dynamics.</sub><br><sub>[PDF](https://arxiv.org/pdf/2609.28809)</sub> | arXiv | `Method` | — |
 | 2026-09 | **[LoopCD: Loop-wise Contrastive Decoding for Improving Reasoning in Looped Language Models](https://arxiv.org/abs/2609.24196)**<br><sub>Byeongho Yu, Junhyuk So, Eunhyeok Park</sub><br><sub>💡 Contrasts predictions from successive loops of a looped LM during decoding to suppress premature answers and improve reasoning accuracy.</sub><br><sub>[PDF](https://arxiv.org/pdf/2609.24196)</sub> | EMNLP 2026 | `Method` | [![GitHub stars](https://img.shields.io/github/stars/hoeng4/LoopCD?style=flat&logo=github&label=&color=4c1)](https://github.com/hoeng4/LoopCD) |
 | 2026-09 | **[Looped GPT-BERT: Trading Parameters for Computation in Small Language Modeling](https://arxiv.org/abs/2609.09691)**<br><sub>Tingshuo Fan, Hongtao Mu, Tianyu Zhou et al.</sub><br><sub>💡 Reuses a four-layer GPT-BERT stack across twelve traversals, trading parameters for recurrent compute in small-data language modeling.</sub><br><sub>[PDF](https://arxiv.org/pdf/2609.09691)</sub> | arXiv | `Method` | [![GitHub stars](https://img.shields.io/github/stars/Survivor613/BabyLM-2026?style=flat&logo=github&label=&color=4c1)](https://github.com/Survivor613/BabyLM-2026) |
@@ -581,7 +581,7 @@ reference and inclusion criteria.
 
 ## 📈 Progress
 
-**295 papers** · **113** with official code · newest 2026-10-01
+**295 papers** · **114** with official code · newest 2026-10-01
 
 | Year | Papers | |
 |:---:|:---:|:---|

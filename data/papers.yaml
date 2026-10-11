@@ -269,6 +269,7 @@
   tags: [language, reasoning]
   arxiv: '2609.34218'
   paper_url: https://arxiv.org/abs/2609.34218
+  code_url: https://github.com/NUS-HPC-AI-Lab/loop-dropout
   tldr: Randomly masks per-loop applications of shared LoRA adapters during fine-tuning of looped LMs, fixing a
     bias toward late loops.
   added: '2026-10-03'
