@@ -610,7 +610,7 @@
   added: '2026-10-03'
 
 - id: yu2026-t-loopformer-token
-  title: 'T-LoopFormer: Token-Level Elastic-Depth Looped Transformers for Latent Reasoning with Dynamic Routing'
+  title: 'T-LoopFormer: Token-Level Elastic-Depth Looped Transformers with Dynamic Routing'
   authors: [Mingqian Yu, Wenpeng Zhang, Shaobo Cui, Peilin Zhao]
   date: '2026-09-14'
   venue: arXiv
@@ -2070,8 +2070,8 @@
   added: '2026-10-03'
 
 - id: fang2026-loopq-quantization-recursive
-  title: 'LoopQ: Quantization for Recursive Transformers'
-  authors: [Rui Fang, Hsi-Wen Chen, Ming-Syan Chen]
+  title: 'LoopQ: Quantization for Looped Language Models'
+  authors: [Rui Fang, Hsi-Wen Chen, Chia-Ming Cheng, Ming-Syan Chen]
   date: '2026-05-08'
   venue: arXiv
   type: Method
@@ -2461,7 +2461,7 @@
 
 - id: tang2026-looprpt-reinforcement-pre
   title: 'LoopRPT: Reinforcement Pre-Training for Looped Language Models'
-  authors: [Guo Tang, Shixin Jiang, Heng Chang, Nuo Chen, Yuhan Li, et al.]
+  authors: [Guo Tang, Shixin Jiang, Heng Chang, Zihan Zhang, Nuo Chen, et al.]
   date: '2026-03-20'
   venue: arXiv
   type: Method
