@@ -523,17 +523,17 @@
   added: '2026-10-03'
 
 - id: kavuncu2026-lstm-ut-recurrent
-  title: LSTM-UT and Recurrent-Depth Transformers on Cellular Automata
-  authors: [Aras Kavuncu]
+  title: 'Storing Is Not Remembering: LSTM-UT and Bounded Gated Memory for Looped Transformers'
+  authors: [Aras Kavuncu, Muhammad Burhan Hafez]
   date: '2026-09-17'
   venue: arXiv
   type: Method
   category: algorithmic-reasoning
-  tags: [algorithmic]
+  tags: [algorithmic, language]
   arxiv: '2609.19521'
   paper_url: https://arxiv.org/abs/2609.19521
-  tldr: Benchmarks memory designs for recurrent-depth transformers on cellular automata and proposes a gated LSTM-style
-    state that extrapolates to unseen depths.
+  tldr: Adds bounded gated memory to looped Transformers, improving Rule 30 depth extrapolation and delayed recall
+    over recurrent-depth baselines, with additional OpenWebText2 language-modelling experiments.
   added: '2026-10-03'
 
 - id: feng2026-coreloop-parameter-efficient
