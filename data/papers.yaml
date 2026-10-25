@@ -625,7 +625,8 @@
   added: '2026-10-03'
 
 - id: olszowiec2026-same-path-different
-  title: 'Same path, different: a mechanistic comparison of looped and stacked transformer encoders on 12-lead ECG'
+  title: 'Same path, different walk: a mechanistic comparison of looped and stacked transformer encoders on 12-lead
+    ECG'
   authors: [Pawel Olszowiec, Michal Byra, Grzegorz Gruszczynski, Grzegorz Stefanski, Alberto Presta]
   date: '2026-09-14'
   venue: arXiv
@@ -1443,20 +1444,6 @@
     depth as a third scaling axis beyond parameters and steps.
   added: '2026-10-03'
 
-- id: wang2026-residual-scaling-looped
-  title: 'On the Residual Scaling of Looped Transformers: Stability and Transferability'
-  authors: [Shaowen Wang, Bingrui Li, Ge Zhang, Wenhao Huang, Shen Yan, Jian Li]
-  date: '2026-06-16'
-  venue: arXiv
-  type: Theory
-  category: theory
-  tags: [language, theory, scaling]
-  arxiv: '2606.18524'
-  paper_url: https://arxiv.org/abs/2606.18524
-  tldr: Shows correlated shared-block updates require 1/N residual scaling in looped transformers, enabling hyperparameter
-    transfer across loop counts.
-  added: '2026-10-03'
-
 - id: lu2026-looped-world-models
   title: Looped World Models
   authors: [Hongyuan Adam Lu, Z. L. Victor Wei, Qun Zhang, Jinrui Zeng, Bowen Cao, et al.]
@@ -1484,6 +1471,20 @@
   project_url: https://huggingface.co/Multilingual-Multimodal-NLP/LoopCoder-V2
   tldr: Trains looped code LMs on the Parallel Loop Transformer and finds two loops give most of the refinement
     benefit, favoring efficient shallow looping.
+  added: '2026-10-03'
+
+- id: wang2026-residual-scaling-looped
+  title: 'Loop-$μ$P: Residual Scaling and Hyperparameter Transfer in Looped Transformers'
+  authors: [Shaowen Wang, Bingrui Li, Tansheng Zhu, Ge Zhang, Wenhao Huang, et al.]
+  date: '2026-06-16'
+  venue: arXiv
+  type: Theory
+  category: theory
+  tags: [language, theory, scaling]
+  arxiv: '2606.18524'
+  paper_url: https://arxiv.org/abs/2606.18524
+  tldr: Shows correlated shared-block updates require 1/N residual scaling in looped transformers, enabling hyperparameter
+    transfer across loop counts.
   added: '2026-10-03'
 
 - id: movahedi2026-fixed-point-reasoners
@@ -1619,7 +1620,7 @@
   title: 'BA-T: An Iterative Transformer for Two-View Bundle Adjustment'
   authors: [Ganlin Zhang, Weirong Chen, Daniel Cremers, Xi Wang]
   date: '2026-06-02'
-  venue: arXiv
+  venue: NeurIPS 2026
   type: Method
   category: vision-multimodal
   tags: [vision]
