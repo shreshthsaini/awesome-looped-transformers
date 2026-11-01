@@ -1927,7 +1927,7 @@
   title: 'One Model, Two Roles: Emergent Specialization in a Shared Recurrent Transformer'
   authors: [Jucheng Shen, Barbara Su, Anastasios Kyrillidis]
   date: '2026-05-18'
-  venue: arXiv
+  venue: NeurIPS 2026
   type: Analysis
   category: analysis-interpretability
   tags: [reasoning, interpretability]
@@ -2190,7 +2190,7 @@
   title: How Much Is One Recurrence Worth? Iso-Depth Scaling Laws for Looped Language Models
   authors: [Kristian Schwethelm, Daniel Rueckert, Georgios Kaissis]
   date: '2026-04-22'
-  venue: arXiv
+  venue: NeurIPS 2026
   type: Analysis
   category: analysis-interpretability
   tags: [language, scaling, pretraining]
