@@ -1259,7 +1259,7 @@
   added: '2026-10-03'
 
 - id: buehlmaier2026-layernorm-as-implicit
-  title: LayerNorm as Implicit Gain Control in Looped Transformers
+  title: Spectral Margins and Memory Routing in Looped Transformers
   authors: [Matthias M. M. Buehlmaier]
   date: '2026-07-12'
   venue: arXiv
@@ -1320,12 +1320,13 @@
   title: 'Soft Mixture-of-Recursions: Going Deeper with Recursive Vision Transformers'
   authors: [Sang In Lee, Jihun Park]
   date: '2026-07-01'
-  venue: arXiv
+  venue: WACV 2027
   type: Method
   category: vision-multimodal
   tags: [vision, efficiency, adaptive]
   arxiv: '2607.00774'
   paper_url: https://arxiv.org/abs/2607.00774
+  code_url: https://github.com/sangin-lee/sr-vit
   tldr: Replaces hard recursion-depth routing with a learned soft mixture over all recursion outputs; recursive
     ViT-S gains 2.6 points top-1 with minimal extra parameters.
   added: '2026-10-03'
@@ -2248,7 +2249,7 @@
   title: Stability and Generalization in Looped Transformers
   authors: [Asher Labovich]
   date: '2026-04-16'
-  venue: arXiv
+  venue: NeurIPS 2026
   type: Analysis
   category: analysis-interpretability
   tags: [theory, algorithmic]
@@ -2753,10 +2754,10 @@
   added: '2026-10-03'
 
 - id: knupp2026-depth-recurrent-attention
-  title: 'Depth-Recurrent Attention Mixtures: Giving Latent Reasoning the Attention it Deserves'
+  title: 'Depth-Recurrent Attention Mixture (Dreamer): Giving Latent Reasoning the Attention it Deserves'
   authors: [Jonas Knupp, Jan Hendrik Metzen, Jeremias Bohn, Georg Groh, Kristian Kersting]
   date: '2026-01-29'
-  venue: arXiv
+  venue: NeurIPS 2026
   type: Method
   category: language-models
   tags: [language, reasoning, scaling, efficiency]
