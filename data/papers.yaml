@@ -1816,6 +1816,7 @@
   tags: [reasoning, test-time-compute]
   arxiv: '2605.25230'
   paper_url: https://arxiv.org/abs/2605.25230
+  code_url: https://github.com/digiLab-ai/bigr
   tldr: Treats recursive-model inference as trajectory inference and adds guided stochastic exploration reweighted
     by the halting head.
   added: '2026-10-03'
